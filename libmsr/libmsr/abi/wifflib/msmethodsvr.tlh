@@ -1,0 +1,2643 @@
+﻿// Created by Microsoft (R) C/C++ Compiler Version 14.00.50727.762 (ca254794).
+//
+// f:\tmp\sashimi-trunk\trans_proteomic_pipeline\src\mzxml\converters\mzwiff\wifflib\msmethodsvr.tlh
+//
+// C++ source equivalent of Win32 type library ..\\libs\\analyst\\MSMethodSvr.dll
+// compiler-generated file created 07/24/07 at 22:36:04 - DO NOT EDIT!
+
+#pragma once
+#pragma pack(push, 8)
+
+#include <comdef.h>
+
+namespace Analyst {
+
+//
+// Forward references and typedefs
+//
+
+struct __declspec(uuid("81aa0690-77b7-11d1-9d57-006097223085"))
+/* LIBID */ __MSMethodSvrLib;
+struct /* coclass */ MassSpecMethod;
+struct __declspec(uuid("81aa069e-77b7-11d1-9d57-006097223085"))
+/* dual interface */ IMassSpecMethod;
+struct __declspec(uuid("15224830-d832-11d3-81d7-00c04f8cf853"))
+/* dual interface */ IMassSpecMethod2;
+struct __declspec(uuid("d457fa02-bfe9-11d4-94e5-00c04f7b9c46"))
+/* dual interface */ IMassSpecMethod3;
+struct __declspec(uuid("b7618c81-a872-11d1-9d5d-006097223085"))
+/* interface */ IDevMethod;
+struct __declspec(uuid("05c46891-aa58-11d1-9d5f-006097223085"))
+/* interface */ IPersistWIFFStg;
+enum tagACQMETHODSTGTYPE;
+struct __declspec(uuid("50f874b2-a995-11d2-b920-006097223085"))
+/* interface */ IAccessIonSourceInfo;
+struct __declspec(uuid("cfef76d1-ab11-11d2-b920-006097223085"))
+/* interface */ ITimingEvents;
+struct __declspec(uuid("cfef76d2-ab11-11d2-b920-006097223085"))
+/* interface */ IConnection;
+struct __declspec(uuid("18f4d3c2-aeea-11d2-b920-006097223085"))
+/* interface */ IEnableTuneMode;
+struct __declspec(uuid("a6ce55e1-95ee-11d2-9d9a-006097223085"))
+/* interface */ ISupportEmbeddedDevices;
+struct __declspec(uuid("467f84b2-6c40-11d2-9d93-006097223085"))
+/* interface */ IValidateMSObject;
+struct __declspec(uuid("74e8ff20-8af3-11d3-81bd-00c04f8cf853"))
+/* interface */ IMSValidation;
+struct __declspec(uuid("bf2c4631-5ca8-11d4-b2e0-00c04f52be46"))
+/* interface */ IClone;
+struct __declspec(uuid("69df3a80-b4e3-11d4-bbf6-0060977f5de9"))
+/* interface */ IMiscDAMCalls;
+struct __declspec(uuid("f5b4000b-e97a-43ca-b127-0681aad8cbc6"))
+/* dual interface */ IMassSpecMethodMultiSpray;
+struct /* coclass */ Period;
+struct __declspec(uuid("81aa06a0-77b7-11d1-9d57-006097223085"))
+/* dual interface */ IPeriod;
+struct __declspec(uuid("6587f602-aa33-11d2-b920-006097223085"))
+/* interface */ ICycledParameters;
+struct __declspec(uuid("05eae5e3-0132-11d6-8ac6-00b0d0247d7b"))
+/* interface */ IIDA;
+struct /* coclass */ Experiment;
+struct __declspec(uuid("81aa069f-77b7-11d1-9d57-006097223085"))
+/* dual interface */ IExperiment;
+struct __declspec(uuid("f27dc401-6164-11d3-835a-00104b1f7094"))
+/* dual interface */ IExperiment2;
+struct __declspec(uuid("aca7a671-5cea-11d4-b2e0-00c04f52be46"))
+/* dual interface */ IExperiment3;
+struct __declspec(uuid("bcd11dc1-ee1a-11d4-8aa9-00c04f05ef0a"))
+/* dual interface */ IExperiment4;
+struct __declspec(uuid("c33c8fc2-9e79-11d1-9d5d-006097223085"))
+/* dual interface */ IIonSourceParams;
+struct __declspec(uuid("8c282211-9466-11d2-9d9a-006097223085"))
+/* interface */ IAccessScanDefaultsAndLimits;
+struct __declspec(uuid("9ebe1960-a771-11d3-81c7-00c04f8cf853"))
+/* interface */ ISmartSettling;
+struct __declspec(uuid("1e2b6a72-ef90-11d3-8388-00104b1f7094"))
+/* interface */ ITOFProperties;
+struct __declspec(uuid("6d36f3e8-392c-4afc-a716-91cfaa887771"))
+/* dual interface */ IDFTParams;
+struct /* coclass */ MassRange;
+struct __declspec(uuid("81aa06a1-77b7-11d1-9d57-006097223085"))
+/* dual interface */ IMassRange;
+struct __declspec(uuid("c4757871-8b4a-11d5-8b73-00c04f05ef0a"))
+/* dual interface */ IMassRange2;
+struct __declspec(uuid("cfea5921-f988-11d1-9d6f-006097223085"))
+/* dual interface */ ICompoundDependentParams;
+struct __declspec(uuid("a0853d61-7827-11d4-b2e7-00c04f52be46"))
+/* dual interface */ ICompoundDependentParams2;
+struct /* coclass */ MSConfigInfo;
+struct __declspec(uuid("05aaa431-4e63-11d2-9d82-006097223085"))
+/* interface */ IMassSpecConfigSpec;
+struct __declspec(uuid("4f771303-6816-11d6-8ae3-00b0d0247d7b"))
+/* dual interface */ IMassSpecConfigSpec2;
+struct __declspec(uuid("05aaa433-4e63-11d2-9d82-006097223085"))
+/* interface */ IIonSourceTypeSpec;
+struct __declspec(uuid("0d602b92-5160-11d2-9d82-006097223085"))
+/* interface */ ICloneSpecs;
+struct __declspec(uuid("467f84b1-6c40-11d2-9d93-006097223085"))
+/* interface */ ICompareMSConfigInfo;
+struct /* coclass */ TOFMassRange;
+struct __declspec(uuid("8838f244-108b-11d4-81ec-00c04f8cf853"))
+/* dual interface */ ITOFMassRange;
+
+//
+// Smart pointer typedef declarations
+//
+
+_COM_SMARTPTR_TYPEDEF(IMassSpecMethod, __uuidof(IMassSpecMethod));
+_COM_SMARTPTR_TYPEDEF(IMassSpecMethod2, __uuidof(IMassSpecMethod2));
+_COM_SMARTPTR_TYPEDEF(IMassSpecMethod3, __uuidof(IMassSpecMethod3));
+_COM_SMARTPTR_TYPEDEF(IDevMethod, __uuidof(IDevMethod));
+_COM_SMARTPTR_TYPEDEF(IPersistWIFFStg, __uuidof(IPersistWIFFStg));
+_COM_SMARTPTR_TYPEDEF(IAccessIonSourceInfo, __uuidof(IAccessIonSourceInfo));
+_COM_SMARTPTR_TYPEDEF(ITimingEvents, __uuidof(ITimingEvents));
+_COM_SMARTPTR_TYPEDEF(IConnection, __uuidof(IConnection));
+_COM_SMARTPTR_TYPEDEF(IEnableTuneMode, __uuidof(IEnableTuneMode));
+_COM_SMARTPTR_TYPEDEF(ISupportEmbeddedDevices, __uuidof(ISupportEmbeddedDevices));
+_COM_SMARTPTR_TYPEDEF(IValidateMSObject, __uuidof(IValidateMSObject));
+_COM_SMARTPTR_TYPEDEF(IMSValidation, __uuidof(IMSValidation));
+_COM_SMARTPTR_TYPEDEF(IClone, __uuidof(IClone));
+_COM_SMARTPTR_TYPEDEF(IMiscDAMCalls, __uuidof(IMiscDAMCalls));
+_COM_SMARTPTR_TYPEDEF(IMassSpecMethodMultiSpray, __uuidof(IMassSpecMethodMultiSpray));
+_COM_SMARTPTR_TYPEDEF(IPeriod, __uuidof(IPeriod));
+_COM_SMARTPTR_TYPEDEF(ICycledParameters, __uuidof(ICycledParameters));
+_COM_SMARTPTR_TYPEDEF(IIDA, __uuidof(IIDA));
+_COM_SMARTPTR_TYPEDEF(IExperiment, __uuidof(IExperiment));
+_COM_SMARTPTR_TYPEDEF(IExperiment2, __uuidof(IExperiment2));
+_COM_SMARTPTR_TYPEDEF(IExperiment3, __uuidof(IExperiment3));
+_COM_SMARTPTR_TYPEDEF(IExperiment4, __uuidof(IExperiment4));
+_COM_SMARTPTR_TYPEDEF(IIonSourceParams, __uuidof(IIonSourceParams));
+_COM_SMARTPTR_TYPEDEF(IAccessScanDefaultsAndLimits, __uuidof(IAccessScanDefaultsAndLimits));
+_COM_SMARTPTR_TYPEDEF(ISmartSettling, __uuidof(ISmartSettling));
+_COM_SMARTPTR_TYPEDEF(ITOFProperties, __uuidof(ITOFProperties));
+_COM_SMARTPTR_TYPEDEF(IDFTParams, __uuidof(IDFTParams));
+_COM_SMARTPTR_TYPEDEF(IMassRange, __uuidof(IMassRange));
+_COM_SMARTPTR_TYPEDEF(IMassRange2, __uuidof(IMassRange2));
+_COM_SMARTPTR_TYPEDEF(ICompoundDependentParams, __uuidof(ICompoundDependentParams));
+_COM_SMARTPTR_TYPEDEF(ICompoundDependentParams2, __uuidof(ICompoundDependentParams2));
+_COM_SMARTPTR_TYPEDEF(IMassSpecConfigSpec, __uuidof(IMassSpecConfigSpec));
+_COM_SMARTPTR_TYPEDEF(IMassSpecConfigSpec2, __uuidof(IMassSpecConfigSpec2));
+_COM_SMARTPTR_TYPEDEF(IIonSourceTypeSpec, __uuidof(IIonSourceTypeSpec));
+_COM_SMARTPTR_TYPEDEF(ICloneSpecs, __uuidof(ICloneSpecs));
+_COM_SMARTPTR_TYPEDEF(ICompareMSConfigInfo, __uuidof(ICompareMSConfigInfo));
+_COM_SMARTPTR_TYPEDEF(ITOFMassRange, __uuidof(ITOFMassRange));
+
+//
+// Type library items
+//
+
+struct __declspec(uuid("9c38bb23-7013-11d1-a482-bcdd47000000"))
+MassSpecMethod;
+    // [ default ] interface IMassSpecMethod
+    // interface IMassSpecMethod2
+    // interface IMassSpecMethod3
+    // interface IDevMethod
+    // interface IPersistWIFFStg
+    // interface IPersistStorage
+    // interface ISupportErrorInfo
+    // interface IAccessIonSourceInfo
+    // interface ITimingEvents
+    // interface IConnection
+    // interface IEnableTuneMode
+    // interface ISupportEmbeddedDevices
+    // interface IValidateMSObject
+    // interface IMSValidation
+    // interface IClone
+    // interface IMiscDAMCalls
+    // interface IMassSpecMethodMultiSpray
+
+struct __declspec(uuid("81aa069e-77b7-11d1-9d57-006097223085"))
+IMassSpecMethod : IDispatch
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetDescription,put=PutDescription))
+    _bstr_t Description;
+    __declspec(property(get=GetPeriodCount))
+    long PeriodCount;
+    __declspec(property(get=GetSyncMode,put=PutSyncMode))
+    short SyncMode;
+    __declspec(property(get=GetMinMassStepSize))
+    double MinMassStepSize;
+    __declspec(property(get=GetMinPauseBetweenMassRanges))
+    double MinPauseBetweenMassRanges;
+    __declspec(property(get=GetMinSettlingTime))
+    double MinSettlingTime;
+    __declspec(property(get=GetMinCADGasInjectTime))
+    double MinCADGasInjectTime;
+    __declspec(property(get=GetMinCADGasEvacuateTime))
+    double MinCADGasEvacuateTime;
+    __declspec(property(get=GetEmbeddedValveEnabled,put=PutEmbeddedValveEnabled))
+    long EmbeddedValveEnabled;
+    __declspec(property(get=GetMinDwellTime))
+    double MinDwellTime;
+    __declspec(property(get=GetMaxDwellTime))
+    double MaxDwellTime;
+    __declspec(property(get=GetMaxPeriodDuration))
+    double MaxPeriodDuration;
+    __declspec(property(get=GetMaxPeriodDelay))
+    double MaxPeriodDelay;
+    __declspec(property(get=GetMaxSettlingTime))
+    double MaxSettlingTime;
+    __declspec(property(get=GetMaxPauseBetweenMassRanges))
+    double MaxPauseBetweenMassRanges;
+    __declspec(property(get=GetMaxIntensityThreshold))
+    double MaxIntensityThreshold;
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    IUnknownPtr GetPeriod (
+        long periodIdx );
+    _bstr_t GetDescription ( );
+    void PutDescription (
+        _bstr_t pVal );
+    HRESULT DeletePeriod (
+        long lPeriodIdx );
+    long GetPeriodCount ( );
+    short GetSyncMode ( );
+    void PutSyncMode (
+        short pVal );
+    HRESULT SetMaxNumOfPeriods (
+        long lMax );
+    HRESULT GetMassSpecConfigInfo (
+        long * pNumQuads,
+        long * pModel,
+        BSTR * configVer );
+    double GetMinMassStepSize ( );
+    double GetMinPauseBetweenMassRanges ( );
+    double GetMinSettlingTime ( );
+    double GetMinCADGasInjectTime ( );
+    double GetMinCADGasEvacuateTime ( );
+    IUnknownPtr CreatePeriod (
+        long * pPeriodIdx );
+    IUnknownPtr GetInternalValveMethod ( );
+    long GetEmbeddedValveEnabled ( );
+    void PutEmbeddedValveEnabled (
+        long pVal );
+    IUnknownPtr GetPrevPeriod (
+        IUnknown * lpunkCurrentPer );
+    IUnknownPtr GetNextPeriod (
+        IUnknown * lpunkCurPeriod );
+    HRESULT UpdateSettlingTime (
+        IUnknown * lpunkPeriod );
+    double GetMinDwellTime ( );
+    double GetMaxDwellTime ( );
+    double GetMaxPeriodDuration ( );
+    double GetMaxPeriodDelay ( );
+    double GetMaxSettlingTime ( );
+    double GetMaxPauseBetweenMassRanges ( );
+    double GetMaxIntensityThreshold ( );
+    IUnknownPtr GetParamSettingsSvr ( );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall raw_GetPeriod (
+        /*[in]*/ long periodIdx,
+        /*[out,retval]*/ IUnknown * * ppUnkPeriod ) = 0;
+      virtual HRESULT __stdcall get_Description (
+        /*[out,retval]*/ BSTR * pVal ) = 0;
+      virtual HRESULT __stdcall put_Description (
+        /*[in]*/ BSTR pVal ) = 0;
+      virtual HRESULT __stdcall raw_DeletePeriod (
+        /*[in]*/ long lPeriodIdx ) = 0;
+      virtual HRESULT __stdcall get_PeriodCount (
+        /*[out,retval]*/ long * pVal ) = 0;
+      virtual HRESULT __stdcall get_SyncMode (
+        /*[out,retval]*/ short * pVal ) = 0;
+      virtual HRESULT __stdcall put_SyncMode (
+        /*[in]*/ short pVal ) = 0;
+      virtual HRESULT __stdcall raw_SetMaxNumOfPeriods (
+        /*[in]*/ long lMax ) = 0;
+      virtual HRESULT __stdcall raw_GetMassSpecConfigInfo (
+        /*[out]*/ long * pNumQuads,
+        /*[out]*/ long * pModel,
+        /*[out]*/ BSTR * configVer ) = 0;
+      virtual HRESULT __stdcall get_MinMassStepSize (
+        /*[out,retval]*/ double * pVal ) = 0;
+      virtual HRESULT __stdcall get_MinPauseBetweenMassRanges (
+        /*[out,retval]*/ double * pVal ) = 0;
+      virtual HRESULT __stdcall get_MinSettlingTime (
+        /*[out,retval]*/ double * pVal ) = 0;
+      virtual HRESULT __stdcall get_MinCADGasInjectTime (
+        /*[out,retval]*/ double * pVal ) = 0;
+      virtual HRESULT __stdcall get_MinCADGasEvacuateTime (
+        /*[out,retval]*/ double * pVal ) = 0;
+      virtual HRESULT __stdcall raw_CreatePeriod (
+        /*[out]*/ long * pPeriodIdx,
+        /*[out,retval]*/ IUnknown * * ppUnkPeriod ) = 0;
+      virtual HRESULT __stdcall raw_GetInternalValveMethod (
+        /*[out,retval]*/ IUnknown * * ppUnkValveMeth ) = 0;
+      virtual HRESULT __stdcall get_EmbeddedValveEnabled (
+        /*[out,retval]*/ long * pVal ) = 0;
+      virtual HRESULT __stdcall put_EmbeddedValveEnabled (
+        /*[in]*/ long pVal ) = 0;
+      virtual HRESULT __stdcall raw_GetPrevPeriod (
+        /*[in]*/ IUnknown * lpunkCurrentPer,
+        /*[out,retval]*/ IUnknown * * lppunkPrevPeriod ) = 0;
+      virtual HRESULT __stdcall raw_GetNextPeriod (
+        /*[in]*/ IUnknown * lpunkCurPeriod,
+        /*[out,retval]*/ IUnknown * * lppunkNextPeriod ) = 0;
+      virtual HRESULT __stdcall raw_UpdateSettlingTime (
+        /*[in]*/ IUnknown * lpunkPeriod ) = 0;
+      virtual HRESULT __stdcall get_MinDwellTime (
+        /*[out,retval]*/ double * pVal ) = 0;
+      virtual HRESULT __stdcall get_MaxDwellTime (
+        /*[out,retval]*/ double * pVal ) = 0;
+      virtual HRESULT __stdcall get_MaxPeriodDuration (
+        /*[out,retval]*/ double * pVal ) = 0;
+      virtual HRESULT __stdcall get_MaxPeriodDelay (
+        /*[out,retval]*/ double * pVal ) = 0;
+      virtual HRESULT __stdcall get_MaxSettlingTime (
+        /*[out,retval]*/ double * pVal ) = 0;
+      virtual HRESULT __stdcall get_MaxPauseBetweenMassRanges (
+        /*[out,retval]*/ double * pVal ) = 0;
+      virtual HRESULT __stdcall get_MaxIntensityThreshold (
+        /*[out,retval]*/ double * pVal ) = 0;
+      virtual HRESULT __stdcall raw_GetParamSettingsSvr (
+        /*[out,retval]*/ IUnknown * * ppUnk ) = 0;
+};
+
+struct __declspec(uuid("15224830-d832-11d3-81d7-00c04f8cf853"))
+IMassSpecMethod2 : IDispatch
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetDataDependent,put=PutDataDependent))
+    long DataDependent;
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    IUnknownPtr InsertPeriod (
+        long periodLocation,
+        long * pPeriodIdx );
+    HRESULT GetMassSpecConfig (
+        IUnknown * * pUnkMSConfig );
+    long GetDataDependent ( );
+    void PutDataDependent (
+        long pVal );
+    HRESULT GetDataDependSvr (
+        IUnknown * * ppUnk );
+    HRESULT IsIDAMethodValid (
+        long * pVal );
+    HRESULT get_IDAMethodValid (
+        long * pVal );
+    HRESULT put_IDAMethodValid (
+        long newVal );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall raw_InsertPeriod (
+        /*[in]*/ long periodLocation,
+        /*[out]*/ long * pPeriodIdx,
+        /*[out,retval]*/ IUnknown * * ppUnkPeriod ) = 0;
+      virtual HRESULT __stdcall raw_GetMassSpecConfig (
+        IUnknown * * pUnkMSConfig ) = 0;
+      virtual HRESULT __stdcall get_DataDependent (
+        /*[out,retval]*/ long * pVal ) = 0;
+      virtual HRESULT __stdcall put_DataDependent (
+        /*[in]*/ long pVal ) = 0;
+      virtual HRESULT __stdcall raw_GetDataDependSvr (
+        IUnknown * * ppUnk ) = 0;
+      virtual HRESULT __stdcall raw_IsIDAMethodValid (
+        long * pVal ) = 0;
+      virtual HRESULT __stdcall raw_get_IDAMethodValid (
+        long * pVal ) = 0;
+      virtual HRESULT __stdcall raw_put_IDAMethodValid (
+        long newVal ) = 0;
+};
+
+struct __declspec(uuid("d457fa02-bfe9-11d4-94e5-00c04f7b9c46"))
+IMassSpecMethod3 : IDispatch
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetDoBake,put=PutDoBake))
+    long DoBake;
+    __declspec(property(get=GetBakeTemp,put=PutBakeTemp))
+    long BakeTemp;
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    long GetDoBake ( );
+    void PutDoBake (
+        long pVal );
+    long GetBakeTemp ( );
+    void PutBakeTemp (
+        long pVal );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall get_DoBake (
+        /*[out,retval]*/ long * pVal ) = 0;
+      virtual HRESULT __stdcall put_DoBake (
+        /*[in]*/ long pVal ) = 0;
+      virtual HRESULT __stdcall get_BakeTemp (
+        /*[out,retval]*/ long * pVal ) = 0;
+      virtual HRESULT __stdcall put_BakeTemp (
+        /*[in]*/ long pVal ) = 0;
+};
+
+struct __declspec(uuid("b7618c81-a872-11d1-9d5d-006097223085"))
+IDevMethod : IUnknown
+{
+    //
+    // Wrapper methods for error-handling
+    //
+
+    HRESULT SaveDevMethod (
+        struct IStorage * pSaveStg );
+    HRESULT LoadDevMethod (
+        struct IStorage * pStg );
+    HRESULT InitDeviceMethod (
+        long type,
+        long devmodel,
+        long devid );
+    long ValidateDeviceMethod ( );
+    double GetDeviceMethodDuration ( );
+    HRESULT InitData (
+        _bstr_t dataTypeId,
+        long datasize,
+        unsigned char * pData );
+    HRESULT InitDone ( );
+    HRESULT OnMethodClose ( );
+    HRESULT SetUse (
+        long bUse );
+    HRESULT GetUse (
+        long * bUse );
+    HRESULT GetDeviceInfo (
+        long * devtype,
+        long * devmodel,
+        long * devid );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall raw_SaveDevMethod (
+        /*[in]*/ struct IStorage * pSaveStg ) = 0;
+      virtual HRESULT __stdcall raw_LoadDevMethod (
+        /*[in]*/ struct IStorage * pStg ) = 0;
+      virtual HRESULT __stdcall raw_InitDeviceMethod (
+        /*[in]*/ long type,
+        /*[in]*/ long devmodel,
+        /*[in]*/ long devid ) = 0;
+      virtual HRESULT __stdcall raw_ValidateDeviceMethod (
+        /*[out,retval]*/ long * bSuccess ) = 0;
+      virtual HRESULT __stdcall raw_GetDeviceMethodDuration (
+        /*[out,retval]*/ double * pDuration ) = 0;
+      virtual HRESULT __stdcall raw_InitData (
+        /*[in]*/ BSTR dataTypeId,
+        /*[in]*/ long datasize,
+        /*[in]*/ unsigned char * pData ) = 0;
+      virtual HRESULT __stdcall raw_InitDone ( ) = 0;
+      virtual HRESULT __stdcall raw_OnMethodClose ( ) = 0;
+      virtual HRESULT __stdcall raw_SetUse (
+        long bUse ) = 0;
+      virtual HRESULT __stdcall raw_GetUse (
+        long * bUse ) = 0;
+      virtual HRESULT __stdcall raw_GetDeviceInfo (
+        /*[out]*/ long * devtype,
+        /*[out]*/ long * devmodel,
+        /*[out]*/ long * devid ) = 0;
+};
+
+enum tagACQMETHODSTGTYPE
+{
+    METHODFILE = 1,
+    DATAFILE = 2,
+    EXTRACT = 3
+};
+
+struct __declspec(uuid("05c46891-aa58-11d1-9d5f-006097223085"))
+IPersistWIFFStg : IUnknown
+{
+    //
+    // Wrapper methods for error-handling
+    //
+
+    HRESULT SaveToWIFF (
+        struct IStorage * pSaveStg,
+        enum tagACQMETHODSTGTYPE stgType );
+    HRESULT LoadFromWIFF (
+        struct IStorage * pStg,
+        enum tagACQMETHODSTGTYPE stgType );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall raw_SaveToWIFF (
+        /*[in]*/ struct IStorage * pSaveStg,
+        /*[in]*/ enum tagACQMETHODSTGTYPE stgType ) = 0;
+      virtual HRESULT __stdcall raw_LoadFromWIFF (
+        /*[in]*/ struct IStorage * pStg,
+        /*[in]*/ enum tagACQMETHODSTGTYPE stgType ) = 0;
+};
+
+struct __declspec(uuid("50f874b2-a995-11d2-b920-006097223085"))
+IAccessIonSourceInfo : IUnknown
+{
+    //
+    // Wrapper methods for error-handling
+    //
+
+    HRESULT GetSourceType (
+        int * pIonSrc );
+    HRESULT SetTargetIonSource (
+        long IonSource,
+        short ISValid,
+        short NCValid,
+        short TEMValid );
+    HRESULT GetSourceParametersMask (
+        long * pbISvalid,
+        long * pbNCvalid,
+        long * pbTEMvalid );
+    long IsIonSourceTypeValid ( );
+    HRESULT ResetIonSourceTypeToTarget ( );
+    HRESULT GetOriginSourceType (
+        int * pIonSource );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall raw_GetSourceType (
+        /*[out]*/ int * pIonSrc ) = 0;
+      virtual HRESULT __stdcall raw_SetTargetIonSource (
+        /*[in]*/ long IonSource,
+        /*[in]*/ short ISValid,
+        /*[in]*/ short NCValid,
+        /*[in]*/ short TEMValid ) = 0;
+      virtual HRESULT __stdcall raw_GetSourceParametersMask (
+        /*[out]*/ long * pbISvalid,
+        /*[out]*/ long * pbNCvalid,
+        /*[out]*/ long * pbTEMvalid ) = 0;
+      virtual HRESULT __stdcall raw_IsIonSourceTypeValid (
+        /*[out,retval]*/ long * bISTypeValid ) = 0;
+      virtual HRESULT __stdcall raw_ResetIonSourceTypeToTarget ( ) = 0;
+      virtual HRESULT __stdcall raw_GetOriginSourceType (
+        /*[out]*/ int * pIonSource ) = 0;
+};
+
+struct __declspec(uuid("cfef76d1-ab11-11d2-b920-006097223085"))
+ITimingEvents : IUnknown
+{
+    //
+    // Wrapper methods for error-handling
+    //
+
+    HRESULT InvalidateTiming ( );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall raw_InvalidateTiming ( ) = 0;
+};
+
+struct __declspec(uuid("cfef76d2-ab11-11d2-b920-006097223085"))
+IConnection : IUnknown
+{
+    //
+    // Wrapper methods for error-handling
+    //
+
+    HRESULT BelongsTo (
+        IUnknown * pUnkParent );
+    HRESULT Disconnect ( );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall raw_BelongsTo (
+        /*[in]*/ IUnknown * pUnkParent ) = 0;
+      virtual HRESULT __stdcall raw_Disconnect ( ) = 0;
+};
+
+struct __declspec(uuid("18f4d3c2-aeea-11d2-b920-006097223085"))
+IEnableTuneMode : IUnknown
+{
+    //
+    // Wrapper methods for error-handling
+    //
+
+    HRESULT EnableTuneMode (
+        long bTuneModeOn );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall raw_EnableTuneMode (
+        /*[in]*/ long bTuneModeOn ) = 0;
+};
+
+struct __declspec(uuid("a6ce55e1-95ee-11d2-9d9a-006097223085"))
+ISupportEmbeddedDevices : IUnknown
+{
+    //
+    // Wrapper methods for error-handling
+    //
+
+    long SupportEmbeddedDevice ( );
+    HRESULT GetEmbeddedDeviceMethodCount (
+        long * plCount );
+    HRESULT GetEmbeddedDeviceMethod (
+        long lIdx,
+        IUnknown * * ppUnk,
+        long * plType,
+        long * plModel );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall raw_SupportEmbeddedDevice (
+        /*[out,retval]*/ long * pbEmbed ) = 0;
+      virtual HRESULT __stdcall raw_GetEmbeddedDeviceMethodCount (
+        /*[out]*/ long * plCount ) = 0;
+      virtual HRESULT __stdcall raw_GetEmbeddedDeviceMethod (
+        /*[in]*/ long lIdx,
+        /*[out]*/ IUnknown * * ppUnk,
+        /*[out]*/ long * plType,
+        /*[out]*/ long * plModel ) = 0;
+};
+
+struct __declspec(uuid("467f84b2-6c40-11d2-9d93-006097223085"))
+IValidateMSObject : IUnknown
+{
+    //
+    // Wrapper methods for error-handling
+    //
+
+    HRESULT InitMSConfig (
+        IUnknown * pUnkMSConfig );
+    HRESULT InitParamSettingsServer (
+        IUnknown * pUnkParamSettingsServer );
+    HRESULT ResetDefaultSettings ( );
+    long Validate ( );
+    long ValidateMassAndCompDepParams ( );
+    HRESULT ResetInvalidCompAndMassDepParamsToDefaults ( );
+    long ValidateIonSourceParams ( );
+    HRESULT ResetInvalidIonSourceParamsToDefaults ( );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall raw_InitMSConfig (
+        /*[in]*/ IUnknown * pUnkMSConfig ) = 0;
+      virtual HRESULT __stdcall raw_InitParamSettingsServer (
+        /*[in]*/ IUnknown * pUnkParamSettingsServer ) = 0;
+      virtual HRESULT __stdcall raw_ResetDefaultSettings ( ) = 0;
+      virtual HRESULT __stdcall raw_Validate (
+        /*[out,retval]*/ long * pbValid ) = 0;
+      virtual HRESULT __stdcall raw_ValidateMassAndCompDepParams (
+        /*[out,retval]*/ long * pbValid ) = 0;
+      virtual HRESULT __stdcall raw_ResetInvalidCompAndMassDepParamsToDefaults ( ) = 0;
+      virtual HRESULT __stdcall raw_ValidateIonSourceParams (
+        /*[out,retval]*/ long * pbValid ) = 0;
+      virtual HRESULT __stdcall raw_ResetInvalidIonSourceParamsToDefaults ( ) = 0;
+};
+
+struct __declspec(uuid("74e8ff20-8af3-11d3-81bd-00c04f8cf853"))
+IMSValidation : IUnknown
+{
+    //
+    // Wrapper methods for error-handling
+    //
+
+    HRESULT SetValidation (
+        long lMask );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall raw_SetValidation (
+        /*[in]*/ long lMask ) = 0;
+};
+
+struct __declspec(uuid("bf2c4631-5ca8-11d4-b2e0-00c04f52be46"))
+IClone : IUnknown
+{
+    //
+    // Wrapper methods for error-handling
+    //
+
+    HRESULT CopyDataFrom (
+        IUnknown * pUnk );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall raw_CopyDataFrom (
+        /*[in]*/ IUnknown * pUnk ) = 0;
+};
+
+struct __declspec(uuid("69df3a80-b4e3-11d4-bbf6-0060977f5de9"))
+IMiscDAMCalls : IUnknown
+{
+    //
+    // Wrapper methods for error-handling
+    //
+
+    HRESULT SetIsDirty (
+        long bNewFlagValue );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall raw_SetIsDirty (
+        /*[in]*/ long bNewFlagValue ) = 0;
+};
+
+struct __declspec(uuid("f5b4000b-e97a-43ca-b127-0681aad8cbc6"))
+IMassSpecMethodMultiSpray : IDispatch
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetIsMultiSpray))
+    long IsMultiSpray;
+    __declspec(property(get=GetCalibrantInUse,put=PutCalibrantInUse))
+    long CalibrantInUse;
+    __declspec(property(get=GetCalibrantStream,put=PutCalibrantStream))
+    _bstr_t CalibrantStream;
+    __declspec(property(get=GetMaxCalibrantIntervalCount,put=PutMaxCalibrantIntervalCount))
+    short MaxCalibrantIntervalCount;
+    __declspec(property(get=GetCalibrantIntervalCount))
+    short CalibrantIntervalCount;
+    __declspec(property(get=GetCalibrantStandardName,put=PutCalibrantStandardName))
+    _bstr_t CalibrantStandardName;
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    long GetIsMultiSpray ( );
+    long GetCalibrantInUse ( );
+    void PutCalibrantInUse (
+        long pVal );
+    _bstr_t GetCalibrantStream ( );
+    void PutCalibrantStream (
+        _bstr_t pVal );
+    short GetMaxCalibrantIntervalCount ( );
+    void PutMaxCalibrantIntervalCount (
+        short pVal );
+    short GetCalibrantIntervalCount ( );
+    HRESULT SetCalibrantInterval (
+        short calibrantIndex,
+        double startTime,
+        double endTime );
+    HRESULT GetCalibrantInterval (
+        short calibrantIndex,
+        double * startTime,
+        double * endTime );
+    HRESULT AddCalibrantInterval (
+        double startTime,
+        double endTime,
+        short * newCalibrantIndex );
+    HRESULT RemoveCalibrantInterval (
+        short calibrantIndex );
+    HRESULT RemoveAllCalibrantIntervals ( );
+    _bstr_t GetCalibrantStandardName ( );
+    void PutCalibrantStandardName (
+        _bstr_t pVal );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall get_IsMultiSpray (
+        /*[out,retval]*/ long * pVal ) = 0;
+      virtual HRESULT __stdcall get_CalibrantInUse (
+        /*[out,retval]*/ long * pVal ) = 0;
+      virtual HRESULT __stdcall put_CalibrantInUse (
+        /*[in]*/ long pVal ) = 0;
+      virtual HRESULT __stdcall get_CalibrantStream (
+        /*[out,retval]*/ BSTR * pVal ) = 0;
+      virtual HRESULT __stdcall put_CalibrantStream (
+        /*[in]*/ BSTR pVal ) = 0;
+      virtual HRESULT __stdcall get_MaxCalibrantIntervalCount (
+        /*[out,retval]*/ short * pVal ) = 0;
+      virtual HRESULT __stdcall put_MaxCalibrantIntervalCount (
+        /*[in]*/ short pVal ) = 0;
+      virtual HRESULT __stdcall get_CalibrantIntervalCount (
+        /*[out,retval]*/ short * pVal ) = 0;
+      virtual HRESULT __stdcall raw_SetCalibrantInterval (
+        /*[in]*/ short calibrantIndex,
+        /*[in]*/ double startTime,
+        /*[in]*/ double endTime ) = 0;
+      virtual HRESULT __stdcall raw_GetCalibrantInterval (
+        /*[in]*/ short calibrantIndex,
+        /*[out]*/ double * startTime,
+        /*[out]*/ double * endTime ) = 0;
+      virtual HRESULT __stdcall raw_AddCalibrantInterval (
+        /*[in]*/ double startTime,
+        /*[in]*/ double endTime,
+        /*[out]*/ short * newCalibrantIndex ) = 0;
+      virtual HRESULT __stdcall raw_RemoveCalibrantInterval (
+        /*[in]*/ short calibrantIndex ) = 0;
+      virtual HRESULT __stdcall raw_RemoveAllCalibrantIntervals ( ) = 0;
+      virtual HRESULT __stdcall get_CalibrantStandardName (
+        /*[out,retval]*/ BSTR * pVal ) = 0;
+      virtual HRESULT __stdcall put_CalibrantStandardName (
+        /*[in]*/ BSTR pVal ) = 0;
+};
+
+struct __declspec(uuid("706eac8f-7232-11d1-9d52-006097223085"))
+Period;
+    // [ default ] interface IPeriod
+    // interface IPersistWIFFStg
+    // interface IPersistStorage
+    // interface IValidateMSObject
+    // interface ISupportErrorInfo
+    // interface ICycledParameters
+    // interface ITimingEvents
+    // interface IConnection
+    // interface IMSValidation
+    // interface IClone
+    // interface IMiscDAMCalls
+    // interface IIDA
+
+struct __declspec(uuid("81aa06a0-77b7-11d1-9d57-006097223085"))
+IPeriod : IDispatch
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetNumCycles,put=PutNumCycles))
+    long NumCycles;
+    __declspec(property(get=GetDuration,put=PutDuration))
+    double Duration;
+    __declspec(property(get=GetExperimCount))
+    long ExperimCount;
+    __declspec(property(get=GetCycleTime))
+    double CycleTime;
+    __declspec(property(get=GetPause,put=PutPause))
+    double Pause;
+    __declspec(property(get=GetPeriodPad))
+    double PeriodPad;
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    IUnknownPtr GetExperiment (
+        long experimIdx );
+    long GetNumCycles ( );
+    void PutNumCycles (
+        long pVal );
+    HRESULT DeleteExperiment (
+        long experimIdx );
+    double GetDuration ( );
+    void PutDuration (
+        double pVal );
+    long GetExperimCount ( );
+    double GetCycleTime ( );
+    IUnknownPtr GetCycleDepParamsTbl ( );
+    HRESULT UpdateNumOfCycles (
+        long * pNumCycles,
+        double * pPeriodPad );
+    double UpdateDuration ( );
+    double GetPause ( );
+    void PutPause (
+        double pVal );
+    double GetPeriodPad ( );
+    IUnknownPtr CreateExperiment (
+        long * pIdx );
+    IUnknownPtr GetPrevExperimentGlobal (
+        IUnknown * lpunkCurExp );
+    IUnknownPtr GetMassSpecUnknown ( );
+    HRESULT CopyISParamsFromPrevExp (
+        IUnknown * punkCurExp );
+    IUnknownPtr GetPrevExperimentLocal (
+        IUnknown * lpunkCurrentExp );
+    IUnknownPtr GetNextExperimentLocal (
+        IUnknown * lpunkCurExperiment );
+    HRESULT UpdateSettlingTime (
+        IUnknown * lpunkExperiment );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall raw_GetExperiment (
+        /*[in]*/ long experimIdx,
+        /*[out,retval]*/ IUnknown * * ppUnkExperiment ) = 0;
+      virtual HRESULT __stdcall get_NumCycles (
+        /*[out,retval]*/ long * pVal ) = 0;
+      virtual HRESULT __stdcall put_NumCycles (
+        /*[in]*/ long pVal ) = 0;
+      virtual HRESULT __stdcall raw_DeleteExperiment (
+        /*[in]*/ long experimIdx ) = 0;
+      virtual HRESULT __stdcall get_Duration (
+        /*[out,retval]*/ double * pVal ) = 0;
+      virtual HRESULT __stdcall put_Duration (
+        /*[in]*/ double pVal ) = 0;
+      virtual HRESULT __stdcall get_ExperimCount (
+        /*[out,retval]*/ long * pVal ) = 0;
+      virtual HRESULT __stdcall get_CycleTime (
+        /*[out,retval]*/ double * pVal ) = 0;
+      virtual HRESULT __stdcall raw_GetCycleDepParamsTbl (
+        /*[out,retval]*/ IUnknown * * ppUnkCycDepParamsTbl ) = 0;
+      virtual HRESULT __stdcall raw_UpdateNumOfCycles (
+        /*[out]*/ long * pNumCycles,
+        /*[out]*/ double * pPeriodPad ) = 0;
+      virtual HRESULT __stdcall raw_UpdateDuration (
+        /*[out,retval]*/ double * pDuration ) = 0;
+      virtual HRESULT __stdcall get_Pause (
+        /*[out,retval]*/ double * pVal ) = 0;
+      virtual HRESULT __stdcall put_Pause (
+        /*[in]*/ double pVal ) = 0;
+      virtual HRESULT __stdcall get_PeriodPad (
+        /*[out,retval]*/ double * pVal ) = 0;
+      virtual HRESULT __stdcall raw_CreateExperiment (
+        /*[out]*/ long * pIdx,
+        /*[out,retval]*/ IUnknown * * ppUnkExperim ) = 0;
+      virtual HRESULT __stdcall raw_GetPrevExperimentGlobal (
+        /*[in]*/ IUnknown * lpunkCurExp,
+        /*[out,retval]*/ IUnknown * * lppunkPrevExp ) = 0;
+      virtual HRESULT __stdcall raw_GetMassSpecUnknown (
+        /*[out,retval]*/ IUnknown * * lpunkMS ) = 0;
+      virtual HRESULT __stdcall raw_CopyISParamsFromPrevExp (
+        /*[in]*/ IUnknown * punkCurExp ) = 0;
+      virtual HRESULT __stdcall raw_GetPrevExperimentLocal (
+        /*[in]*/ IUnknown * lpunkCurrentExp,
+        /*[out,retval]*/ IUnknown * * lppunkPrevExp ) = 0;
+      virtual HRESULT __stdcall raw_GetNextExperimentLocal (
+        /*[in]*/ IUnknown * lpunkCurExperiment,
+        /*[out,retval]*/ IUnknown * * lppunkNextExperiment ) = 0;
+      virtual HRESULT __stdcall raw_UpdateSettlingTime (
+        /*[in]*/ IUnknown * lpunkExperiment ) = 0;
+};
+
+struct __declspec(uuid("6587f602-aa33-11d2-b920-006097223085"))
+ICycledParameters : IUnknown
+{
+    //
+    // Wrapper methods for error-handling
+    //
+
+    HRESULT GetCycledParamCount (
+        long * pCycParamCount );
+    HRESULT GetFirstCycledParam (
+        BSTR * pParamID,
+        float * pStart,
+        float * pStop,
+        float * pStep );
+    HRESULT GetNextCycledParam (
+        BSTR * pParamID,
+        float * pStart,
+        float * pStop,
+        float * pStep );
+    HRESULT GetCycledParam (
+        _bstr_t strParamID,
+        float * pStart,
+        float * pStop,
+        float * pStep );
+    HRESULT EditCycledParam (
+        _bstr_t strParamID,
+        float start,
+        float stop );
+    HRESULT GetCyclableParams (
+        long * count,
+        BSTR * * astrCycParamID );
+    HRESULT DeleteAllCycleParameters ( );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall raw_GetCycledParamCount (
+        /*[out]*/ long * pCycParamCount ) = 0;
+      virtual HRESULT __stdcall raw_GetFirstCycledParam (
+        /*[out]*/ BSTR * pParamID,
+        /*[out]*/ float * pStart,
+        /*[out]*/ float * pStop,
+        /*[out]*/ float * pStep ) = 0;
+      virtual HRESULT __stdcall raw_GetNextCycledParam (
+        /*[out]*/ BSTR * pParamID,
+        /*[out]*/ float * pStart,
+        /*[out]*/ float * pStop,
+        /*[out]*/ float * pStep ) = 0;
+      virtual HRESULT __stdcall raw_GetCycledParam (
+        /*[in]*/ BSTR strParamID,
+        /*[out]*/ float * pStart,
+        /*[out]*/ float * pStop,
+        /*[out]*/ float * pStep ) = 0;
+      virtual HRESULT __stdcall raw_EditCycledParam (
+        /*[in]*/ BSTR strParamID,
+        /*[in]*/ float start,
+        /*[in]*/ float stop ) = 0;
+      virtual HRESULT __stdcall raw_GetCyclableParams (
+        /*[out]*/ long * count,
+        /*[out]*/ BSTR * * astrCycParamID ) = 0;
+      virtual HRESULT __stdcall raw_DeleteAllCycleParameters ( ) = 0;
+};
+
+struct __declspec(uuid("05eae5e3-0132-11d6-8ac6-00b0d0247d7b"))
+IIDA : IUnknown
+{
+    //
+    // Wrapper methods for error-handling
+    //
+
+    HRESULT put_UseIDA (
+        long newVal );
+    long get_UseIDA ( );
+    HRESULT GetIDAServer (
+        IUnknown * * ppUnk );
+    HRESULT UpdateExpIDALevel (
+        short sOrig,
+        short sReplaced );
+    HRESULT UpdateIDAConfScanPropertyOnScanChange (
+        IUnknown * punkCurExp );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall raw_put_UseIDA (
+        /*[in]*/ long newVal ) = 0;
+      virtual HRESULT __stdcall raw_get_UseIDA (
+        /*[out,retval]*/ long * pVal ) = 0;
+      virtual HRESULT __stdcall raw_GetIDAServer (
+        /*[out]*/ IUnknown * * ppUnk ) = 0;
+      virtual HRESULT __stdcall raw_UpdateExpIDALevel (
+        /*[in]*/ short sOrig,
+        /*[in]*/ short sReplaced ) = 0;
+      virtual HRESULT __stdcall raw_UpdateIDAConfScanPropertyOnScanChange (
+        IUnknown * punkCurExp ) = 0;
+};
+
+struct __declspec(uuid("706eac91-7232-11d1-9d52-006097223085"))
+Experiment;
+    // [ default ] interface IExperiment
+    // interface IExperiment2
+    // interface IExperiment3
+    // interface IExperiment4
+    // interface IIonSourceParams
+    // interface IPersistWIFFStg
+    // interface IPersistStorage
+    // interface IValidateMSObject
+    // interface ISupportErrorInfo
+    // interface IAccessScanDefaultsAndLimits
+    // interface ITimingEvents
+    // interface IConnection
+    // interface IMSValidation
+    // interface ISmartSettling
+    // interface ITOFProperties
+    // interface IClone
+    // interface IMiscDAMCalls
+    // interface IDFTParams
+
+struct __declspec(uuid("81aa069f-77b7-11d1-9d57-006097223085"))
+IExperiment : IDispatch
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetScanType,put=PutScanType))
+    short ScanType;
+    __declspec(property(get=GetScanMode,put=PutScanMode))
+    short ScanMode;
+    __declspec(property(get=GetDescription,put=PutDescription))
+    _bstr_t Description;
+    __declspec(property(get=GetPolarity,put=PutPolarity))
+    long Polarity;
+    __declspec(property(get=GetMassRangesCount))
+    long MassRangesCount;
+    __declspec(property(get=GetSmartQ2SettlingOn,put=PutSmartQ2SettlingOn))
+    long SmartQ2SettlingOn;
+    __declspec(property(get=GetSettlingTime,put=PutSettlingTime))
+    double SettlingTime;
+    __declspec(property(get=GetSourceParamsTbl))
+    IUnknownPtr SourceParamsTbl;
+    __declspec(property(get=GetIntensityThreshold,put=PutIntensityThreshold))
+    double IntensityThreshold;
+    __declspec(property(get=GetPauseBetweenMassRanges,put=PutPauseBetweenMassRanges))
+    double PauseBetweenMassRanges;
+    __declspec(property(get=GetQ1ResolutionFlag,put=PutQ1ResolutionFlag))
+    short Q1ResolutionFlag;
+    __declspec(property(get=GetFixedMass,put=PutFixedMass))
+    double FixedMass;
+    __declspec(property(get=GetMinPeakWidth,put=PutMinPeakWidth))
+    double MinPeakWidth;
+    __declspec(property(get=GetMinPeakSeparation,put=PutMinPeakSeparation))
+    double MinPeakSeparation;
+    __declspec(property(get=GetQ3ResolutionFlag,put=PutQ3ResolutionFlag))
+    short Q3ResolutionFlag;
+    __declspec(property(get=GetUseMCAScans,put=PutUseMCAScans))
+    long UseMCAScans;
+    __declspec(property(get=GetNumOfMCAScans,put=PutNumOfMCAScans))
+    short NumOfMCAScans;
+    __declspec(property(get=GetMassDefect,put=PutMassDefect))
+    double MassDefect;
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    short GetScanType ( );
+    void PutScanType (
+        short pVal );
+    short GetScanMode ( );
+    void PutScanMode (
+        short pVal );
+    _bstr_t GetDescription ( );
+    void PutDescription (
+        _bstr_t pVal );
+    IUnknownPtr GetMassRange (
+        long massIdx );
+    long GetPolarity ( );
+    void PutPolarity (
+        long pVal );
+    IUnknownPtr CreateMassRange (
+        long * plIdx );
+    long GetMassRangesCount ( );
+    long GetSmartQ2SettlingOn ( );
+    void PutSmartQ2SettlingOn (
+        long pVal );
+    double GetSettlingTime ( );
+    void PutSettlingTime (
+        double pVal );
+    IUnknownPtr GetSourceParamsTbl ( );
+    HRESULT DeleteMassRange (
+        long massIdx );
+    double GetIntensityThreshold ( );
+    void PutIntensityThreshold (
+        double pVal );
+    double GetPauseBetweenMassRanges ( );
+    void PutPauseBetweenMassRanges (
+        double pVal );
+    short GetQ1ResolutionFlag ( );
+    void PutQ1ResolutionFlag (
+        short pVal );
+    HRESULT ValidateExperiment (
+        long * bIsValid );
+    HRESULT InitExperiment ( );
+    double GetFixedMass ( );
+    void PutFixedMass (
+        double pVal );
+    double GetMinPeakWidth ( );
+    void PutMinPeakWidth (
+        double pVal );
+    double GetMinPeakSeparation ( );
+    void PutMinPeakSeparation (
+        double pVal );
+    short GetQ3ResolutionFlag ( );
+    void PutQ3ResolutionFlag (
+        short pVal );
+    long GetUseMCAScans ( );
+    void PutUseMCAScans (
+        long pVal );
+    short GetNumOfMCAScans ( );
+    void PutNumOfMCAScans (
+        short pVal );
+    HRESULT DeleteAllMasses ( );
+    double CalculateDuration ( );
+    double GetMassDefect ( );
+    void PutMassDefect (
+        double pVal );
+    double GetCADValue ( );
+    long GetSettlingMask ( );
+    HRESULT SetDefaultScanType (
+        short ScanType,
+        long flag );
+    HRESULT SetDefaultPolarity (
+        long bPolarity,
+        long flag );
+    double GetMinSettlingTime ( );
+    HRESULT IsCompOrMassParamTheSame (
+        _bstr_t AccessID,
+        long * pRes );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall get_ScanType (
+        /*[out,retval]*/ short * pVal ) = 0;
+      virtual HRESULT __stdcall put_ScanType (
+        /*[in]*/ short pVal ) = 0;
+      virtual HRESULT __stdcall get_ScanMode (
+        /*[out,retval]*/ short * pVal ) = 0;
+      virtual HRESULT __stdcall put_ScanMode (
+        /*[in]*/ short pVal ) = 0;
+      virtual HRESULT __stdcall get_Description (
+        /*[out,retval]*/ BSTR * pVal ) = 0;
+      virtual HRESULT __stdcall put_Description (
+        /*[in]*/ BSTR pVal ) = 0;
+      virtual HRESULT __stdcall raw_GetMassRange (
+        /*[in]*/ long massIdx,
+        /*[out,retval]*/ IUnknown * * ppUnkMassRanges ) = 0;
+      virtual HRESULT __stdcall get_Polarity (
+        /*[out,retval]*/ long * pVal ) = 0;
+      virtual HRESULT __stdcall put_Polarity (
+        /*[in]*/ long pVal ) = 0;
+      virtual HRESULT __stdcall raw_CreateMassRange (
+        /*[out]*/ long * plIdx,
+        /*[out,retval]*/ IUnknown * * ppUnkMassRange ) = 0;
+      virtual HRESULT __stdcall get_MassRangesCount (
+        /*[out,retval]*/ long * pVal ) = 0;
+      virtual HRESULT __stdcall get_SmartQ2SettlingOn (
+        /*[out,retval]*/ long * pVal ) = 0;
+      virtual HRESULT __stdcall put_SmartQ2SettlingOn (
+        /*[in]*/ long pVal ) = 0;
+      virtual HRESULT __stdcall get_SettlingTime (
+        /*[out,retval]*/ double * pVal ) = 0;
+      virtual HRESULT __stdcall put_SettlingTime (
+        /*[in]*/ double pVal ) = 0;
+      virtual HRESULT __stdcall get_SourceParamsTbl (
+        /*[out,retval]*/ IUnknown * * pVal ) = 0;
+      virtual HRESULT __stdcall raw_DeleteMassRange (
+        /*[in]*/ long massIdx ) = 0;
+      virtual HRESULT __stdcall get_IntensityThreshold (
+        /*[out,retval]*/ double * pVal ) = 0;
+      virtual HRESULT __stdcall put_IntensityThreshold (
+        /*[in]*/ double pVal ) = 0;
+      virtual HRESULT __stdcall get_PauseBetweenMassRanges (
+        /*[out,retval]*/ double * pVal ) = 0;
+      virtual HRESULT __stdcall put_PauseBetweenMassRanges (
+        /*[in]*/ double pVal ) = 0;
+      virtual HRESULT __stdcall get_Q1ResolutionFlag (
+        /*[out,retval]*/ short * pVal ) = 0;
+      virtual HRESULT __stdcall put_Q1ResolutionFlag (
+        /*[in]*/ short pVal ) = 0;
+      virtual HRESULT __stdcall raw_ValidateExperiment (
+        /*[out]*/ long * bIsValid ) = 0;
+      virtual HRESULT __stdcall raw_InitExperiment ( ) = 0;
+      virtual HRESULT __stdcall get_FixedMass (
+        /*[out,retval]*/ double * pVal ) = 0;
+      virtual HRESULT __stdcall put_FixedMass (
+        /*[in]*/ double pVal ) = 0;
+      virtual HRESULT __stdcall get_MinPeakWidth (
+        /*[out,retval]*/ double * pVal ) = 0;
+      virtual HRESULT __stdcall put_MinPeakWidth (
+        /*[in]*/ double pVal ) = 0;
+      virtual HRESULT __stdcall get_MinPeakSeparation (
+        /*[out,retval]*/ double * pVal ) = 0;
+      virtual HRESULT __stdcall put_MinPeakSeparation (
+        /*[in]*/ double pVal ) = 0;
+      virtual HRESULT __stdcall get_Q3ResolutionFlag (
+        /*[out,retval]*/ short * pVal ) = 0;
+      virtual HRESULT __stdcall put_Q3ResolutionFlag (
+        /*[in]*/ short pVal ) = 0;
+      virtual HRESULT __stdcall get_UseMCAScans (
+        /*[out,retval]*/ long * pVal ) = 0;
+      virtual HRESULT __stdcall put_UseMCAScans (
+        /*[in]*/ long pVal ) = 0;
+      virtual HRESULT __stdcall get_NumOfMCAScans (
+        /*[out,retval]*/ short * pVal ) = 0;
+      virtual HRESULT __stdcall put_NumOfMCAScans (
+        /*[in]*/ short pVal ) = 0;
+      virtual HRESULT __stdcall raw_DeleteAllMasses ( ) = 0;
+      virtual HRESULT __stdcall raw_CalculateDuration (
+        /*[out,retval]*/ double * pDuration ) = 0;
+      virtual HRESULT __stdcall get_MassDefect (
+        /*[out,retval]*/ double * pVal ) = 0;
+      virtual HRESULT __stdcall put_MassDefect (
+        /*[in]*/ double pVal ) = 0;
+      virtual HRESULT __stdcall raw_GetCADValue (
+        /*[out,retval]*/ double * pCADValue ) = 0;
+      virtual HRESULT __stdcall raw_GetSettlingMask (
+        /*[out,retval]*/ long * pMask ) = 0;
+      virtual HRESULT __stdcall raw_SetDefaultScanType (
+        /*[in]*/ short ScanType,
+        /*[in]*/ long flag ) = 0;
+      virtual HRESULT __stdcall raw_SetDefaultPolarity (
+        /*[in]*/ long bPolarity,
+        /*[in]*/ long flag ) = 0;
+      virtual HRESULT __stdcall raw_GetMinSettlingTime (
+        /*[out,retval]*/ double * minset ) = 0;
+      virtual HRESULT __stdcall raw_IsCompOrMassParamTheSame (
+        /*[in]*/ BSTR AccessID,
+        /*[out]*/ long * pRes ) = 0;
+};
+
+struct __declspec(uuid("f27dc401-6164-11d3-835a-00104b1f7094"))
+IExperiment2 : IDispatch
+{
+    //
+    // Wrapper methods for error-handling
+    //
+
+    HRESULT FindMassRange (
+        double startMass,
+        double stopMass,
+        short * indexFound );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall raw_FindMassRange (
+        /*[in]*/ double startMass,
+        /*[in]*/ double stopMass,
+        /*[out]*/ short * indexFound ) = 0;
+};
+
+struct __declspec(uuid("aca7a671-5cea-11d4-b2e0-00c04f52be46"))
+IExperiment3 : IDispatch
+{
+    //
+    // Wrapper methods for error-handling
+    //
+
+    IUnknownPtr GetMassSpecMethod ( );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall raw_GetMassSpecMethod (
+        /*[out,retval]*/ IUnknown * * ppUnk ) = 0;
+};
+
+struct __declspec(uuid("bcd11dc1-ee1a-11d4-8aa9-00c04f05ef0a"))
+IExperiment4 : IDispatch
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetMCSeparationBarrier,put=PutMCSeparationBarrier))
+    double MCSeparationBarrier;
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    long get_ScansToAvg ( );
+    HRESULT put_ScansToAvg (
+        long newVal );
+    HRESULT put_SecondPrecursor (
+        double newVal );
+    double get_SecondPrecursor ( );
+    HRESULT put_QZeroTrapping (
+        long newVal );
+    long get_QZeroTrapping ( );
+    HRESULT put_Q3FillTime (
+        double newVal );
+    double get_Q3FillTime ( );
+    HRESULT put_ScanRate (
+        double newVal );
+    double get_ScanRate ( );
+    HRESULT put_Q3EntryBarrier (
+        double newVal );
+    double get_Q3EntryBarrier ( );
+    HRESULT put_FragDuration (
+        double newVal );
+    double get_FragDuration ( );
+    HRESULT put_LowMassOffset (
+        double newVal );
+    double get_LowMassOffset ( );
+    HRESULT put_HighMassOffset (
+        double newVal );
+    double get_HighMassOffset ( );
+    HRESULT put_FragmentationOffset (
+        double newVal );
+    double get_FragmentationOffset ( );
+    HRESULT put_NoFragmentation (
+        long newVal );
+    long get_NoFragmentation ( );
+    HRESULT put_Q3FillMass (
+        double newVal );
+    double get_Q3FillMass ( );
+    HRESULT put_Q3CoolTime (
+        double newVal );
+    double get_Q3CoolTime ( );
+    HRESULT put_Q3EmptyTime (
+        double newVal );
+    double get_Q3EmptyTime ( );
+    HRESULT put_CenterWidth (
+        long newVal );
+    long get_CenterWidth ( );
+    short GetPrevScanType ( );
+    HRESULT put_IDAType (
+        short newVal );
+    HRESULT get_IDAType (
+        short * pVal );
+    HRESULT put_IDALevel (
+        short newVal );
+    HRESULT get_IDALevel (
+        short * pVal );
+    long FindMassRangeWithCenter (
+        double center );
+    HRESULT get_ShowUserExp (
+        short * pVal );
+    HRESULT put_ShowUserExp (
+        long newVal );
+    HRESULT UpdateIDAType ( );
+    HRESULT put_ScanRateReset (
+        long newVal );
+    long UseRangeForCompDepParam (
+        IUnknown * pUnkMassRange,
+        _bstr_t bstrParamID );
+    HRESULT SetUseRangeForCompDepParam (
+        long newVal );
+    short GetQ3ResolutionType ( );
+    HRESULT reserved2 ( );
+    HRESULT get_DefaultStepSize (
+        double * pVal );
+    HRESULT ParseMassRanges ( );
+    HRESULT CalcRemQuotRounded (
+        double dStart,
+        double dStep,
+        double * dRem,
+        double * dQuot );
+    float GetCADUserValue ( );
+    float GetCESUserValue ( );
+    double GetMCSeparationBarrier ( );
+    void PutMCSeparationBarrier (
+        double pVal );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall raw_get_ScansToAvg (
+        /*[out,retval]*/ long * pVal ) = 0;
+      virtual HRESULT __stdcall raw_put_ScansToAvg (
+        /*[in]*/ long newVal ) = 0;
+      virtual HRESULT __stdcall raw_put_SecondPrecursor (
+        /*[in]*/ double newVal ) = 0;
+      virtual HRESULT __stdcall raw_get_SecondPrecursor (
+        /*[out,retval]*/ double * pVal ) = 0;
+      virtual HRESULT __stdcall raw_put_QZeroTrapping (
+        /*[in]*/ long newVal ) = 0;
+      virtual HRESULT __stdcall raw_get_QZeroTrapping (
+        /*[out,retval]*/ long * pVal ) = 0;
+      virtual HRESULT __stdcall raw_put_Q3FillTime (
+        /*[in]*/ double newVal ) = 0;
+      virtual HRESULT __stdcall raw_get_Q3FillTime (
+        /*[out,retval]*/ double * pVal ) = 0;
+      virtual HRESULT __stdcall raw_put_ScanRate (
+        /*[in]*/ double newVal ) = 0;
+      virtual HRESULT __stdcall raw_get_ScanRate (
+        /*[out,retval]*/ double * pVal ) = 0;
+      virtual HRESULT __stdcall raw_put_Q3EntryBarrier (
+        /*[in]*/ double newVal ) = 0;
+      virtual HRESULT __stdcall raw_get_Q3EntryBarrier (
+        /*[out,retval]*/ double * pVal ) = 0;
+      virtual HRESULT __stdcall raw_put_FragDuration (
+        /*[in]*/ double newVal ) = 0;
+      virtual HRESULT __stdcall raw_get_FragDuration (
+        /*[out,retval]*/ double * pVal ) = 0;
+      virtual HRESULT __stdcall raw_put_LowMassOffset (
+        /*[in]*/ double newVal ) = 0;
+      virtual HRESULT __stdcall raw_get_LowMassOffset (
+        /*[out,retval]*/ double * pVal ) = 0;
+      virtual HRESULT __stdcall raw_put_HighMassOffset (
+        /*[in]*/ double newVal ) = 0;
+      virtual HRESULT __stdcall raw_get_HighMassOffset (
+        /*[out,retval]*/ double * pVal ) = 0;
+      virtual HRESULT __stdcall raw_put_FragmentationOffset (
+        /*[in]*/ double newVal ) = 0;
+      virtual HRESULT __stdcall raw_get_FragmentationOffset (
+        /*[out,retval]*/ double * pVal ) = 0;
+      virtual HRESULT __stdcall raw_put_NoFragmentation (
+        /*[in]*/ long newVal ) = 0;
+      virtual HRESULT __stdcall raw_get_NoFragmentation (
+        /*[out,retval]*/ long * pVal ) = 0;
+      virtual HRESULT __stdcall raw_put_Q3FillMass (
+        /*[in]*/ double newVal ) = 0;
+      virtual HRESULT __stdcall raw_get_Q3FillMass (
+        /*[out,retval]*/ double * pVal ) = 0;
+      virtual HRESULT __stdcall raw_put_Q3CoolTime (
+        /*[in]*/ double newVal ) = 0;
+      virtual HRESULT __stdcall raw_get_Q3CoolTime (
+        /*[out,retval]*/ double * pVal ) = 0;
+      virtual HRESULT __stdcall raw_put_Q3EmptyTime (
+        /*[in]*/ double newVal ) = 0;
+      virtual HRESULT __stdcall raw_get_Q3EmptyTime (
+        /*[out,retval]*/ double * pVal ) = 0;
+      virtual HRESULT __stdcall raw_put_CenterWidth (
+        /*[in]*/ long newVal ) = 0;
+      virtual HRESULT __stdcall raw_get_CenterWidth (
+        /*[out,retval]*/ long * pVal ) = 0;
+      virtual HRESULT __stdcall raw_GetPrevScanType (
+        /*[out,retval]*/ short * ScanType ) = 0;
+      virtual HRESULT __stdcall raw_put_IDAType (
+        short newVal ) = 0;
+      virtual HRESULT __stdcall raw_get_IDAType (
+        short * pVal ) = 0;
+      virtual HRESULT __stdcall raw_put_IDALevel (
+        short newVal ) = 0;
+      virtual HRESULT __stdcall raw_get_IDALevel (
+        short * pVal ) = 0;
+      virtual HRESULT __stdcall raw_FindMassRangeWithCenter (
+        /*[in]*/ double center,
+        /*[out,retval]*/ long * pIndex ) = 0;
+      virtual HRESULT __stdcall raw_get_ShowUserExp (
+        short * pVal ) = 0;
+      virtual HRESULT __stdcall raw_put_ShowUserExp (
+        long newVal ) = 0;
+      virtual HRESULT __stdcall raw_UpdateIDAType ( ) = 0;
+      virtual HRESULT __stdcall raw_put_ScanRateReset (
+        long newVal ) = 0;
+      virtual HRESULT __stdcall raw_UseRangeForCompDepParam (
+        /*[in]*/ IUnknown * pUnkMassRange,
+        /*[in]*/ BSTR bstrParamID,
+        /*[out,retval]*/ long * pVal ) = 0;
+      virtual HRESULT __stdcall raw_SetUseRangeForCompDepParam (
+        /*[in]*/ long newVal ) = 0;
+      virtual HRESULT __stdcall raw_GetQ3ResolutionType (
+        /*[out,retval]*/ short * pType ) = 0;
+      virtual HRESULT __stdcall raw_reserved2 ( ) = 0;
+      virtual HRESULT __stdcall raw_get_DefaultStepSize (
+        double * pVal ) = 0;
+      virtual HRESULT __stdcall raw_ParseMassRanges ( ) = 0;
+      virtual HRESULT __stdcall raw_CalcRemQuotRounded (
+        /*[in]*/ double dStart,
+        /*[in]*/ double dStep,
+        /*[out]*/ double * dRem,
+        /*[out]*/ double * dQuot ) = 0;
+      virtual HRESULT __stdcall raw_GetCADUserValue (
+        /*[out,retval]*/ float * pCADUserValue ) = 0;
+      virtual HRESULT __stdcall raw_GetCESUserValue (
+        /*[out,retval]*/ float * pCESUserValue ) = 0;
+      virtual HRESULT __stdcall get_MCSeparationBarrier (
+        /*[out,retval]*/ double * pVal ) = 0;
+      virtual HRESULT __stdcall put_MCSeparationBarrier (
+        /*[in]*/ double pVal ) = 0;
+};
+
+struct __declspec(uuid("c33c8fc2-9e79-11d1-9d5d-006097223085"))
+IIonSourceParams : IDispatch
+{
+    //
+    // Wrapper methods for error-handling
+    //
+
+    HRESULT InitIonSourceParamsWithDefaults (
+        short sScanType,
+        long bPolarity );
+    HRESULT CopyISParamsFromExperiment (
+        IUnknown * lpunkExp );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall raw_InitIonSourceParamsWithDefaults (
+        /*[in]*/ short sScanType,
+        /*[in]*/ long bPolarity ) = 0;
+      virtual HRESULT __stdcall raw_CopyISParamsFromExperiment (
+        /*[in]*/ IUnknown * lpunkExp ) = 0;
+};
+
+struct __declspec(uuid("8c282211-9466-11d2-9d9a-006097223085"))
+IAccessScanDefaultsAndLimits : IUnknown
+{
+    //
+    // Wrapper methods for error-handling
+    //
+
+    IUnknownPtr GetCompoundAndMassDependentGroup ( );
+    IUnknownPtr GetSourceAndGasDependentGroup ( );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall raw_GetCompoundAndMassDependentGroup (
+        /*[out,retval]*/ IUnknown * * ppUnkCDPG ) = 0;
+      virtual HRESULT __stdcall raw_GetSourceAndGasDependentGroup (
+        /*[out,retval]*/ IUnknown * * ppUnkSDPG ) = 0;
+};
+
+struct __declspec(uuid("9ebe1960-a771-11d3-81c7-00c04f8cf853"))
+ISmartSettling : IUnknown
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetSmartSettlingFlag,put=PutSmartSettlingFlag))
+    long SmartSettlingFlag;
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    long GetSmartSettlingFlag ( );
+    void PutSmartSettlingFlag (
+        long pVal );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall get_SmartSettlingFlag (
+        /*[out,retval]*/ long * pVal ) = 0;
+      virtual HRESULT __stdcall put_SmartSettlingFlag (
+        /*[in]*/ long pVal ) = 0;
+};
+
+struct __declspec(uuid("1e2b6a72-ef90-11d3-8388-00104b1f7094"))
+ITOFProperties : IUnknown
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetAccumTime,put=PutAccumTime))
+    double AccumTime;
+    __declspec(property(get=GetCenterWidth,put=PutCenterWidth))
+    long CenterWidth;
+    __declspec(property(get=GetUseHistogram,put=PutUseHistogram))
+    long UseHistogram;
+    __declspec(property(get=GetTOFMassMin,put=PutTOFMassMin))
+    double TOFMassMin;
+    __declspec(property(get=GetTOFMassMax,put=PutTOFMassMax))
+    double TOFMassMax;
+    __declspec(property(get=GetUseQ1TranDefault,put=PutUseQ1TranDefault))
+    long UseQ1TranDefault;
+    __declspec(property(get=GetTimeBins,put=PutTimeBins))
+    short TimeBins;
+    __declspec(property(get=GetUseTOFExtrDefault,put=PutUseTOFExtrDefault))
+    long UseTOFExtrDefault;
+    __declspec(property(get=GetChannels,put=PutChannels))
+    short Channels;
+    __declspec(property(get=GetTOFMassRangesCount))
+    long TOFMassRangesCount;
+    __declspec(property(get=GetDisplayMass,put=PutDisplayMass))
+    long DisplayMass;
+    __declspec(property(get=GetPulserFreq,put=PutPulserFreq))
+    double PulserFreq;
+    __declspec(property(get=GetStore,put=PutStore))
+    short Store;
+    __declspec(property(get=GetPulseDur,put=PutPulseDur))
+    double PulseDur;
+    __declspec(property(get=GetEnhanceAll,put=PutEnhanceAll))
+    long EnhanceAll;
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    double GetAccumTime ( );
+    void PutAccumTime (
+        double pVal );
+    long GetCenterWidth ( );
+    void PutCenterWidth (
+        long pVal );
+    long GetUseHistogram ( );
+    void PutUseHistogram (
+        long pVal );
+    double GetTOFMassMin ( );
+    void PutTOFMassMin (
+        double pVal );
+    double GetTOFMassMax ( );
+    void PutTOFMassMax (
+        double pVal );
+    long GetUseQ1TranDefault ( );
+    void PutUseQ1TranDefault (
+        long pVal );
+    short GetTimeBins ( );
+    void PutTimeBins (
+        short pVal );
+    long GetUseTOFExtrDefault ( );
+    void PutUseTOFExtrDefault (
+        long pVal );
+    short GetChannels ( );
+    void PutChannels (
+        short pVal );
+    long GetDisplayMass ( );
+    void PutDisplayMass (
+        long pVal );
+    double GetPulserFreq ( );
+    void PutPulserFreq (
+        double pVal );
+    short GetStore ( );
+    void PutStore (
+        short pVal );
+    double GetPulseDur ( );
+    void PutPulseDur (
+        double pVal );
+    long GetEnhanceAll ( );
+    void PutEnhanceAll (
+        long pVal );
+    HRESULT put_TOFMasses (
+        double newTOFMin,
+        double newTOFMax );
+    HRESULT CreateTOFMassRange (
+        long * lIndex,
+        IUnknown * * pUnkMassRange );
+    HRESULT DeleteTOFMassRange (
+        long massIdx );
+    HRESULT SetTOFMassRange (
+        long massIdx,
+        double newCenter,
+        double newWidth,
+        long newEnhance );
+    HRESULT GetTOFMassRange (
+        long massIdx,
+        IUnknown * * pUnkMassRange );
+    long GetTOFMassRangesCount ( );
+    HRESULT RecalculateDelayAndWidth ( );
+    HRESULT GetTOFEnhance (
+        double * mass,
+        double * width,
+        long * enhance );
+    HRESULT GetQuadCyclesPerAccumulation (
+        short * pCycles );
+    HRESULT SetTOFEnhance (
+        double mass,
+        double width,
+        long enhance );
+    HRESULT CreateTOFMassRange2 (
+        double mass,
+        double width,
+        long enhance,
+        long * index );
+    double AdjustTimeForTOF (
+        double time );
+    long GetPulsesPerStep ( );
+    _bstr_t ExportToText (
+        _bstr_t delimiter,
+        long bTuneMode );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall get_AccumTime (
+        /*[out,retval]*/ double * pVal ) = 0;
+      virtual HRESULT __stdcall put_AccumTime (
+        /*[in]*/ double pVal ) = 0;
+      virtual HRESULT __stdcall get_CenterWidth (
+        /*[out,retval]*/ long * pVal ) = 0;
+      virtual HRESULT __stdcall put_CenterWidth (
+        /*[in]*/ long pVal ) = 0;
+      virtual HRESULT __stdcall get_UseHistogram (
+        /*[out,retval]*/ long * pVal ) = 0;
+      virtual HRESULT __stdcall put_UseHistogram (
+        /*[in]*/ long pVal ) = 0;
+      virtual HRESULT __stdcall get_TOFMassMin (
+        /*[out,retval]*/ double * pVal ) = 0;
+      virtual HRESULT __stdcall put_TOFMassMin (
+        /*[in]*/ double pVal ) = 0;
+      virtual HRESULT __stdcall get_TOFMassMax (
+        /*[out,retval]*/ double * pVal ) = 0;
+      virtual HRESULT __stdcall put_TOFMassMax (
+        /*[in]*/ double pVal ) = 0;
+      virtual HRESULT __stdcall get_UseQ1TranDefault (
+        /*[out,retval]*/ long * pVal ) = 0;
+      virtual HRESULT __stdcall put_UseQ1TranDefault (
+        /*[in]*/ long pVal ) = 0;
+      virtual HRESULT __stdcall get_TimeBins (
+        /*[out,retval]*/ short * pVal ) = 0;
+      virtual HRESULT __stdcall put_TimeBins (
+        /*[in]*/ short pVal ) = 0;
+      virtual HRESULT __stdcall get_UseTOFExtrDefault (
+        /*[out,retval]*/ long * pVal ) = 0;
+      virtual HRESULT __stdcall put_UseTOFExtrDefault (
+        /*[in]*/ long pVal ) = 0;
+      virtual HRESULT __stdcall get_Channels (
+        /*[out,retval]*/ short * pVal ) = 0;
+      virtual HRESULT __stdcall put_Channels (
+        /*[in]*/ short pVal ) = 0;
+      virtual HRESULT __stdcall get_DisplayMass (
+        /*[out,retval]*/ long * pVal ) = 0;
+      virtual HRESULT __stdcall put_DisplayMass (
+        /*[in]*/ long pVal ) = 0;
+      virtual HRESULT __stdcall get_PulserFreq (
+        /*[out,retval]*/ double * pVal ) = 0;
+      virtual HRESULT __stdcall put_PulserFreq (
+        /*[in]*/ double pVal ) = 0;
+      virtual HRESULT __stdcall get_Store (
+        /*[out,retval]*/ short * pVal ) = 0;
+      virtual HRESULT __stdcall put_Store (
+        /*[in]*/ short pVal ) = 0;
+      virtual HRESULT __stdcall get_PulseDur (
+        /*[out,retval]*/ double * pVal ) = 0;
+      virtual HRESULT __stdcall put_PulseDur (
+        /*[in]*/ double pVal ) = 0;
+      virtual HRESULT __stdcall get_EnhanceAll (
+        /*[out,retval]*/ long * pVal ) = 0;
+      virtual HRESULT __stdcall put_EnhanceAll (
+        /*[in]*/ long pVal ) = 0;
+      virtual HRESULT __stdcall raw_put_TOFMasses (
+        double newTOFMin,
+        double newTOFMax ) = 0;
+      virtual HRESULT __stdcall raw_CreateTOFMassRange (
+        /*[out]*/ long * lIndex,
+        /*[out]*/ IUnknown * * pUnkMassRange ) = 0;
+      virtual HRESULT __stdcall raw_DeleteTOFMassRange (
+        long massIdx ) = 0;
+      virtual HRESULT __stdcall raw_SetTOFMassRange (
+        long massIdx,
+        double newCenter,
+        double newWidth,
+        long newEnhance ) = 0;
+      virtual HRESULT __stdcall raw_GetTOFMassRange (
+        long massIdx,
+        IUnknown * * pUnkMassRange ) = 0;
+      virtual HRESULT __stdcall get_TOFMassRangesCount (
+        /*[out,retval]*/ long * pVal ) = 0;
+      virtual HRESULT __stdcall raw_RecalculateDelayAndWidth ( ) = 0;
+      virtual HRESULT __stdcall raw_GetTOFEnhance (
+        /*[out]*/ double * mass,
+        /*[out]*/ double * width,
+        /*[out]*/ long * enhance ) = 0;
+      virtual HRESULT __stdcall raw_GetQuadCyclesPerAccumulation (
+        /*[out]*/ short * pCycles ) = 0;
+      virtual HRESULT __stdcall raw_SetTOFEnhance (
+        /*[in]*/ double mass,
+        /*[in]*/ double width,
+        /*[in]*/ long enhance ) = 0;
+      virtual HRESULT __stdcall raw_CreateTOFMassRange2 (
+        /*[in]*/ double mass,
+        /*[in]*/ double width,
+        /*[in]*/ long enhance,
+        /*[out]*/ long * index ) = 0;
+      virtual HRESULT __stdcall raw_AdjustTimeForTOF (
+        /*[in]*/ double time,
+        /*[out,retval]*/ double * pAdjustedTime ) = 0;
+      virtual HRESULT __stdcall raw_GetPulsesPerStep (
+        /*[out,retval]*/ long * pVal ) = 0;
+      virtual HRESULT __stdcall raw_ExportToText (
+        /*[in]*/ BSTR delimiter,
+        /*[in]*/ long bTuneMode,
+        /*[out,retval]*/ BSTR * pVal ) = 0;
+};
+
+struct __declspec(uuid("6d36f3e8-392c-4afc-a716-91cfaa887771"))
+IDFTParams : IDispatch
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetAutoFillTime,put=PutAutoFillTime))
+    long AutoFillTime;
+    __declspec(property(get=GetUseParentAreaER,put=PutUseParentAreaER))
+    long UseParentAreaER;
+    __declspec(property(get=GetUseParentAreaEPI,put=PutUseParentAreaEPI))
+    long UseParentAreaEPI;
+    __declspec(property(get=GetTICTargetEMS,put=PutTICTargetEMS))
+    double TICTargetEMS;
+    __declspec(property(get=GetTICTargetER,put=PutTICTargetER))
+    double TICTargetER;
+    __declspec(property(get=GetTICTargetEPI,put=PutTICTargetEPI))
+    double TICTargetEPI;
+    __declspec(property(get=GetMaxFillEMS,put=PutMaxFillEMS))
+    long MaxFillEMS;
+    __declspec(property(get=GetMaxFillER,put=PutMaxFillER))
+    long MaxFillER;
+    __declspec(property(get=GetMaxFillEPI,put=PutMaxFillEPI))
+    long MaxFillEPI;
+    __declspec(property(get=GetMinFillEMS,put=PutMinFillEMS))
+    long MinFillEMS;
+    __declspec(property(get=GetMinFillER,put=PutMinFillER))
+    long MinFillER;
+    __declspec(property(get=GetMinFillEPI,put=PutMinFillEPI))
+    long MinFillEPI;
+    __declspec(property(get=GetDefFillEMS,put=PutDefFillEMS))
+    long DefFillEMS;
+    __declspec(property(get=GetDefFillER,put=PutDefFillER))
+    long DefFillER;
+    __declspec(property(get=GetDefFillEPI,put=PutDefFillEPI))
+    long DefFillEPI;
+    __declspec(property(get=Getreserved1,put=Putreserved1))
+    double reserved1;
+    __declspec(property(get=Getreserved2,put=Putreserved2))
+    double reserved2;
+    __declspec(property(get=Getreserved3,put=Putreserved3))
+    double reserved3;
+    __declspec(property(get=GetExperimentVersion))
+    long ExperimentVersion;
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    long GetAutoFillTime ( );
+    void PutAutoFillTime (
+        long pVal );
+    long GetUseParentAreaER ( );
+    void PutUseParentAreaER (
+        long pVal );
+    long GetUseParentAreaEPI ( );
+    void PutUseParentAreaEPI (
+        long pVal );
+    double GetTICTargetEMS ( );
+    void PutTICTargetEMS (
+        double pVal );
+    double GetTICTargetER ( );
+    void PutTICTargetER (
+        double pVal );
+    double GetTICTargetEPI ( );
+    void PutTICTargetEPI (
+        double pVal );
+    long GetMaxFillEMS ( );
+    void PutMaxFillEMS (
+        long pVal );
+    long GetMaxFillER ( );
+    void PutMaxFillER (
+        long pVal );
+    long GetMaxFillEPI ( );
+    void PutMaxFillEPI (
+        long pVal );
+    long GetMinFillEMS ( );
+    void PutMinFillEMS (
+        long pVal );
+    long GetMinFillER ( );
+    void PutMinFillER (
+        long pVal );
+    long GetMinFillEPI ( );
+    void PutMinFillEPI (
+        long pVal );
+    long GetDefFillEMS ( );
+    void PutDefFillEMS (
+        long pVal );
+    long GetDefFillER ( );
+    void PutDefFillER (
+        long pVal );
+    long GetDefFillEPI ( );
+    void PutDefFillEPI (
+        long pVal );
+    double Getreserved1 ( );
+    void Putreserved1 (
+        double pVal );
+    double Getreserved2 ( );
+    void Putreserved2 (
+        double pVal );
+    double Getreserved3 ( );
+    void Putreserved3 (
+        double pVal );
+    long GetExperimentVersion ( );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall get_AutoFillTime (
+        /*[out,retval]*/ long * pVal ) = 0;
+      virtual HRESULT __stdcall put_AutoFillTime (
+        /*[in]*/ long pVal ) = 0;
+      virtual HRESULT __stdcall get_UseParentAreaER (
+        /*[out,retval]*/ long * pVal ) = 0;
+      virtual HRESULT __stdcall put_UseParentAreaER (
+        /*[in]*/ long pVal ) = 0;
+      virtual HRESULT __stdcall get_UseParentAreaEPI (
+        /*[out,retval]*/ long * pVal ) = 0;
+      virtual HRESULT __stdcall put_UseParentAreaEPI (
+        /*[in]*/ long pVal ) = 0;
+      virtual HRESULT __stdcall get_TICTargetEMS (
+        /*[out,retval]*/ double * pVal ) = 0;
+      virtual HRESULT __stdcall put_TICTargetEMS (
+        /*[in]*/ double pVal ) = 0;
+      virtual HRESULT __stdcall get_TICTargetER (
+        /*[out,retval]*/ double * pVal ) = 0;
+      virtual HRESULT __stdcall put_TICTargetER (
+        /*[in]*/ double pVal ) = 0;
+      virtual HRESULT __stdcall get_TICTargetEPI (
+        /*[out,retval]*/ double * pVal ) = 0;
+      virtual HRESULT __stdcall put_TICTargetEPI (
+        /*[in]*/ double pVal ) = 0;
+      virtual HRESULT __stdcall get_MaxFillEMS (
+        /*[out,retval]*/ long * pVal ) = 0;
+      virtual HRESULT __stdcall put_MaxFillEMS (
+        /*[in]*/ long pVal ) = 0;
+      virtual HRESULT __stdcall get_MaxFillER (
+        /*[out,retval]*/ long * pVal ) = 0;
+      virtual HRESULT __stdcall put_MaxFillER (
+        /*[in]*/ long pVal ) = 0;
+      virtual HRESULT __stdcall get_MaxFillEPI (
+        /*[out,retval]*/ long * pVal ) = 0;
+      virtual HRESULT __stdcall put_MaxFillEPI (
+        /*[in]*/ long pVal ) = 0;
+      virtual HRESULT __stdcall get_MinFillEMS (
+        /*[out,retval]*/ long * pVal ) = 0;
+      virtual HRESULT __stdcall put_MinFillEMS (
+        /*[in]*/ long pVal ) = 0;
+      virtual HRESULT __stdcall get_MinFillER (
+        /*[out,retval]*/ long * pVal ) = 0;
+      virtual HRESULT __stdcall put_MinFillER (
+        /*[in]*/ long pVal ) = 0;
+      virtual HRESULT __stdcall get_MinFillEPI (
+        /*[out,retval]*/ long * pVal ) = 0;
+      virtual HRESULT __stdcall put_MinFillEPI (
+        /*[in]*/ long pVal ) = 0;
+      virtual HRESULT __stdcall get_DefFillEMS (
+        /*[out,retval]*/ long * pVal ) = 0;
+      virtual HRESULT __stdcall put_DefFillEMS (
+        /*[in]*/ long pVal ) = 0;
+      virtual HRESULT __stdcall get_DefFillER (
+        /*[out,retval]*/ long * pVal ) = 0;
+      virtual HRESULT __stdcall put_DefFillER (
+        /*[in]*/ long pVal ) = 0;
+      virtual HRESULT __stdcall get_DefFillEPI (
+        /*[out,retval]*/ long * pVal ) = 0;
+      virtual HRESULT __stdcall put_DefFillEPI (
+        /*[in]*/ long pVal ) = 0;
+      virtual HRESULT __stdcall get_reserved1 (
+        /*[out,retval]*/ double * pVal ) = 0;
+      virtual HRESULT __stdcall put_reserved1 (
+        /*[in]*/ double pVal ) = 0;
+      virtual HRESULT __stdcall get_reserved2 (
+        /*[out,retval]*/ double * pVal ) = 0;
+      virtual HRESULT __stdcall put_reserved2 (
+        /*[in]*/ double pVal ) = 0;
+      virtual HRESULT __stdcall get_reserved3 (
+        /*[out,retval]*/ double * pVal ) = 0;
+      virtual HRESULT __stdcall put_reserved3 (
+        /*[in]*/ double pVal ) = 0;
+      virtual HRESULT __stdcall get_ExperimentVersion (
+        /*[out,retval]*/ long * pVal ) = 0;
+};
+
+struct __declspec(uuid("9c38bb27-7013-11d1-a482-bcdd47000000"))
+MassRange;
+    // [ default ] interface IMassRange
+    // interface IMassRange2
+    // interface ICompoundDependentParams
+    // interface IPersistWIFFStg
+    // interface IPersistStorage
+    // interface IValidateMSObject
+    // interface ISupportErrorInfo
+    // interface IConnection
+    // interface IMSValidation
+    // interface ISmartSettling
+    // interface IClone
+    // interface ICompoundDependentParams2
+    // interface IMiscDAMCalls
+
+struct __declspec(uuid("81aa06a1-77b7-11d1-9d57-006097223085"))
+IMassRange : IDispatch
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetMassDepParamCount))
+    long MassDepParamCount;
+    __declspec(property(get=GetQstartMass,put=PutQstartMass))
+    double QstartMass;
+    __declspec(property(get=GetQstopMass,put=PutQstopMass))
+    double QstopMass;
+    __declspec(property(get=GetQstepMass,put=PutQstepMass))
+    double QstepMass;
+    __declspec(property(get=GetDwellTime,put=PutDwellTime))
+    double DwellTime;
+    __declspec(property(get=GetIsDummy,put=PutIsDummy))
+    long IsDummy;
+    __declspec(property(get=GetMassDepParamTbl))
+    IUnknownPtr MassDepParamTbl;
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    long GetMassDepParamCount ( );
+    double GetQstartMass ( );
+    void PutQstartMass (
+        double pVal );
+    double GetQstopMass ( );
+    void PutQstopMass (
+        double pVal );
+    double GetQstepMass ( );
+    void PutQstepMass (
+        double pVal );
+    double GetDwellTime ( );
+    void PutDwellTime (
+        double pVal );
+    long GetIsDummy ( );
+    void PutIsDummy (
+        long pVal );
+    IUnknownPtr GetMassDepParamTbl ( );
+    HRESULT SetMassRange (
+        double dStart,
+        double dStop,
+        double dStep );
+    HRESULT GetMassRange (
+        double * pdStart,
+        double * pdStop,
+        double * pdStep );
+    long GetNumOfMassPoints ( );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall get_MassDepParamCount (
+        /*[out,retval]*/ long * pVal ) = 0;
+      virtual HRESULT __stdcall get_QstartMass (
+        /*[out,retval]*/ double * pVal ) = 0;
+      virtual HRESULT __stdcall put_QstartMass (
+        /*[in]*/ double pVal ) = 0;
+      virtual HRESULT __stdcall get_QstopMass (
+        /*[out,retval]*/ double * pVal ) = 0;
+      virtual HRESULT __stdcall put_QstopMass (
+        /*[in]*/ double pVal ) = 0;
+      virtual HRESULT __stdcall get_QstepMass (
+        /*[out,retval]*/ double * pVal ) = 0;
+      virtual HRESULT __stdcall put_QstepMass (
+        /*[in]*/ double pVal ) = 0;
+      virtual HRESULT __stdcall get_DwellTime (
+        /*[out,retval]*/ double * pVal ) = 0;
+      virtual HRESULT __stdcall put_DwellTime (
+        /*[in]*/ double pVal ) = 0;
+      virtual HRESULT __stdcall get_IsDummy (
+        /*[out,retval]*/ long * pVal ) = 0;
+      virtual HRESULT __stdcall put_IsDummy (
+        /*[in]*/ long pVal ) = 0;
+      virtual HRESULT __stdcall get_MassDepParamTbl (
+        /*[out,retval]*/ IUnknown * * pVal ) = 0;
+      virtual HRESULT __stdcall raw_SetMassRange (
+        /*[in]*/ double dStart,
+        /*[in]*/ double dStop,
+        /*[in]*/ double dStep ) = 0;
+      virtual HRESULT __stdcall raw_GetMassRange (
+        /*[out]*/ double * pdStart,
+        /*[out]*/ double * pdStop,
+        /*[out]*/ double * pdStep ) = 0;
+      virtual HRESULT __stdcall raw_GetNumOfMassPoints (
+        /*[out,retval]*/ long * plPts ) = 0;
+};
+
+struct __declspec(uuid("c4757871-8b4a-11d5-8b73-00c04f05ef0a"))
+IMassRange2 : IDispatch
+{
+    //
+    // Wrapper methods for error-handling
+    //
+
+    HRESULT SetMassRange2 (
+        double dStart,
+        double dStop,
+        double dStep,
+        long bValidateConfigSpec );
+    HRESULT reserved1 ( );
+    HRESULT reserved2 ( );
+    HRESULT SetCenterWidth (
+        double center,
+        double width,
+        long bValidateConfigSpec );
+    HRESULT GetCenterWidth (
+        double * pCenter,
+        double * pWidth );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall raw_SetMassRange2 (
+        /*[in]*/ double dStart,
+        /*[in]*/ double dStop,
+        /*[in]*/ double dStep,
+        /*[in]*/ long bValidateConfigSpec ) = 0;
+      virtual HRESULT __stdcall raw_reserved1 ( ) = 0;
+      virtual HRESULT __stdcall raw_reserved2 ( ) = 0;
+      virtual HRESULT __stdcall raw_SetCenterWidth (
+        /*[in]*/ double center,
+        /*[in]*/ double width,
+        /*[in]*/ long bValidateConfigSpec ) = 0;
+      virtual HRESULT __stdcall raw_GetCenterWidth (
+        /*[out]*/ double * pCenter,
+        /*[out]*/ double * pWidth ) = 0;
+};
+
+struct __declspec(uuid("cfea5921-f988-11d1-9d6f-006097223085"))
+ICompoundDependentParams : IDispatch
+{
+    //
+    // Wrapper methods for error-handling
+    //
+
+    HRESULT InitCompoundDepParamsList (
+        IUnknown * pUnkSettings );
+    HRESULT InitCompoundDepParamsWithDefaults (
+        short sScanType,
+        double dFixedMass );
+    HRESULT InitMassDepParamsWithDefaults (
+        short sScanType,
+        double dFixedMass,
+        short mask,
+        long bAnalysingQuad );
+    long ValidateCompoundAndMassDepParams ( );
+    HRESULT SetMassDepParam (
+        short sScanType,
+        _bstr_t bstrParamID,
+        float fStart,
+        float fStop );
+    HRESULT GetMassDepParam (
+        _bstr_t bstrParamID,
+        float * pfStart,
+        float * pfStop,
+        float * pfStep );
+    HRESULT GetFirstMassDepParam (
+        BSTR * pbstrParamID,
+        float * pfStart,
+        float * pfStop,
+        float * pfStep );
+    HRESULT GetNextMassDepParam (
+        BSTR * pbstrParamID,
+        float * pfStart,
+        float * pfStop,
+        float * pfStep );
+    HRESULT IsParamMassDep (
+        _bstr_t bstrParamID,
+        long * pbMassDep );
+    HRESULT CopyCompatibleParameters (
+        IUnknown * punkIPDC );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall raw_InitCompoundDepParamsList (
+        /*[in]*/ IUnknown * pUnkSettings ) = 0;
+      virtual HRESULT __stdcall raw_InitCompoundDepParamsWithDefaults (
+        /*[in]*/ short sScanType,
+        /*[in]*/ double dFixedMass ) = 0;
+      virtual HRESULT __stdcall raw_InitMassDepParamsWithDefaults (
+        /*[in]*/ short sScanType,
+        /*[in]*/ double dFixedMass,
+        /*[in]*/ short mask,
+        /*[in]*/ long bAnalysingQuad ) = 0;
+      virtual HRESULT __stdcall raw_ValidateCompoundAndMassDepParams (
+        /*[out,retval]*/ long * pbValid ) = 0;
+      virtual HRESULT __stdcall raw_SetMassDepParam (
+        /*[in]*/ short sScanType,
+        /*[in]*/ BSTR bstrParamID,
+        /*[in]*/ float fStart,
+        /*[in]*/ float fStop ) = 0;
+      virtual HRESULT __stdcall raw_GetMassDepParam (
+        /*[in]*/ BSTR bstrParamID,
+        /*[out]*/ float * pfStart,
+        /*[out]*/ float * pfStop,
+        /*[out]*/ float * pfStep ) = 0;
+      virtual HRESULT __stdcall raw_GetFirstMassDepParam (
+        /*[out]*/ BSTR * pbstrParamID,
+        /*[out]*/ float * pfStart,
+        /*[out]*/ float * pfStop,
+        /*[out]*/ float * pfStep ) = 0;
+      virtual HRESULT __stdcall raw_GetNextMassDepParam (
+        /*[out]*/ BSTR * pbstrParamID,
+        /*[out]*/ float * pfStart,
+        /*[out]*/ float * pfStop,
+        /*[out]*/ float * pfStep ) = 0;
+      virtual HRESULT __stdcall raw_IsParamMassDep (
+        /*[in]*/ BSTR bstrParamID,
+        /*[out]*/ long * pbMassDep ) = 0;
+      virtual HRESULT __stdcall raw_CopyCompatibleParameters (
+        IUnknown * punkIPDC ) = 0;
+};
+
+struct __declspec(uuid("a0853d61-7827-11d4-b2e7-00c04f52be46"))
+ICompoundDependentParams2 : IDispatch
+{
+    //
+    // Wrapper methods for error-handling
+    //
+
+    HRESULT RevertPolarity (
+        short sScanType,
+        double dFixedMass );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall raw_RevertPolarity (
+        /*[in]*/ short sScanType,
+        /*[in]*/ double dFixedMass ) = 0;
+};
+
+struct __declspec(uuid("d2ecaec4-514f-11d2-9d82-006097223085"))
+MSConfigInfo;
+    // [ default ] interface IMassSpecConfigSpec
+    // interface IMassSpecConfigSpec2
+    // interface IIonSourceTypeSpec
+    // interface ICloneSpecs
+    // interface IPersistWIFFStg
+    // interface IPersistStorage
+    // interface ICompareMSConfigInfo
+    // interface IMiscDAMCalls
+
+struct __declspec(uuid("05aaa431-4e63-11d2-9d82-006097223085"))
+IMassSpecConfigSpec : IUnknown
+{
+    //
+    // Wrapper methods for error-handling
+    //
+
+    HRESULT SetNumOfQuads (
+        short numQuads );
+    HRESULT SetMassSpecModel (
+        long model );
+    HRESULT SetConfigTableVersion (
+        _bstr_t configVer );
+    short GetNumOfQuads ( );
+    long GetMassSpecModel ( );
+    _bstr_t GetConfigTableVersion ( );
+    HRESULT SetMinQ1Mass (
+        double dMinQ1Mass );
+    double GetMinQ1Mass ( );
+    HRESULT SetMaxQ1Mass (
+        double dMaxQ1Mass );
+    double GetMaxQ1Mass ( );
+    HRESULT SetMinQ3Mass (
+        double dMinQ3Mass );
+    double GetMinQ3Mass ( );
+    HRESULT SetMaxQ3Mass (
+        double dMaxQ3Mass );
+    double GetMaxQ3Mass ( );
+    HRESULT SetMinMassStep (
+        double dMinMassStep );
+    double GetMinMassStep ( );
+    HRESULT SetMinCADGasEvacTime (
+        double dMinCADGasEvacTime );
+    double GetMinCADGasEvacTime ( );
+    HRESULT SetMinCADGasInjectTime (
+        double dMinCADGasInjectTime );
+    double GetMinCADGasInjectTime ( );
+    HRESULT SetMinPolReversalTime (
+        double dMinPolReversalTime );
+    double GetMinPolReversalTime ( );
+    HRESULT SetMinPauseBtwnMassRanges (
+        double dMinPauseBtwnMassRanges );
+    double GetMinPauseBtwnMassRanges ( );
+    double GetMinDwellTime ( );
+    HRESULT SetMinDwellTime (
+        double MinDwellTime );
+    double GetMaxPeriodDelay ( );
+    double GetMaxPeriodDuration ( );
+    double GetMaxDwellTime ( );
+    double GetMaxSettlingTime ( );
+    double GetMaxIntensityThreshold ( );
+    double GetMaxPauseBetweenMassRanges ( );
+    double GetMaxStepSize ( );
+    double GetMaxMassDefect ( );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall raw_SetNumOfQuads (
+        /*[in]*/ short numQuads ) = 0;
+      virtual HRESULT __stdcall raw_SetMassSpecModel (
+        /*[in]*/ long model ) = 0;
+      virtual HRESULT __stdcall raw_SetConfigTableVersion (
+        /*[in]*/ BSTR configVer ) = 0;
+      virtual HRESULT __stdcall raw_GetNumOfQuads (
+        /*[out,retval]*/ short * pNumQuads ) = 0;
+      virtual HRESULT __stdcall raw_GetMassSpecModel (
+        /*[out,retval]*/ long * pModel ) = 0;
+      virtual HRESULT __stdcall raw_GetConfigTableVersion (
+        /*[out,retval]*/ BSTR * pConfigVer ) = 0;
+      virtual HRESULT __stdcall raw_SetMinQ1Mass (
+        /*[in]*/ double dMinQ1Mass ) = 0;
+      virtual HRESULT __stdcall raw_GetMinQ1Mass (
+        /*[out,retval]*/ double * pdMinQ1Mass ) = 0;
+      virtual HRESULT __stdcall raw_SetMaxQ1Mass (
+        /*[in]*/ double dMaxQ1Mass ) = 0;
+      virtual HRESULT __stdcall raw_GetMaxQ1Mass (
+        /*[out,retval]*/ double * pdMaxQ1Mass ) = 0;
+      virtual HRESULT __stdcall raw_SetMinQ3Mass (
+        /*[in]*/ double dMinQ3Mass ) = 0;
+      virtual HRESULT __stdcall raw_GetMinQ3Mass (
+        /*[out,retval]*/ double * pdMinQ3Mass ) = 0;
+      virtual HRESULT __stdcall raw_SetMaxQ3Mass (
+        /*[in]*/ double dMaxQ3Mass ) = 0;
+      virtual HRESULT __stdcall raw_GetMaxQ3Mass (
+        /*[out,retval]*/ double * pdMaxQ3Mass ) = 0;
+      virtual HRESULT __stdcall raw_SetMinMassStep (
+        /*[in]*/ double dMinMassStep ) = 0;
+      virtual HRESULT __stdcall raw_GetMinMassStep (
+        /*[out,retval]*/ double * pdMinMassStep ) = 0;
+      virtual HRESULT __stdcall raw_SetMinCADGasEvacTime (
+        /*[in]*/ double dMinCADGasEvacTime ) = 0;
+      virtual HRESULT __stdcall raw_GetMinCADGasEvacTime (
+        /*[out,retval]*/ double * pdMinCADGasEvacTime ) = 0;
+      virtual HRESULT __stdcall raw_SetMinCADGasInjectTime (
+        /*[in]*/ double dMinCADGasInjectTime ) = 0;
+      virtual HRESULT __stdcall raw_GetMinCADGasInjectTime (
+        /*[out,retval]*/ double * pdMinCADGasInjectTime ) = 0;
+      virtual HRESULT __stdcall raw_SetMinPolReversalTime (
+        /*[in]*/ double dMinPolReversalTime ) = 0;
+      virtual HRESULT __stdcall raw_GetMinPolReversalTime (
+        /*[out,retval]*/ double * pdMinPolReversalTime ) = 0;
+      virtual HRESULT __stdcall raw_SetMinPauseBtwnMassRanges (
+        /*[in]*/ double dMinPauseBtwnMassRanges ) = 0;
+      virtual HRESULT __stdcall raw_GetMinPauseBtwnMassRanges (
+        /*[out,retval]*/ double * pdMinPauseBtwnMassRanges ) = 0;
+      virtual HRESULT __stdcall raw_GetMinDwellTime (
+        /*[out,retval]*/ double * pMinDwellTime ) = 0;
+      virtual HRESULT __stdcall raw_SetMinDwellTime (
+        double MinDwellTime ) = 0;
+      virtual HRESULT __stdcall raw_GetMaxPeriodDelay (
+        /*[out,retval]*/ double * pMaxPeriodDelay ) = 0;
+      virtual HRESULT __stdcall raw_GetMaxPeriodDuration (
+        /*[out,retval]*/ double * pMaxPeriodDuration ) = 0;
+      virtual HRESULT __stdcall raw_GetMaxDwellTime (
+        /*[out,retval]*/ double * pMaxDwellTime ) = 0;
+      virtual HRESULT __stdcall raw_GetMaxSettlingTime (
+        /*[out,retval]*/ double * pMaxSettlingTime ) = 0;
+      virtual HRESULT __stdcall raw_GetMaxIntensityThreshold (
+        /*[out,retval]*/ double * pMaxIntesityThreshold ) = 0;
+      virtual HRESULT __stdcall raw_GetMaxPauseBetweenMassRanges (
+        /*[out,retval]*/ double * pMaxPause ) = 0;
+      virtual HRESULT __stdcall raw_GetMaxStepSize (
+        /*[out,retval]*/ double * pValue ) = 0;
+      virtual HRESULT __stdcall raw_GetMaxMassDefect (
+        /*[out,retval]*/ double * pValue ) = 0;
+};
+
+struct __declspec(uuid("4f771303-6816-11d6-8ae3-00b0d0247d7b"))
+IMassSpecConfigSpec2 : IUnknown
+{
+    //
+    // Wrapper methods for error-handling
+    //
+
+    HRESULT GetMinQ3MassWithScanType (
+        double * pdMinQ3Mass,
+        short sScanType );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall raw_GetMinQ3MassWithScanType (
+        double * pdMinQ3Mass,
+        short sScanType ) = 0;
+};
+
+struct __declspec(uuid("05aaa433-4e63-11d2-9d82-006097223085"))
+IIonSourceTypeSpec : IUnknown
+{
+    //
+    // Wrapper methods for error-handling
+    //
+
+    HRESULT SetSourceType (
+        int ionSrc );
+    HRESULT SetIonSprayVoltageValid (
+        long bValid );
+    HRESULT SetTemperatureValid (
+        long bValid );
+    HRESULT SetNebCurrentValid (
+        long bValid );
+    HRESULT GetSourceType (
+        int * pIonSrc );
+    HRESULT IsIonSprayVoltageValid (
+        long * pValid );
+    long IsNebTemperatureValid ( );
+    long IsNebCurrentValid ( );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall raw_SetSourceType (
+        /*[in]*/ int ionSrc ) = 0;
+      virtual HRESULT __stdcall raw_SetIonSprayVoltageValid (
+        /*[in]*/ long bValid ) = 0;
+      virtual HRESULT __stdcall raw_SetTemperatureValid (
+        /*[in]*/ long bValid ) = 0;
+      virtual HRESULT __stdcall raw_SetNebCurrentValid (
+        /*[in]*/ long bValid ) = 0;
+      virtual HRESULT __stdcall raw_GetSourceType (
+        /*[out]*/ int * pIonSrc ) = 0;
+      virtual HRESULT __stdcall raw_IsIonSprayVoltageValid (
+        /*[out]*/ long * pValid ) = 0;
+      virtual HRESULT __stdcall raw_IsNebTemperatureValid (
+        /*[out,retval]*/ long * pValid ) = 0;
+      virtual HRESULT __stdcall raw_IsNebCurrentValid (
+        /*[out,retval]*/ long * pValid ) = 0;
+};
+
+struct __declspec(uuid("0d602b92-5160-11d2-9d82-006097223085"))
+ICloneSpecs : IUnknown
+{
+    //
+    // Wrapper methods for error-handling
+    //
+
+    HRESULT CloneSpec (
+        IUnknown * * ppUnkSpecObj );
+    HRESULT CopySpec (
+        IUnknown * pUnkSpecObj );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall raw_CloneSpec (
+        /*[out]*/ IUnknown * * ppUnkSpecObj ) = 0;
+      virtual HRESULT __stdcall raw_CopySpec (
+        /*[in]*/ IUnknown * pUnkSpecObj ) = 0;
+};
+
+struct __declspec(uuid("467f84b1-6c40-11d2-9d93-006097223085"))
+ICompareMSConfigInfo : IUnknown
+{
+    //
+    // Wrapper methods for error-handling
+    //
+
+    long IsMSConfigIdentical (
+        IUnknown * pUnkMSConfig );
+    long IsMSConfigDifferent (
+        IUnknown * pUnkMSConfig );
+    long IsMSConfigEquivalent (
+        IUnknown * pUnkMSConfig );
+    long IsMSConfigIncompatible (
+        IUnknown * pUnkMSConfig );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall raw_IsMSConfigIdentical (
+        /*[in]*/ IUnknown * pUnkMSConfig,
+        /*[out,retval]*/ long * pbIdentical ) = 0;
+      virtual HRESULT __stdcall raw_IsMSConfigDifferent (
+        /*[in]*/ IUnknown * pUnkMSConfig,
+        /*[out,retval]*/ long * pbDifferent ) = 0;
+      virtual HRESULT __stdcall raw_IsMSConfigEquivalent (
+        /*[in]*/ IUnknown * pUnkMSConfig,
+        /*[out,retval]*/ long * pbEquivalent ) = 0;
+      virtual HRESULT __stdcall raw_IsMSConfigIncompatible (
+        /*[in]*/ IUnknown * pUnkMSConfig,
+        /*[out,retval]*/ long * pbIncompatible ) = 0;
+};
+
+struct __declspec(uuid("8838f245-108b-11d4-81ec-00c04f8cf853"))
+TOFMassRange;
+    // [ default ] interface ITOFMassRange
+    // interface IPersistWIFFStg
+    // interface IPersistStorage
+    // interface ISupportErrorInfo
+    // interface IConnection
+    // interface IClone
+    // interface IMiscDAMCalls
+
+struct __declspec(uuid("8838f244-108b-11d4-81ec-00c04f8cf853"))
+ITOFMassRange : IDispatch
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetEnhanced,put=PutEnhanced))
+    long Enhanced;
+    __declspec(property(get=GetstartMass))
+    double startMass;
+    __declspec(property(get=GetstopMass))
+    double stopMass;
+    __declspec(property(get=GetcenterMass))
+    double centerMass;
+    __declspec(property(get=Getwidth))
+    double width;
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    long GetEnhanced ( );
+    void PutEnhanced (
+        long pVal );
+    HRESULT GetMassRange (
+        double * center,
+        double * width,
+        long * pEnhanced );
+    HRESULT SetMassRange (
+        double center,
+        double width,
+        long Enhanced );
+    double GetstartMass ( );
+    double GetstopMass ( );
+    double GetcenterMass ( );
+    double Getwidth ( );
+    HRESULT InitMSConfig (
+        IUnknown * lpUnkConfig );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall get_Enhanced (
+        /*[out,retval]*/ long * pVal ) = 0;
+      virtual HRESULT __stdcall put_Enhanced (
+        /*[in]*/ long pVal ) = 0;
+      virtual HRESULT __stdcall raw_GetMassRange (
+        double * center,
+        double * width,
+        long * pEnhanced ) = 0;
+      virtual HRESULT __stdcall raw_SetMassRange (
+        /*[in]*/ double center,
+        /*[in]*/ double width,
+        /*[in]*/ long Enhanced ) = 0;
+      virtual HRESULT __stdcall get_startMass (
+        /*[out,retval]*/ double * pVal ) = 0;
+      virtual HRESULT __stdcall get_stopMass (
+        /*[out,retval]*/ double * pVal ) = 0;
+      virtual HRESULT __stdcall get_centerMass (
+        /*[out,retval]*/ double * pVal ) = 0;
+      virtual HRESULT __stdcall get_width (
+        /*[out,retval]*/ double * pVal ) = 0;
+      virtual HRESULT __stdcall raw_InitMSConfig (
+        IUnknown * lpUnkConfig ) = 0;
+};
+
+//
+// Wrapper method implementations
+//
+
+#include "wifflib\msmethodsvr.tli"
+
+} // namespace Analyst
+
+#pragma pack(pop)

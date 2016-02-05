@@ -1,0 +1,19 @@
+﻿// Created by Microsoft (R) C/C++ Compiler Version 14.00.50727.762 (ff2fd8d5).
+//
+// f:\tmp\sashimi-trunk\trans_proteomic_pipeline\src\mzxml\converters\mzwiff\wiffqslib\peakfinderfactory.tli
+//
+// Wrapper implementations for Win32 type library ..\\libs\\analystqs\\PeakFinderFactory.dll
+// compiler-generated file created 07/24/07 at 22:35:44 - DO NOT EDIT!
+
+#pragma once
+
+//
+// interface IPeakFinderFactory wrapper method implementations
+//
+
+inline IUnknownPtr IPeakFinderFactory::CreatePeakFinder ( _bstr_t wiffFileName, long sampleNumber, enum SciexPeakDataType fPeakType, BSTR * params ) {
+    IUnknown * _result = 0;
+    HRESULT _hr = raw_CreatePeakFinder(wiffFileName, sampleNumber, fPeakType, params, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IUnknownPtr(_result, false);
+}

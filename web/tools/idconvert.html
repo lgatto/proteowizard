@@ -1,0 +1,47 @@
+<html>
+
+<head>
+    <title>ProteoWizard Technical Documentation: idconvert</title>
+    <link rel="stylesheet" href="../main.css" type="text/css" media="screen" />
+</head>
+
+<body>
+    <h2>idconvert</h2>
+
+    <p>
+        <i>idconvert</i> is a command line tool for converting between various file formats.
+
+        <ul>
+            <li><b>Read:</b> pepXML, protXML, mzIdentML (<a href="../formats/index.html">ProteoWizard supported formats</a>)</li>
+            <li><b>Write:</b> pepXML, mzIdentML</li>
+        </ul>
+
+
+        <p>
+        Examples:
+        <ul>
+            <li><code>idconvert</code><br/>
+            prints usage information<p/></li>
+
+            <li><code>idconvert sequest.pepXML</code><br/>
+            creates sequest.mzid in current directory<p/></li>
+
+            <li><code>idconvert interact.protXML</code><br/>
+            converts interact.protXML to interact.mzid. Also reads any pepXML file referenced in the protXML file if available.  If the protXML file has been moved from its original location, the pepXML will still be found if it has also been moved to the same position relative to the protXML file. This relative position is determined by reading the protXML <code>protein_summary:summary_xml</code> and  <code>protein_summary_header:source_files</code> values.<p/></li>
+
+            <li><code>idconvert mascot.mzid --pepXML</code><br/>
+            converts mascot.mzid to mascot.pepXML<p/></li>
+
+            <li><code>idconvert omssa.pepXML -o my_output_dir</code><br/>
+            puts output file in <code>my_output_dir</code><p/></li>
+
+        </ul>
+        </p>
+    </p>
+
+    <hr/>
+
+
+</body>
+</html>
+

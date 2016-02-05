@@ -1,0 +1,157 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>ProteoWizard:FAQ</title>
+
+<link href="css/pwiz_structure.css" rel="stylesheet" type="text/css">
+<link href="css/pwiz_styles.css" rel="stylesheet" type="text/css">
+
+<script src="SpryAssets/SpryMenuBar.js" type="text/javascript"></script>
+<link href="SpryAssets/SpryMenuBarHorizontal.css" rel="stylesheet" type="text/css" />
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-54926454-1', 'auto');
+  ga('send', 'pageview');
+
+</script></head>
+
+<body>
+
+<div class="container">
+
+  
+<!--#include virtual="nav.html" -->
+
+    <div class="content">
+    
+    <!-- Content goes here. -->
+
+    <h1>FAQ</h1>
+    
+        <h2>What is ProteoWizard?</h2>
+
+        <p>ProteoWizard is a set of tools and libraries to facilitate proteomics data analysis and to facilitate developing applications for proteomics data analysis.          </p>
+
+        <h2>How do I cite ProteoWizard?</h2>
+<p>
+        If you use or incorporate the ProteoWizard tools or libraries, please cite our Nature Biotechnology Commentary </p>
+        
+        <P>A cross-platform toolkit for mass spectrometry and proteomics.  Chambers, M.C., MacLean, B., Burke, R., Amode, D., Ruderman, D.L., Neumann, S., Gatto, L., Fischer, B., Pratt, B., Egertson, J., Hoff, K., Kessner, D., Tasman, N., Shulman, N., Frewen, B., Baker, T.A., Brusniak, M.-Y., Paulse, C., Creasy, D., Flashner, L., Kani, K., Moulding, C., Seymour, S.L., Nuwaysir, L.M., Lefebvre, B., Kuhlmann, F., Roark, J., Rainer, P., Detlev, S., Hemenway, T., Huhmer, A., Langridge, J., Connolly, B., Chadick, T., Holly, K., Eckels, J., Deutsch, E.W., Moritz, R.L., Katz, J.E., Agus, D.B., MacCoss, M., Tabb, D.L. & Mallick, P. Nature Biotechnology 30, 918-920 (2012). [<a href="http://www.nature.com/nbt/journal/v30/n10/full/nbt.2377.html" target="_blank">article</a>]
+        </P>
+        
+        <P>and/or
+        
+        
+        Our Bioinformatics Application Note [<a href="http://bioinformatics.oxfordjournals.org/cgi/content/abstract/btn323?ijkey=BNjsLHD6Ki2zYgS&keytype=ref" target="_blank">abstract</a>]
+
+		[<a href="http://bioinformatics.oxfordjournals.org/cgi/reprint/btn323?ijkey=BNjsLHD6Ki2zYgS&keytype=ref" target="_blank">pdf</a>]
+:<br/>
+</p>
+	  <p class="text1 style1">
+       	  ProteoWizard: Open Source Software for Rapid Proteomics Tools Development <br/>
+		  Darren Kessner; Matt Chambers; Robert Burke; David Agus; Parag Mallick<br/>
+		  Bioinformatics 2008; doi: 10.1093/bioinformatics/btn323<br/>
+	  </p>
+
+    </p>
+
+    <h2>What is the current status of ProteoWizard?</h2>
+
+    <p>
+        We have released version 2.1.x of the library, together with a set of 
+        command line tools.  Source and binary packages are available for download
+        from our <a href="downloads.shtml">download</a> page or from our
+        <a href="http://sourceforge.net/projects/proteowizard" target="_blank">SourceForge project page</a>
+    </p>
+    
+    <h2>What formats does ProteoWizard support?</h2>
+
+    <p>
+        On all platforms: mzML (1.1 and 1.0), mzXML, MGF
+    </p>
+    <p>
+        On Windows, with vendor libraries: Thermo, Agilent, Bruker, Thermo, Waters and AB Sciex.
+    </p>
+
+
+    <h2>Who is using ProteoWizard?</h2>
+    <p>
+        Hundreds of labs around the world are using different ProteoWizard tools.  The central developers are at the Center for Applied Molecular Medicine (CAMM) at the University of
+        Southern California, the Canary Center for Early Detection at Stanford University, the
+        Vanderbilt University Mass Spectrometry Research Center and at the MacCoss lab at the University of Washington, Seattle.  Each of these groups use 
+         ProteoWizard extensively in daily data analysis.
+    </p>
+    <p>
+        The ProteoWizard libraries are also being used by the Trans-Proteomic Pipeline (TPP)
+        and the Computational Proteomics Analysis System (CPAS) tools for mzML support.
+    </p>
+    
+        <h2>I want to contribute!</h2>
+    <p>
+        
+        Great! Drop Matt an email: 
+         <SCRIPT TYPE="text/javascript">
+<!-- 
+// protected email script by Joe Maller
+// JavaScripts available at http://www.joemaller.com
+// this script is free to use and distribute
+// but please credit me and/or link to my site
+
+emailE=('matt.chambers@' + 'proteowizard.org')
+document.write('<A href="mailto:' + emailE + '">' + emailE + '</a>')
+ //-->
+</script>
+
+<NOSCRIPT>
+    <em>Email address protected by JavaScript.<BR>
+    Please enable JavaScript to contact us.</em>
+</NOSCRIPT>
+       
+         and he'll get you signed up to the subversion repository.
+    </p>
+
+        <h2>Where is your subversion repository?</h2>
+<p>
+To checkout the entire proteowizard, you can issue the command <br>
+
+<code> svn&nbsp;co&nbsp;<a href="https://svn.code.sf.net/p/proteowizard/code/trunk/pwiz">https://svn.code.sf.net/p/proteowizard/code/trunk/pwiz</a>&nbsp;your_local_directory</code> 
+
+Or you can browse the repository at: 
+
+<a href="https://sourceforge.net/p/proteowizard/code/">https://sourceforge.net/p/proteowizard/code/</a>
+
+
+    </p>
+
+
+    <h2>What's next on the development roadmap?</h2>
+    <p>
+        We (CAMM) have begun collaboration with other proteomics software groups, including
+        the Vanderbilt University Mass Spectrometry Research Center, University of Washington,
+        Insilicos Software, and the Seattle Proteome Center at the Institute for Systems Biology (ISB/SPC), with the 
+        goal of providing a single standard software library for proteomic data analysis.  The 
+        first immediate goal is to combine efforts to add support for all vendor-specific 
+        proprietary data formats.  Our immediate priorities are putting together a simple GUI, supporting mzIdentML, and extending ProteoWizard to other languages by adding SWIG support.
+    </p>
+    <!-- End of Content  -->
+
+    
+    <!-- end .content -->
+</div>
+	<div id="sourceforge">
+        <a href="http://sourceforge.net/projects/proteowizard"><img src="http://sflogo.sourceforge.net/sflogo.php?group_id=216483&type=11" width="120" height="30" border="0" alt="Get ProteoWizard at SourceForge.net. Fast, secure and Free Open Source software downloads" /></a>
+	</div>
+
+    
+    
+  <!-- end .container --></div>
+<script type="text/javascript">
+var MenuBar1 = new Spry.Widget.MenuBar("MenuBar1", {imgDown:"SpryAssets/SpryMenuBarDownHover.gif", imgRight:"SpryAssets/SpryMenuBarRightHover.gif"});
+</script>
+</body>
+</html>

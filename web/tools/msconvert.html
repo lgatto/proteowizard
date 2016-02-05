@@ -1,0 +1,221 @@
+<html>
+
+<head>
+    <title>ProteoWizard Technical Documentation: msconvert</title>
+    <link rel="stylesheet" href="../main.css" type="text/css" media="screen" />
+</head>
+
+<body>
+    <h2>msconvert</h2>
+
+    <p>
+        <i>msconvert</i> is a command line tool for converting between various file formats.  For Windows users, the msConvertGUI program is also available for easy file conversion.
+
+        <ul>
+            <li><b>Read:</b> open formats, vendor formats (<a href="../formats/index.html">ProteoWizard supported formats</a>)</li>
+            <li><b>Write:</b> open formats.  Also, msconvert can perform various filters and transformations (listed <a href="../tools/filters.html">here</a>) on its input files.</li>
+        </ul>
+
+        <p>
+        Examples:
+        <ul>
+
+            <li><code>msconvert</code><br/>
+            (prints usage information, as seen below)<p/></li>
+
+            <li><code>msconvert --help</code><br/>
+            (prints usage information, with more detail about <a href="../tools/filters.html">filters</a>)<p/></li>
+
+            <li><code>msconvert data.RAW</code><br/>
+            (creates data.mzML in current directory)<p/></li>
+
+            <li><code>msconvert data.RAW --mzXML</code><br/>
+            (creates data.mzXML in current directory)<p/></li>
+
+            <li><code>msconvert *.RAW -o my_output_dir</code><br/>
+            (converts all files matching *.RAW to mzML, output files created in <code>my_output_dir</code>)<p/></li>
+
+            <li><code>msconvert data.RAW --zlib --filter "peakPicking true [2,3]" </code><br/>
+            (use zlib compression for binary data arrays, and use vendor centroiding for msLevels in [2,3])<p/></li>
+
+            <li><code>msconvert data.RAW --filter "msLevel 2"</code><br/>
+            (only write ms2 scans)<p/></li>
+
+            <li><code>msconvert data.RAW --filter "msLevel 2-"</code><br/>
+            (only write ms2 and higher scans)<p/></li>
+
+            <li><code>msconvert data.RAW  --filter "zeroSamples removeExtra"</code><br/>
+            (omit zero-valued samples that are not next to non-zero samples)<p/></li>
+
+            <li><code>msconvert data.RAW --32 --zlib --filter "peakPicking true 1-" --filter "zeroSamples removeExtra" </code><br/>
+            (various tricks to create a smaller file, much like the old ReAdW converter program)<p/></li>
+
+        </ul>
+        </p>
+<p>
+<br/>Running msconvert with no arguments produces this helpful output:<br/><br/><code>
+Usage: msconvert [options] [filemasks]<br/>
+Convert mass spec data file formats.<br/>
+<br/>
+Return value: # of failed files.<br/>
+<br/>
+Options:<br/>
+&nbsp; -f [ --filelist ] arg            : specify text file containing filenames<br/>
+&nbsp; -o [ --outdir ] arg (=.)         : set output directory ('-' for stdout) [.]<br/>
+&nbsp; -c [ --config ] arg              : configuration file (optionName=value)<br/>
+&nbsp; --outfile arg                    : Override the name of output file.<br/>
+&nbsp; -e [ --ext ] arg                 : set extension for output files <br/>
+&nbsp;                          [mzML|mzXML|mgf|txt|mz5]<br/>
+&nbsp; --mzML                           : write mzML format [default]<br/>
+&nbsp; --mzXML                          : write mzXML format<br/>
+&nbsp; --mz5                            : write mz5 format<br/>
+&nbsp; --mgf                            : write Mascot generic format<br/>
+&nbsp; --text                           : write ProteoWizard internal text format<br/>
+&nbsp; --ms1                            : write MS1 format<br/>
+&nbsp; --cms1                           : write CMS1 format<br/>
+&nbsp; --ms2                            : write MS2 format<br/>
+&nbsp; --cms2                           : write CMS2 format<br/>
+&nbsp; -v [ --verbose ]                 : display detailed progress information<br/>
+&nbsp; --64                     : set default binary encoding to 64-bit precision <br/>
+&nbsp;                          [default]<br/>
+&nbsp; --32                     : set default binary encoding to 32-bit precision<br/>
+&nbsp; --mz64                   : encode m/z values in 64-bit precision [default]<br/>
+&nbsp; --mz32                           : encode m/z values in 32-bit precision<br/>
+&nbsp; --inten64                : encode intensity values in 64-bit precision<br/>
+&nbsp; --inten32                : encode intensity values in 32-bit precision <br/>
+&nbsp;                          [default]<br/>
+&nbsp; --noindex                        : do not write index<br/>
+&nbsp; -i [ --contactInfo ] arg         : filename for contact info<br/>
+&nbsp; -z [ --zlib ]                    : use zlib compression for binary data<br/>
+&nbsp; --numpressLinear [toler]  : use numpress linear prediction lossy compression for binary mz and rt data (relative error guaranteed less than given tolerance, default is 2e-009)  <br/>
+&nbsp; --numpressPic            : use numpress positive integer lossy compression for binary intensities (maximum 0.5 absolute error guaranteed)<br/>
+&nbsp; --numpressSlof [toler]   : use numpress short logged float lossy compression for binary intensities (relative error guaranteed less than given tolerance, default is 0.0002)<br/>
+&nbsp; -n [ --numpressAll]      : same as --numpressLinear --numpressSlof (see https://github.com/fickludd/ms-numpress for more info)<br/>
+&nbsp; -g [ --gzip ]                    : gzip entire output file (adds .gz to filename)<br/>
+&nbsp; --filter arg                     : add a spectrum list filter<br/>
+&nbsp; --merge                  : create a single output file from multiple input <br/>
+&nbsp;                          files by merging file-level metadata and <br/>
+&nbsp;                          concatenating spectrum lists<br/>
+&nbsp; --simAsSpectra           : write selected ion monitoring as spectra, not <br/>
+&nbsp;                          chromatograms<br/>
+&nbsp; --srmAsSpectra           : write selected reaction monitoring as spectra, not<br/>
+&nbsp;                          chromatograms<br/>
+&nbsp; --combineIonMobilitySpectra      : write all drift bins/scans in a frame/block as one spectrum instead of  individual spectra<br/>
+&nbsp; --acceptZeroLengthSpectra        : some vendor readers have an efficient way of filtering out empty spectra, but it takes more time to open the file<br/>
+&nbsp; --ignoreUnknownInstrumentError   : if true, if an instrument cannot be determined from a vendor file, it will not  be an error <br/>
+&nbsp; --help                           : show this message, with extra detail on filter options<br/>
+<br/>
+FILTER OPTIONS<br/>
+run this command with --help to see <a href="../tools/filters.html">more detail</a><br/>
+index &lt;index_value_set&gt;<br/>
+msLevel &lt;mslevels&gt;<br/>
+chargeState &lt;charge_states&gt;<br/>
+precursorRecalculation <br/>
+mzRefiner input1.pepXML input2.mzid [msLevels=&lt;1-&gt;] [thresholdScore=&lt;CV_Score_Name&gt;] [thresholdValue=&lt;floatset&gt;] [thresholdStep=&lt;float&gt;] [maxSteps=&lt;count&gt;]<br/>
+lockmassRefiner mz=&lt;real&gt; mzNegIons=&lt;real (mz)&gt; tol=&lt;real (1.0 Daltons)&gt;<br/>
+precursorRefine <br/>
+peakPicking [&lt;PickerType&gt; [snr=&lt;minimum signal-to-noise ratio&gt;] [peakSpace=&lt;minimum peak spacing&gt;] [msLevel=&lt;ms_levels&gt;]]<br/>
+scanNumber &lt;scan_numbers&gt;<br/>
+scanEvent &lt;scan_event_set&gt;<br/>
+scanTime &lt;scan_time_range&gt;<br/>
+sortByScanTime <br/>
+stripIT <br/>
+metadataFixer <br/>
+titleMaker &lt;format_string&gt;<br/>
+threshold &lt;type&gt; &lt;threshold&gt; &lt;orientation&gt; [&lt;mslevels&gt;]<br/>
+mzWindow &lt;mzrange&gt;<br/>
+mzPrecursors &lt;precursor_mz_list&gt;<br/>
+defaultArrayLength &lt;peak_count_range&gt;<br/>
+zeroSamples &lt;mode&gt; [&lt;MS_levels&gt;]<br/>
+mzPresent &lt;tolerance&gt; &lt;type&gt; &lt;threshold&gt; &lt;orientation&gt; &lt;mz_list&gt; [&lt;include_or_exclude&gt;]<br/>
+scanSumming [precursorTol=&lt;precursor tolerance&gt;] [scanTimeTol=&lt;scan time tolerance&gt;]<br/>
+MS2Denoise [&lt;peaks_in_window&gt; [&lt;window_width_Da&gt; [multicharge_fragment_relaxation]]]<br/>
+MS2Deisotope [hi_res [mzTol=&lt;mzTol&gt;]] [Poisson [minCharge=&lt;minCharge&gt;] [maxCharge=&lt;maxCharge&gt;]]<br/>
+ETDFilter [&lt;removePrecursor&gt; [&lt;removeChargeReduced&gt; [&lt;removeNeutralLoss&gt; [&lt;blanketRemoval&gt; [&lt;matchingTolerance&gt; ]]]]]<br/>
+chargeStatePredictor [overrideExistingCharge=&lt;true|false (false)&gt;] [maxMultipleCharge=&lt;int (3)&gt;] [minMultipleCharge=&lt;int (2)&gt;] [singleChargeFractionTIC=&lt;real (0.9)&gt;] [maxKnownCharge=&lt;int (0)&gt;] [makeMS2=&lt;true|false (false)&gt;]<br/>
+turbocharger [minCharge=&lt;minCharge&gt;] [maxCharge=&lt;maxCharge&gt;] [precursorsBefore=&lt;before&gt;] [precursorsAfter=&lt;after&gt;] [halfIsoWidth=&lt;half-width of isolation window&gt;] [defaultMinCharge=&lt;defaultMinCharge&gt;] [defaultMaxCharge=&lt;defaultMaxCharge&gt;] [useVendorPeaks=&lt;useVendorPeaks&gt;]<br/>
+activation &lt;precursor_activation_type&gt;<br/>
+analyzer &lt;analyzer&gt;<br/>
+analyzerType &lt;analyzer&gt;<br/>
+polarity &lt;polarity&gt;<br/>
+<br/>
+<br/>
+Examples:<br/>
+<br/>
+# convert data.RAW to data.mzML<br/>
+msconvert data.RAW<br/>
+<br/>
+# convert data.RAW to data.mzXML<br/>
+msconvert data.RAW --mzXML<br/>
+<br/>
+# put output file in my_output_dir<br/>
+msconvert data.RAW -o my_output_dir<br/>
+<br/>
+# extract scan indices 5...10 and 20...25<br/>
+msconvert data.RAW --filter &quot;index [5,10] [20,25]&quot;<br/>
+<br/>
+# extract MS1 scans only<br/>
+msconvert data.RAW --filter &quot;msLevel 1&quot;<br/>
+<br/>
+# extract MS2 and MS3 scans only<br/>
+msconvert data.RAW --filter &quot;msLevel 2-3&quot;<br/>
+<br/>
+# extract MSn scans for n&gt;1<br/>
+msconvert data.RAW --filter &quot;msLevel 2-&quot;<br/>
+<br/>
+# apply ETD precursor mass filter<br/>
+msconvert data.RAW --filter ETDFilter<br/>
+<br/>
+# remove non-flanking zero value samples<br/>
+msconvert data.RAW --filter &quot;zeroSamples removeExtra&quot;<br/>
+<br/>
+# remove non-flanking zero value samples in MS2 and MS3 only<br/>
+msconvert data.RAW --filter &quot;zeroSamples removeExtra 2 3&quot;<br/>
+<br/>
+# add missing zero value samples (with 5 flanking zeros) in MS2 and MS3 only<br/>
+msconvert data.RAW --filter &quot;zeroSamples addMissing=5 2 3&quot;<br/>
+<br/>
+# keep only HCD spectra from a decision tree data file<br/>
+msconvert data.RAW --filter &quot;activation HCD&quot;<br/>
+<br/>
+# keep the top 42 peaks or samples (depending on whether spectra are centroid or profile):<br/>
+msconvert data.RAW --filter &quot;threshold count 42 most-intense&quot;<br/>
+<br/>
+# multiple filters: select scan numbers and recalculate precursors<br/>
+msconvert data.RAW --filter &quot;scanNumber [500,1000]&quot; --filter &quot;precursorRecalculation&quot;<br/>
+<br/>
+# multiple filters: apply peak picking and then keep the bottom 100 peaks:<br/>
+msconvert data.RAW --filter &quot;peakPicking true 1-&quot; --filter &quot;threshold count 100 least-intense&quot;<br/>
+<br/>
+# multiple filters: apply peak picking and then keep all peaks that are at least 50% of the intensity of the base peak:<br/>
+msconvert data.RAW --filter &quot;peakPicking true 1-&quot; --filter &quot;threshold bpi-relative .5 most-intense&quot;<br/>
+<br/>
+# use a configuration file<br/>
+msconvert data.RAW -c config.txt<br/>
+<br/>
+# example configuration file<br/>
+mzXML=true<br/>
+zlib=true<br/>
+filter=&quot;index [3,7]&quot;<br/>
+filter=&quot;precursorRecalculation&quot;<br/>
+<br/>
+<br/>
+Questions, comments, and bug reports:<br/>
+http://proteowizard.sourceforge.net<br/>
+support@proteowizard.org<br/>
+<br/>
+ProteoWizard release: 3.0.9134 (2015-11-11)<br/>
+ProteoWizard MSData: 3.0.9134 (2015-11-11)<br/>
+ProteoWizard Analysis: 3.0.9098 (2015-11-1)<br/>
+Build date: Nov 13 2015 11:57:52<br/>
+<br/>
+
+</code>
+    </p>
+
+    <hr/>
+
+
+</body>
+</html>
+

@@ -1,0 +1,3276 @@
+﻿// Created by Microsoft (R) C/C++ Compiler Version 14.00.50727.762 (10382b32).
+//
+// f:\tmp\sashimi-trunk\trans_proteomic_pipeline\src\mzxml\converters\mzwiff\wifflib\exploredataobjects.tlh
+//
+// C++ source equivalent of Win32 type library ..\\libs\\analyst\\ExploreDataObjects.dll
+// compiler-generated file created 07/24/07 at 22:36:04 - DO NOT EDIT!
+
+#pragma once
+#pragma pack(push, 8)
+
+#include <comdef.h>
+
+namespace Analyst {
+
+//
+// Forward references and typedefs
+//
+
+struct __declspec(uuid("5f259202-611c-11d1-a9c6-0060977f5c78"))
+/* LIBID */ __ExploreDataObjects;
+enum PeriodType;
+enum ExperimentType;
+enum ExploreDataObjectsErrors;
+struct __declspec(uuid("d85afbb0-6a7d-11d1-a9c9-0060977f5c78"))
+/* dispinterface */ _DataEvents;
+struct __declspec(uuid("a60858a1-8de8-11d1-a9ef-0060977f5c78"))
+/* dual interface */ _DualDataEvents;
+struct __declspec(uuid("c415fba0-db88-11d1-aa31-0060977f5c78"))
+/* dispinterface */ _FMANChromDataEvents;
+struct __declspec(uuid("59017b20-ddeb-11d1-aa37-0060977f5c78"))
+/* dual interface */ _FMANWiffFileEvents;
+struct __declspec(uuid("b1735c53-c175-11d4-9fbb-00c04f1961f5"))
+/* dual interface */ IContourData;
+struct __declspec(uuid("c09d0ef7-926d-11d1-a9f2-0060977f5c78"))
+/* dual interface */ IFMANSpecData;
+struct __declspec(uuid("cc5d48a1-8d13-11d1-a9ef-0060977f5c78"))
+/* dual interface */ ISpecData;
+struct __declspec(uuid("5f25920f-611c-11d1-a9c6-0060977f5c78"))
+/* dual interface */ IXYData;
+enum WhichClosestPointType;
+enum SpectrumType;
+struct __declspec(uuid("c09d0ef5-926d-11d1-a9f2-0060977f5c78"))
+/* dual interface */ IFMANChromData;
+struct __declspec(uuid("166c1ff1-8d14-11d1-a9ef-0060977f5c78"))
+/* dual interface */ IChromData;
+enum ChromatogramType;
+enum TimeAxisUnitsType;
+struct __declspec(uuid("e26e4381-c608-11d4-9fc0-00c04f1961f5"))
+/* dual interface */ IContourCycle;
+struct __declspec(uuid("59cfc430-ca9f-11d3-bedd-00c04f7b40c7"))
+/* interface */ IBinData;
+struct __declspec(uuid("e26e4383-c608-11d4-9fc0-00c04f1961f5"))
+/* dual interface */ IContourCyclePoint;
+struct /* coclass */ XYData;
+struct __declspec(uuid("000d81ea-e25a-11d4-8aa3-00b0d0285b37"))
+/* interface */ IGetRawData;
+struct __declspec(uuid("e28a3a91-bab4-11d1-aa0f-0060977f5c78"))
+/* interface */ IFastDataAccess;
+struct __declspec(uuid("49d092b0-408b-11d4-bf2c-00c04f7b40c7"))
+/* dual interface */ IXYSetDisplay;
+enum XYDisplayType;
+enum ChromDataFormat;
+struct /* coclass */ ChromData;
+struct /* coclass */ SpecData;
+struct __declspec(uuid("d62d9e63-e5f9-11d3-bef9-00c04f7b40c7"))
+/* dual interface */ ITOFData;
+enum TOFDisplayType;
+enum TOFXDataFormat;
+struct __declspec(uuid("d47380e0-36ec-11d4-bf28-00c04f7b40c7"))
+/* interface */ ISpecDataEx;
+enum TOFPreCursorFormat;
+struct /* coclass */ FMANChromData;
+struct /* coclass */ FMANSpecData;
+struct __declspec(uuid("553f7892-d2f1-4049-86f7-33685249d7f5"))
+/* interface */ IQTrap;
+struct /* coclass */ FMANWiffFile;
+struct __declspec(uuid("26e42183-9803-11d1-a9f6-0060977f5c78"))
+/* dual interface */ IFMANWiffFile;
+struct __declspec(uuid("939eddb0-d3ca-11d1-aa27-0060977f5c78"))
+/* interface */ _IFMANWiffFileInternal;
+struct __declspec(uuid("abdc6fe0-4b68-11d4-986c-00c04f1961e6"))
+/* interface */ ITDCStatistics;
+struct __declspec(uuid("d982f531-d5d3-11d4-8bfd-00c04f731047"))
+/* dual interface */ IFMANWiffFile2;
+enum FileVersion;
+struct __declspec(uuid("d982f531-d5d3-a154-8b3d-01c043731047"))
+/* dual interface */ IFMANWiffFile3;
+struct __declspec(uuid("dce6a9c5-e67e-48af-858b-9e0667e6acea"))
+/* dual interface */ IFMANWiffFile4;
+struct /* coclass */ FMANWiffFileControl;
+struct __declspec(uuid("a1a48ec3-98c6-11d1-a9f6-0060977f5c78"))
+/* dual interface */ IFMANWiffFileControl;
+struct __declspec(uuid("b09b3aa0-b513-11d1-aa08-0060977f5c78"))
+/* interface */ _IFMANWiffFileControlInternal;
+struct /* coclass */ SpectralPeakList;
+struct __declspec(uuid("a75e7c23-012a-11d2-aa63-0060977f5c78"))
+/* dual interface */ ISpectralPeakList;
+struct /* coclass */ TOFData;
+struct /* coclass */ ContourData;
+struct /* coclass */ ContourCycle;
+struct /* coclass */ ContourCyclePoint;
+
+//
+// Smart pointer typedef declarations
+//
+
+_COM_SMARTPTR_TYPEDEF(_DataEvents, __uuidof(_DataEvents));
+_COM_SMARTPTR_TYPEDEF(_DualDataEvents, __uuidof(_DualDataEvents));
+_COM_SMARTPTR_TYPEDEF(_FMANChromDataEvents, __uuidof(_FMANChromDataEvents));
+_COM_SMARTPTR_TYPEDEF(_FMANWiffFileEvents, __uuidof(_FMANWiffFileEvents));
+_COM_SMARTPTR_TYPEDEF(IXYData, __uuidof(IXYData));
+_COM_SMARTPTR_TYPEDEF(ISpecData, __uuidof(ISpecData));
+_COM_SMARTPTR_TYPEDEF(IFMANSpecData, __uuidof(IFMANSpecData));
+_COM_SMARTPTR_TYPEDEF(IChromData, __uuidof(IChromData));
+_COM_SMARTPTR_TYPEDEF(IFMANChromData, __uuidof(IFMANChromData));
+_COM_SMARTPTR_TYPEDEF(IContourData, __uuidof(IContourData));
+_COM_SMARTPTR_TYPEDEF(IBinData, __uuidof(IBinData));
+_COM_SMARTPTR_TYPEDEF(IContourCycle, __uuidof(IContourCycle));
+_COM_SMARTPTR_TYPEDEF(IContourCyclePoint, __uuidof(IContourCyclePoint));
+_COM_SMARTPTR_TYPEDEF(IGetRawData, __uuidof(IGetRawData));
+_COM_SMARTPTR_TYPEDEF(IFastDataAccess, __uuidof(IFastDataAccess));
+_COM_SMARTPTR_TYPEDEF(IXYSetDisplay, __uuidof(IXYSetDisplay));
+_COM_SMARTPTR_TYPEDEF(ITOFData, __uuidof(ITOFData));
+_COM_SMARTPTR_TYPEDEF(ISpecDataEx, __uuidof(ISpecDataEx));
+_COM_SMARTPTR_TYPEDEF(IQTrap, __uuidof(IQTrap));
+_COM_SMARTPTR_TYPEDEF(IFMANWiffFile, __uuidof(IFMANWiffFile));
+_COM_SMARTPTR_TYPEDEF(_IFMANWiffFileInternal, __uuidof(_IFMANWiffFileInternal));
+_COM_SMARTPTR_TYPEDEF(ITDCStatistics, __uuidof(ITDCStatistics));
+_COM_SMARTPTR_TYPEDEF(IFMANWiffFile2, __uuidof(IFMANWiffFile2));
+_COM_SMARTPTR_TYPEDEF(IFMANWiffFile3, __uuidof(IFMANWiffFile3));
+_COM_SMARTPTR_TYPEDEF(IFMANWiffFile4, __uuidof(IFMANWiffFile4));
+_COM_SMARTPTR_TYPEDEF(IFMANWiffFileControl, __uuidof(IFMANWiffFileControl));
+_COM_SMARTPTR_TYPEDEF(_IFMANWiffFileControlInternal, __uuidof(_IFMANWiffFileControlInternal));
+_COM_SMARTPTR_TYPEDEF(ISpectralPeakList, __uuidof(ISpectralPeakList));
+
+//
+// Type library items
+//
+
+enum PeriodType
+{
+    ALL_PERIODS = -1
+};
+
+enum ExperimentType
+{
+    ALL_EXPERIMENTS = -1
+};
+
+enum ExploreDataObjectsErrors
+{
+    EXPLORE_DATA_GENERAL_FAILURE = -2147220992,
+    EXPLORE_DATA_WIFF_FILE_NOT_OPEN = -2147220991,
+    EXPLORE_DATA_INVALID_DATA_OBJECT_PROVIDED = -2147220990,
+    EXPLORE_DATA_UNABLE_TO_READ_IN_SAMPLE = -2147220989,
+    EXPLORE_DATA_NO_DATA_POINTS_READ_IN = -2147220988,
+    EXPLORE_DATA_UNEXPECTED_EXCEPTION = -2147220987,
+    EXPLORE_DATA_SPECTRA_SPANS_PERIOD_BOUNDARY = -2147220986,
+    EXPLORE_DATA_CANNOT_ENTER_CRITICAL_SECTION = -2147220985,
+    EXPLORE_DATA_SCAN_CONTAINS_NO_DATA_POINTS = -2147220984,
+    EXPLORE_DATA_WORKSPACE_FILE_WRONG_VERSION = -2147220983,
+    EXPLORE_DATA_REALTIME_QUIT = -2147220982,
+    EXPLORE_DATA_NO_SPEC_RT = -2147220981,
+    EXPLORE_DATA_NO_SCANS_IN_SAMPLE = -2147220980,
+    EXPLORE_DATA_NO_TOF_CORRECTION = -2147220979,
+    EXPLORE_DATA_NO_SCANS_FOR_BPC = -2147220978,
+    EXPLORE_DATA_NO_DAD_SCANS_IN_SAMPLE = -2147220977,
+    EXPLORE_DATA_NO_CYCLES_OR_UNBUNDLED = -2147220976
+};
+
+struct __declspec(uuid("d85afbb0-6a7d-11d1-a9c9-0060977f5c78"))
+_DataEvents : IDispatch
+{
+    //
+    // Wrapper methods for error-handling
+    //
+
+    // Methods:
+    HRESULT DataChanged (
+        long firstPoint,
+        long lastPoint );
+    HRESULT NewData (
+        long firstPoint,
+        long lastPoint );
+    HRESULT DataTitleChanged ( );
+    HRESULT XAxisRangeChanged ( );
+    HRESULT AllDataHasBeenRemoved ( );
+    HRESULT DataHasBeenSorted ( );
+};
+
+struct __declspec(uuid("a60858a1-8de8-11d1-a9ef-0060977f5c78"))
+_DualDataEvents : IDispatch
+{
+    //
+    // Wrapper methods for error-handling
+    //
+
+    HRESULT DataChanged (
+        long firstPoint,
+        long lastPoint );
+    HRESULT NewData (
+        long firstPoint,
+        long lastPoint );
+    HRESULT DataTitleChanged ( );
+    HRESULT XAxisRangeChanged ( );
+    HRESULT AllDataHasBeenRemoved ( );
+    HRESULT DataHasBeenSorted ( );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall raw_DataChanged (
+        /*[in]*/ long firstPoint,
+        /*[in]*/ long lastPoint ) = 0;
+      virtual HRESULT __stdcall raw_NewData (
+        /*[in]*/ long firstPoint,
+        /*[in]*/ long lastPoint ) = 0;
+      virtual HRESULT __stdcall raw_DataTitleChanged ( ) = 0;
+      virtual HRESULT __stdcall raw_XAxisRangeChanged ( ) = 0;
+      virtual HRESULT __stdcall raw_AllDataHasBeenRemoved ( ) = 0;
+      virtual HRESULT __stdcall raw_DataHasBeenSorted ( ) = 0;
+};
+
+struct __declspec(uuid("c415fba0-db88-11d1-aa31-0060977f5c78"))
+_FMANChromDataEvents : IDispatch
+{
+    //
+    // Wrapper methods for error-handling
+    //
+
+    // Methods:
+    HRESULT PeriodEnded (
+        long period,
+        long lastPointInPeriod );
+};
+
+struct __declspec(uuid("59017b20-ddeb-11d1-aa37-0060977f5c78"))
+_FMANWiffFileEvents : IDispatch
+{
+    //
+    // Wrapper methods for error-handling
+    //
+
+    HRESULT NewData (
+        long sample,
+        long period,
+        long cycle );
+    HRESULT AcquisitionComplete (
+        long sample );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall raw_NewData (
+        /*[in]*/ long sample,
+        /*[in]*/ long period,
+        /*[in]*/ long cycle ) = 0;
+      virtual HRESULT __stdcall raw_AcquisitionComplete (
+        /*[in]*/ long sample ) = 0;
+};
+
+enum WhichClosestPointType
+{
+    CLOSEST_POINT_LOWER = 0,
+    CLOSEST_POINT = 1,
+    CLOSEST_POINT_HIGHER = 2
+};
+
+struct __declspec(uuid("5f25920f-611c-11d1-a9c6-0060977f5c78"))
+IXYData : IDispatch
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetSortDataPointsWhenAppended,put=PutSortDataPointsWhenAppended))
+    long SortDataPointsWhenAppended;
+    __declspec(property(get=GetXAxisUnits,put=PutXAxisUnits))
+    _bstr_t XAxisUnits;
+    __declspec(property(get=GetYAxisUnits,put=PutYAxisUnits))
+    _bstr_t YAxisUnits;
+    __declspec(property(get=GetXAxisTitle,put=PutXAxisTitle))
+    _bstr_t XAxisTitle;
+    __declspec(property(get=GetYAxisTitle,put=PutYAxisTitle))
+    _bstr_t YAxisTitle;
+    __declspec(property(get=GetDataTitle,put=PutDataTitle))
+    _bstr_t DataTitle;
+    __declspec(property(get=GetStepSize,put=PutStepSize))
+    double StepSize;
+    __declspec(property(get=GetXValuesAreSorted,put=PutXValuesAreSorted))
+    VARIANT_BOOL XValuesAreSorted;
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    HRESULT ReadFromTextFile (
+        _bstr_t fileName );
+    double GetDataPointXValue (
+        long pointNumber );
+    double GetDataPointYValue (
+        long pointNumber );
+    long GetNumberOfDataPoints ( );
+    HRESULT SaveToTextFile (
+        _bstr_t fileName );
+    _bstr_t GetXAxisUnits ( );
+    void PutXAxisUnits (
+        _bstr_t pVal );
+    _bstr_t GetYAxisUnits ( );
+    void PutYAxisUnits (
+        _bstr_t pVal );
+    _bstr_t GetXAxisTitle ( );
+    void PutXAxisTitle (
+        _bstr_t pVal );
+    _bstr_t GetYAxisTitle ( );
+    void PutYAxisTitle (
+        _bstr_t pVal );
+    _bstr_t GetDataTitle ( );
+    void PutDataTitle (
+        _bstr_t pVal );
+    HRESULT SetDataPoint (
+        long pointNumber,
+        double xValue,
+        double yValue );
+    HRESULT AppendDataPoint (
+        double xValue,
+        double yValue );
+    double GetClosestXValue (
+        double requestedXValue,
+        enum WhichClosestPointType whichClosestPoint );
+    double GetYValueForXValue (
+        double xValue,
+        enum WhichClosestPointType whichClosestPoint );
+    HRESULT GetDataPoint (
+        long pointNumber,
+        double * xValue,
+        double * yValue );
+    HRESULT GetXValueRange (
+        double * minimumXValue,
+        double * maximumXValue );
+    HRESULT GetYValueRange (
+        double * minimumYValue,
+        double * maximumYValue );
+    HRESULT GetYValueRangeForXValueRange (
+        double minimumXValue,
+        double maximumXValue,
+        long * pointWithMinimumYValue,
+        long * pointWithMaximumYValue );
+    HRESULT AppendToTitle (
+        _bstr_t stringToAppend );
+    HRESULT GetClosestPointNumberForXValue (
+        double xValue,
+        enum WhichClosestPointType whichClosestPoint,
+        long * pointNumber );
+    HRESULT RemoveAllDataPoints ( );
+    double GetStepSize ( );
+    void PutStepSize (
+        double pVal );
+    HRESULT Add (
+        IUnknown * pOtherIUnknown,
+        double toleranceForXValues );
+    HRESULT SetDataEventsStatus (
+        VARIANT_BOOL generateEvents );
+    HRESULT SetNumberOfDataPoints (
+        long numberOfDataPoints );
+    VARIANT_BOOL GetXValuesAreSorted ( );
+    void PutXValuesAreSorted (
+        VARIANT_BOOL pVal );
+    HRESULT SetDataPointXValue (
+        long pointNumber,
+        double xValue );
+    HRESULT SetDataPointYValue (
+        long pointNumber,
+        double yValue );
+    HRESULT Threshold (
+        double minimumYValue );
+    IUnknownPtr Copy ( );
+    HRESULT Subtract (
+        IUnknown * pOtherIUnknown,
+        double toleranceForXValues,
+        long keepNegativeValues );
+    HRESULT GetXAxisRange (
+        double * minimumXValue,
+        double * maximumXValue );
+    HRESULT GetStepSize (
+        long pointNumber,
+        double * StepSize,
+        long * pointWhereItChanges );
+    long GetSortDataPointsWhenAppended ( );
+    void PutSortDataPointsWhenAppended (
+        long pVal );
+    HRESULT SortData (
+        long sortXValues,
+        long sortAscending );
+    HRESULT UpdateInternalStateAfterCopy ( );
+    HRESULT SetUserValue (
+        long pointNumber,
+        long userValue );
+    long GetUserValue (
+        long pointNumber );
+    long UserValuesHaveBeenSet ( );
+    HRESULT SetXAxisOffset (
+        double offsetValue );
+    HRESULT AddHistoryString (
+        _bstr_t historyString );
+    long GetNumberOfHistoryStrings ( );
+    _bstr_t GetHistoryString (
+        long stringNumber );
+    double GetXAxisOffset ( );
+    _bstr_t GetObjectID ( );
+    _bstr_t _LookupFieldValue (
+        long fieldID );
+    HRESULT SetExpectedNumberOfDataPoints (
+        long numberOfDataPoints );
+    HRESULT FindPeakWidthAtSpecifiedHeight (
+        double xValueOfPeakTop,
+        double peakHeightAsPercent,
+        double * xValueOfLeftSide,
+        double * xValueOfRightSide );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall raw_ReadFromTextFile (
+        /*[in]*/ BSTR fileName ) = 0;
+      virtual HRESULT __stdcall raw_GetDataPointXValue (
+        /*[in]*/ long pointNumber,
+        /*[out,retval]*/ double * xValue ) = 0;
+      virtual HRESULT __stdcall raw_GetDataPointYValue (
+        /*[in]*/ long pointNumber,
+        /*[out,retval]*/ double * yValue ) = 0;
+      virtual HRESULT __stdcall raw_GetNumberOfDataPoints (
+        /*[out,retval]*/ long * numberOfDataPoints ) = 0;
+      virtual HRESULT __stdcall raw_SaveToTextFile (
+        /*[in]*/ BSTR fileName ) = 0;
+      virtual HRESULT __stdcall get_XAxisUnits (
+        /*[out,retval]*/ BSTR * pVal ) = 0;
+      virtual HRESULT __stdcall put_XAxisUnits (
+        /*[in]*/ BSTR pVal ) = 0;
+      virtual HRESULT __stdcall get_YAxisUnits (
+        /*[out,retval]*/ BSTR * pVal ) = 0;
+      virtual HRESULT __stdcall put_YAxisUnits (
+        /*[in]*/ BSTR pVal ) = 0;
+      virtual HRESULT __stdcall get_XAxisTitle (
+        /*[out,retval]*/ BSTR * pVal ) = 0;
+      virtual HRESULT __stdcall put_XAxisTitle (
+        /*[in]*/ BSTR pVal ) = 0;
+      virtual HRESULT __stdcall get_YAxisTitle (
+        /*[out,retval]*/ BSTR * pVal ) = 0;
+      virtual HRESULT __stdcall put_YAxisTitle (
+        /*[in]*/ BSTR pVal ) = 0;
+      virtual HRESULT __stdcall get_DataTitle (
+        /*[out,retval]*/ BSTR * pVal ) = 0;
+      virtual HRESULT __stdcall put_DataTitle (
+        /*[in]*/ BSTR pVal ) = 0;
+      virtual HRESULT __stdcall raw_SetDataPoint (
+        /*[in]*/ long pointNumber,
+        /*[in]*/ double xValue,
+        /*[in]*/ double yValue ) = 0;
+      virtual HRESULT __stdcall raw_AppendDataPoint (
+        /*[in]*/ double xValue,
+        /*[in]*/ double yValue ) = 0;
+      virtual HRESULT __stdcall raw_GetClosestXValue (
+        /*[in]*/ double requestedXValue,
+        /*[in]*/ enum WhichClosestPointType whichClosestPoint,
+        /*[out,retval]*/ double * actualXValue ) = 0;
+      virtual HRESULT __stdcall raw_GetYValueForXValue (
+        /*[in]*/ double xValue,
+        /*[in]*/ enum WhichClosestPointType whichClosestPoint,
+        /*[out,retval]*/ double * yValue ) = 0;
+      virtual HRESULT __stdcall raw_GetDataPoint (
+        /*[in]*/ long pointNumber,
+        /*[out]*/ double * xValue,
+        /*[out]*/ double * yValue ) = 0;
+      virtual HRESULT __stdcall raw_GetXValueRange (
+        /*[out]*/ double * minimumXValue,
+        /*[out]*/ double * maximumXValue ) = 0;
+      virtual HRESULT __stdcall raw_GetYValueRange (
+        /*[out]*/ double * minimumYValue,
+        /*[out]*/ double * maximumYValue ) = 0;
+      virtual HRESULT __stdcall raw_GetYValueRangeForXValueRange (
+        /*[in]*/ double minimumXValue,
+        /*[in]*/ double maximumXValue,
+        /*[out]*/ long * pointWithMinimumYValue,
+        /*[out]*/ long * pointWithMaximumYValue ) = 0;
+      virtual HRESULT __stdcall raw_AppendToTitle (
+        /*[in]*/ BSTR stringToAppend ) = 0;
+      virtual HRESULT __stdcall raw_GetClosestPointNumberForXValue (
+        /*[in]*/ double xValue,
+        /*[in]*/ enum WhichClosestPointType whichClosestPoint,
+        /*[out]*/ long * pointNumber ) = 0;
+      virtual HRESULT __stdcall raw_RemoveAllDataPoints ( ) = 0;
+      virtual HRESULT __stdcall get_StepSize (
+        /*[out,retval]*/ double * pVal ) = 0;
+      virtual HRESULT __stdcall put_StepSize (
+        /*[in]*/ double pVal ) = 0;
+      virtual HRESULT __stdcall raw_Add (
+        /*[in]*/ IUnknown * pOtherIUnknown,
+        /*[in]*/ double toleranceForXValues ) = 0;
+      virtual HRESULT __stdcall raw_SetDataEventsStatus (
+        /*[in]*/ VARIANT_BOOL generateEvents ) = 0;
+      virtual HRESULT __stdcall raw_SetNumberOfDataPoints (
+        /*[in]*/ long numberOfDataPoints ) = 0;
+      virtual HRESULT __stdcall get_XValuesAreSorted (
+        /*[out,retval]*/ VARIANT_BOOL * pVal ) = 0;
+      virtual HRESULT __stdcall put_XValuesAreSorted (
+        /*[in]*/ VARIANT_BOOL pVal ) = 0;
+      virtual HRESULT __stdcall raw_SetDataPointXValue (
+        /*[in]*/ long pointNumber,
+        /*[in]*/ double xValue ) = 0;
+      virtual HRESULT __stdcall raw_SetDataPointYValue (
+        /*[in]*/ long pointNumber,
+        /*[in]*/ double yValue ) = 0;
+      virtual HRESULT __stdcall raw_Threshold (
+        /*[in]*/ double minimumYValue ) = 0;
+      virtual HRESULT __stdcall raw_Copy (
+        /*[out,retval]*/ IUnknown * * ppCopy ) = 0;
+      virtual HRESULT __stdcall raw_Subtract (
+        /*[in]*/ IUnknown * pOtherIUnknown,
+        /*[in]*/ double toleranceForXValues,
+        /*[in]*/ long keepNegativeValues ) = 0;
+      virtual HRESULT __stdcall raw_GetXAxisRange (
+        /*[out]*/ double * minimumXValue,
+        /*[out]*/ double * maximumXValue ) = 0;
+      virtual HRESULT __stdcall raw_GetStepSize (
+        /*[in]*/ long pointNumber,
+        /*[out]*/ double * StepSize,
+        /*[in,out]*/ long * pointWhereItChanges ) = 0;
+      virtual HRESULT __stdcall get_SortDataPointsWhenAppended (
+        /*[out,retval]*/ long * pVal ) = 0;
+      virtual HRESULT __stdcall put_SortDataPointsWhenAppended (
+        /*[in]*/ long pVal ) = 0;
+      virtual HRESULT __stdcall raw_SortData (
+        /*[in]*/ long sortXValues,
+        /*[in]*/ long sortAscending ) = 0;
+      virtual HRESULT __stdcall raw_UpdateInternalStateAfterCopy ( ) = 0;
+      virtual HRESULT __stdcall raw_SetUserValue (
+        /*[in]*/ long pointNumber,
+        /*[in]*/ long userValue ) = 0;
+      virtual HRESULT __stdcall raw_GetUserValue (
+        /*[in]*/ long pointNumber,
+        /*[out,retval]*/ long * userValue ) = 0;
+      virtual HRESULT __stdcall raw_UserValuesHaveBeenSet (
+        /*[out,retval]*/ long * userValuesSet ) = 0;
+      virtual HRESULT __stdcall raw_SetXAxisOffset (
+        /*[in]*/ double offsetValue ) = 0;
+      virtual HRESULT __stdcall raw_AddHistoryString (
+        /*[in]*/ BSTR historyString ) = 0;
+      virtual HRESULT __stdcall raw_GetNumberOfHistoryStrings (
+        /*[out,retval]*/ long * numberOfStrings ) = 0;
+      virtual HRESULT __stdcall raw_GetHistoryString (
+        /*[in]*/ long stringNumber,
+        /*[out,retval]*/ BSTR * historyString ) = 0;
+      virtual HRESULT __stdcall raw_GetXAxisOffset (
+        /*[out,retval]*/ double * offsetValue ) = 0;
+      virtual HRESULT __stdcall raw_GetObjectID (
+        /*[out,retval]*/ BSTR * objectID ) = 0;
+      virtual HRESULT __stdcall raw__LookupFieldValue (
+        /*[in]*/ long fieldID,
+        /*[out,retval]*/ BSTR * fieldValue ) = 0;
+      virtual HRESULT __stdcall raw_SetExpectedNumberOfDataPoints (
+        /*[in]*/ long numberOfDataPoints ) = 0;
+      virtual HRESULT __stdcall raw_FindPeakWidthAtSpecifiedHeight (
+        /*[in]*/ double xValueOfPeakTop,
+        /*[in]*/ double peakHeightAsPercent,
+        /*[out]*/ double * xValueOfLeftSide,
+        /*[out]*/ double * xValueOfRightSide ) = 0;
+};
+
+enum SpectrumType
+{
+    UNKNOWN_SPECTRUM = 0,
+    M_OVER_Z_SPECTRUM = 1,
+    ACTUAL_MASS_SPECTRUM = 2,
+    MRM_SPECTRUM = 3,
+    SIM_SPECTRUM = 4,
+    TOF_M_OVER_Z_SPECTRUM = 5,
+    TOF_TIME_OVER_Z_SPECTRUM = 6,
+    TOF_PRECURSOR_SPECTRUM = 7,
+    DAD_SPECTRUM = 8
+};
+
+struct __declspec(uuid("cc5d48a1-8d13-11d1-a9ef-0060977f5c78"))
+ISpecData : IXYData
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetSpectrumType,put=PutSpectrumType))
+    enum SpectrumType _SpectrumType;
+    __declspec(property(get=GetContainedObject,put=PutContainedObject))
+    IUnknownPtr ContainedObject;
+    __declspec(property(get=GetIsCentroided,put=PutIsCentroided))
+    long IsCentroided;
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    enum SpectrumType GetSpectrumType ( );
+    void PutSpectrumType (
+        enum SpectrumType pVal );
+    IUnknownPtr GetContainedObject ( );
+    void PutContainedObject (
+        IUnknown * pVal );
+    long GetIsCentroided ( );
+    void PutIsCentroided (
+        long pVal );
+    double GetDataPointWidth (
+        long pointNumber );
+    HRESULT SetDataPointWidth (
+        long pointNumber,
+        double width );
+    HRESULT GetXYDataObject (
+        struct IXYData * * pIXYData );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall get_SpectrumType (
+        /*[out,retval]*/ enum SpectrumType * pVal ) = 0;
+      virtual HRESULT __stdcall put_SpectrumType (
+        /*[in]*/ enum SpectrumType pVal ) = 0;
+      virtual HRESULT __stdcall get_ContainedObject (
+        /*[out,retval]*/ IUnknown * * pVal ) = 0;
+      virtual HRESULT __stdcall put_ContainedObject (
+        /*[in]*/ IUnknown * pVal ) = 0;
+      virtual HRESULT __stdcall get_IsCentroided (
+        /*[out,retval]*/ long * pVal ) = 0;
+      virtual HRESULT __stdcall put_IsCentroided (
+        /*[in]*/ long pVal ) = 0;
+      virtual HRESULT __stdcall raw_GetDataPointWidth (
+        /*[in]*/ long pointNumber,
+        /*[out,retval]*/ double * width ) = 0;
+      virtual HRESULT __stdcall raw_SetDataPointWidth (
+        /*[in]*/ long pointNumber,
+        /*[in]*/ double width ) = 0;
+      virtual HRESULT __stdcall raw_GetXYDataObject (
+        struct IXYData * * pIXYData ) = 0;
+};
+
+struct __declspec(uuid("c09d0ef7-926d-11d1-a9f2-0060977f5c78"))
+IFMANSpecData : ISpecData
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetShowLastScan,put=PutShowLastScan))
+    long ShowLastScan;
+    __declspec(property(get=GetWiffFileName,put=PutWiffFileName))
+    _bstr_t WiffFileName;
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    HRESULT SetSpectrum (
+        long sample,
+        long period,
+        long experiment,
+        float startTime,
+        float endTime );
+    double GetStartMass ( );
+    double GetStopMass ( );
+    HRESULT GetQ1Mass (
+        long pointNumber,
+        double * theMass );
+    HRESULT GetQ3Mass (
+        long pointNumber,
+        double * theMass );
+    _bstr_t GetWiffFileName ( );
+    void PutWiffFileName (
+        _bstr_t pVal );
+    long GetSampleNumber ( );
+    HRESULT SetSampleNumber (
+        long sampleNumber );
+    HRESULT GetSIMMass (
+        long pointNumber,
+        double * theMass );
+    HRESULT SetQ1Mass (
+        long pointNumber,
+        double theMass );
+    HRESULT SetQ3Mass (
+        long pointNumber,
+        double theMass );
+    HRESULT SetSIMMass (
+        long pointNumber,
+        double theMass );
+    HRESULT MoveSpectrum (
+        IDispatch * chromatogramGeneratedFrom,
+        float startTime,
+        float endTime,
+        long onlyIfSingleCycle,
+        IUnknown * pIUnknownBackgroundSubtractDataObject );
+    long GetExperimentNumber ( );
+    long GetPeriodNumber ( );
+    HRESULT SetPeriodNumber (
+        long periodNumber );
+    HRESULT SetExperimentNumber (
+        long experimentNumber );
+    IUnknownPtr GetWiffFileObject ( );
+    HRESULT GetScanInfo (
+        short * scanType,
+        short * scanMode,
+        long * isNegativePolarity,
+        short * q1Resolution,
+        short * q3Resolution );
+    float GetStartTime ( );
+    float GetEndTime ( );
+    long GetShowLastScan ( );
+    void PutShowLastScan (
+        long pVal );
+    HRESULT SetCycleDependentSpectrum (
+        long sample,
+        long startCycle,
+        long endCycle );
+    long GetNumberOfMassRanges ( );
+    long GetNumberOfScans ( );
+    HRESULT _SetStartAndEndTime (
+        float startTime,
+        float endTime );
+    HRESULT SetDADSpectrum (
+        long sample,
+        float startTime,
+        float endTime );
+    float GetDADSpectrumStartTime ( );
+    float GetDADSpectrumStopTime ( );
+    long GetDADNumberOfScans ( );
+    HRESULT GetWaveLengthRange (
+        float * startWaveLength,
+        float * endWaveLength,
+        float * stepWaveLength );
+    HRESULT GetDADOperatingMode (
+        short * operatingMode );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall raw_SetSpectrum (
+        /*[in]*/ long sample,
+        /*[in]*/ long period,
+        /*[in]*/ long experiment,
+        /*[in]*/ float startTime,
+        /*[in]*/ float endTime ) = 0;
+      virtual HRESULT __stdcall raw_GetStartMass (
+        /*[out,retval]*/ double * startMass ) = 0;
+      virtual HRESULT __stdcall raw_GetStopMass (
+        /*[out,retval]*/ double * stopMass ) = 0;
+      virtual HRESULT __stdcall raw_GetQ1Mass (
+        /*[in]*/ long pointNumber,
+        /*[out]*/ double * theMass ) = 0;
+      virtual HRESULT __stdcall raw_GetQ3Mass (
+        /*[in]*/ long pointNumber,
+        /*[out]*/ double * theMass ) = 0;
+      virtual HRESULT __stdcall get_WiffFileName (
+        /*[out,retval]*/ BSTR * pVal ) = 0;
+      virtual HRESULT __stdcall put_WiffFileName (
+        /*[in]*/ BSTR pVal ) = 0;
+      virtual HRESULT __stdcall raw_GetSampleNumber (
+        /*[out,retval]*/ long * sampleNumber ) = 0;
+      virtual HRESULT __stdcall raw_SetSampleNumber (
+        /*[in]*/ long sampleNumber ) = 0;
+      virtual HRESULT __stdcall raw_GetSIMMass (
+        /*[in]*/ long pointNumber,
+        /*[out]*/ double * theMass ) = 0;
+      virtual HRESULT __stdcall raw_SetQ1Mass (
+        /*[in]*/ long pointNumber,
+        /*[in]*/ double theMass ) = 0;
+      virtual HRESULT __stdcall raw_SetQ3Mass (
+        /*[in]*/ long pointNumber,
+        /*[in]*/ double theMass ) = 0;
+      virtual HRESULT __stdcall raw_SetSIMMass (
+        /*[in]*/ long pointNumber,
+        /*[in]*/ double theMass ) = 0;
+      virtual HRESULT __stdcall raw_MoveSpectrum (
+        /*[in]*/ IDispatch * chromatogramGeneratedFrom,
+        /*[in]*/ float startTime,
+        /*[in]*/ float endTime,
+        /*[in]*/ long onlyIfSingleCycle,
+        /*[in]*/ IUnknown * pIUnknownBackgroundSubtractDataObject ) = 0;
+      virtual HRESULT __stdcall raw_GetExperimentNumber (
+        /*[out,retval]*/ long * experimentNumber ) = 0;
+      virtual HRESULT __stdcall raw_GetPeriodNumber (
+        /*[out,retval]*/ long * periodNumber ) = 0;
+      virtual HRESULT __stdcall raw_SetPeriodNumber (
+        /*[in]*/ long periodNumber ) = 0;
+      virtual HRESULT __stdcall raw_SetExperimentNumber (
+        /*[in]*/ long experimentNumber ) = 0;
+      virtual HRESULT __stdcall raw_GetWiffFileObject (
+        /*[out,retval]*/ IUnknown * * ppIUnknown ) = 0;
+      virtual HRESULT __stdcall raw_GetScanInfo (
+        /*[out]*/ short * scanType,
+        /*[out]*/ short * scanMode,
+        /*[out]*/ long * isNegativePolarity,
+        /*[out]*/ short * q1Resolution,
+        /*[out]*/ short * q3Resolution ) = 0;
+      virtual HRESULT __stdcall raw_GetStartTime (
+        /*[out,retval]*/ float * startTime ) = 0;
+      virtual HRESULT __stdcall raw_GetEndTime (
+        /*[out,retval]*/ float * endTime ) = 0;
+      virtual HRESULT __stdcall get_ShowLastScan (
+        /*[out,retval]*/ long * pVal ) = 0;
+      virtual HRESULT __stdcall put_ShowLastScan (
+        /*[in]*/ long pVal ) = 0;
+      virtual HRESULT __stdcall raw_SetCycleDependentSpectrum (
+        /*[in]*/ long sample,
+        /*[in]*/ long startCycle,
+        /*[in]*/ long endCycle ) = 0;
+      virtual HRESULT __stdcall raw_GetNumberOfMassRanges (
+        /*[out,retval]*/ long * numberOfMassRanges ) = 0;
+      virtual HRESULT __stdcall raw_GetNumberOfScans (
+        /*[out,retval]*/ long * numberOfScans ) = 0;
+      virtual HRESULT __stdcall raw__SetStartAndEndTime (
+        /*[in]*/ float startTime,
+        /*[in]*/ float endTime ) = 0;
+      virtual HRESULT __stdcall raw_SetDADSpectrum (
+        /*[in]*/ long sample,
+        /*[in]*/ float startTime,
+        /*[in]*/ float endTime ) = 0;
+      virtual HRESULT __stdcall raw_GetDADSpectrumStartTime (
+        /*[out,retval]*/ float * startTime ) = 0;
+      virtual HRESULT __stdcall raw_GetDADSpectrumStopTime (
+        /*[out,retval]*/ float * stopTime ) = 0;
+      virtual HRESULT __stdcall raw_GetDADNumberOfScans (
+        /*[out,retval]*/ long * DADnumberOfScans ) = 0;
+      virtual HRESULT __stdcall raw_GetWaveLengthRange (
+        /*[out]*/ float * startWaveLength,
+        /*[out]*/ float * endWaveLength,
+        /*[out]*/ float * stepWaveLength ) = 0;
+      virtual HRESULT __stdcall raw_GetDADOperatingMode (
+        /*[out]*/ short * operatingMode ) = 0;
+};
+
+enum ChromatogramType
+{
+    UNKNOWN_CHROMATOGRAM = 0,
+    TOTAL_ION_CHROMATOGRAM = 1,
+    EXTRACTED_ION_CHROMATOGRAM = 2,
+    BASE_PEAK_CHROMATOGRAM = 3,
+    ANALOG_TO_DIGITAL_CHANNEL = 4,
+    DAD_TOTAL_ION_CHROMATOGRAM = 5,
+    DAD_EXTRACTED_ION_CHROMATOGRAM = 6,
+    DAD_BASE_PEAK_CHROMATOGRAM = 7
+};
+
+enum TimeAxisUnitsType
+{
+    TIME_IN_MSEC = 0,
+    TIME_IN_SECONDS = 1,
+    TIME_IN_MINUTES = 2,
+    TIME_IN_HOURS = 3,
+    TIME_IN_CYCLE_DEPENDENT_PARAMETER = 4
+};
+
+struct __declspec(uuid("166c1ff1-8d14-11d1-a9ef-0060977f5c78"))
+IChromData : IXYData
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetChromatogramType,put=PutChromatogramType))
+    enum ChromatogramType _ChromatogramType;
+    __declspec(property(get=GetTimeAxisUnits,put=PutTimeAxisUnits))
+    enum TimeAxisUnitsType TimeAxisUnits;
+    __declspec(property(get=GetContainedObject,put=PutContainedObject))
+    IUnknownPtr ContainedObject;
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    enum ChromatogramType GetChromatogramType ( );
+    void PutChromatogramType (
+        enum ChromatogramType pVal );
+    enum TimeAxisUnitsType GetTimeAxisUnits ( );
+    void PutTimeAxisUnits (
+        enum TimeAxisUnitsType pVal );
+    double GetXValueInMS (
+        long pointNumber );
+    double GetXValueInSec (
+        long pointNumber );
+    double GetXValueInMin (
+        long pointNumber );
+    double GetXValueInHours (
+        long pointNumber );
+    IUnknownPtr GetContainedObject ( );
+    void PutContainedObject (
+        IUnknown * pVal );
+    HRESULT GetXYDataObject (
+        struct IXYData * * pIXYData );
+    IUnknownPtr GetPeakList (
+        double backgroundStartTime,
+        double backgroundEndTime );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall get_ChromatogramType (
+        /*[out,retval]*/ enum ChromatogramType * pVal ) = 0;
+      virtual HRESULT __stdcall put_ChromatogramType (
+        /*[in]*/ enum ChromatogramType pVal ) = 0;
+      virtual HRESULT __stdcall get_TimeAxisUnits (
+        /*[out,retval]*/ enum TimeAxisUnitsType * pVal ) = 0;
+      virtual HRESULT __stdcall put_TimeAxisUnits (
+        /*[in]*/ enum TimeAxisUnitsType pVal ) = 0;
+      virtual HRESULT __stdcall raw_GetXValueInMS (
+        /*[in]*/ long pointNumber,
+        /*[out,retval]*/ double * xValue ) = 0;
+      virtual HRESULT __stdcall raw_GetXValueInSec (
+        /*[in]*/ long pointNumber,
+        /*[out,retval]*/ double * xValue ) = 0;
+      virtual HRESULT __stdcall raw_GetXValueInMin (
+        /*[in]*/ long pointNumber,
+        /*[out,retval]*/ double * xValue ) = 0;
+      virtual HRESULT __stdcall raw_GetXValueInHours (
+        /*[in]*/ long pointNumber,
+        /*[out,retval]*/ double * xValue ) = 0;
+      virtual HRESULT __stdcall get_ContainedObject (
+        /*[out,retval]*/ IUnknown * * pVal ) = 0;
+      virtual HRESULT __stdcall put_ContainedObject (
+        /*[in]*/ IUnknown * pVal ) = 0;
+      virtual HRESULT __stdcall raw_GetXYDataObject (
+        struct IXYData * * pIXYData ) = 0;
+      virtual HRESULT __stdcall raw_GetPeakList (
+        /*[in]*/ double backgroundStartTime,
+        /*[in]*/ double backgroundEndTime,
+        /*[out,retval]*/ IUnknown * * peakList ) = 0;
+};
+
+struct __declspec(uuid("c09d0ef5-926d-11d1-a9f2-0060977f5c78"))
+IFMANChromData : IChromData
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetWiffFileName,put=PutWiffFileName))
+    _bstr_t WiffFileName;
+    __declspec(property(get=GetDataIsBeingAcquired,put=PutDataIsBeingAcquired))
+    long DataIsBeingAcquired;
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    HRESULT SetToTIC (
+        long sample,
+        long period,
+        long experiment );
+    HRESULT SetToXIC (
+        long sample,
+        long period,
+        long experiment,
+        double startMass,
+        double stopMass );
+    HRESULT SetToBPC (
+        long sample,
+        long period,
+        long experiment,
+        double startTime,
+        double endTime,
+        double startMass,
+        double stopMass,
+        double massTolerance );
+    HRESULT SetToADC (
+        long sample,
+        long deviceID,
+        long channel );
+    long GetNumberOfPeriods ( );
+    long GetNumberOfExperiments (
+        long period );
+    _bstr_t GetWiffFileName ( );
+    void PutWiffFileName (
+        _bstr_t pVal );
+    long GetSampleNumber ( );
+    HRESULT SetSampleNumber (
+        long sampleNumber );
+    HRESULT GetPeriodRange (
+        long periodNumber,
+        long * startOfPeriodPointNumber,
+        long * endOfPeriodPointNumber );
+    long GetDataIsBeingAcquired ( );
+    void PutDataIsBeingAcquired (
+        long pVal );
+    HRESULT GetColour (
+        long pointNumber,
+        long * colour,
+        long * pointWhereItChanges );
+    long GetPeriodNumber ( );
+    HRESULT SetPeriodNumber (
+        long periodNumber );
+    long GetExperimentNumber ( );
+    HRESULT SetExperimentNumber (
+        long experimentNumber );
+    double GetBasePeakMass (
+        long pointNumber );
+    HRESULT SetBasePeakMass (
+        long pointNumber,
+        double theMass );
+    HRESULT SetToXICZeroWidth (
+        long sample,
+        long period,
+        long experiment,
+        short simIndex );
+    IUnknownPtr GetWiffFileObject ( );
+    HRESULT GetMassRange (
+        double * startMass,
+        double * stopMass );
+    HRESULT SetBasePeakMassTolerance (
+        double massTolerance );
+    double GetBasePeakMassTolerance ( );
+    HRESULT SetNumberOfPeriods (
+        long numberOfPeriods );
+    HRESULT SetDeviceID (
+        long deviceID );
+    HRESULT SetChannelNumber (
+        long channelNumber );
+    HRESULT DisplayCycleDepParamOnXAxis (
+        long displayFirstOne,
+        _bstr_t paramId );
+    HRESULT _SetStartAndStopMass (
+        double startMass,
+        double stopMass );
+    HRESULT _SetSIMIndex (
+        long simIndex );
+    HRESULT _SetCycleDependentStartAndStep (
+        double startValue,
+        double stepValue );
+    HRESULT GetDeviceAndChannelID (
+        long * deviceID,
+        long * channelNumber );
+    HRESULT SetToDADTWC (
+        long sample,
+        long deviceID );
+    HRESULT SetToDADXWC (
+        long sample,
+        long devID,
+        double startWaveLength,
+        double stopWaveLength );
+    HRESULT GetDADDeviceID (
+        long sample,
+        long * deviceID );
+    HRESULT GetStartAndStopWaveLengths (
+        float * startWaveLength,
+        float * stopWaveLength );
+    HRESULT SetStartAndStopWaveLengths (
+        float startWaveLength,
+        float stopWaveLength );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall raw_SetToTIC (
+        /*[in]*/ long sample,
+        /*[in]*/ long period,
+        /*[in]*/ long experiment ) = 0;
+      virtual HRESULT __stdcall raw_SetToXIC (
+        /*[in]*/ long sample,
+        /*[in]*/ long period,
+        /*[in]*/ long experiment,
+        /*[in]*/ double startMass,
+        /*[in]*/ double stopMass ) = 0;
+      virtual HRESULT __stdcall raw_SetToBPC (
+        /*[in]*/ long sample,
+        /*[in]*/ long period,
+        /*[in]*/ long experiment,
+        /*[in]*/ double startTime,
+        /*[in]*/ double endTime,
+        /*[in]*/ double startMass,
+        /*[in]*/ double stopMass,
+        /*[in]*/ double massTolerance ) = 0;
+      virtual HRESULT __stdcall raw_SetToADC (
+        /*[in]*/ long sample,
+        /*[in]*/ long deviceID,
+        /*[in]*/ long channel ) = 0;
+      virtual HRESULT __stdcall raw_GetNumberOfPeriods (
+        /*[out,retval]*/ long * numberOfPeriods ) = 0;
+      virtual HRESULT __stdcall raw_GetNumberOfExperiments (
+        /*[in]*/ long period,
+        /*[out,retval]*/ long * numberOfExperiments ) = 0;
+      virtual HRESULT __stdcall get_WiffFileName (
+        /*[out,retval]*/ BSTR * pVal ) = 0;
+      virtual HRESULT __stdcall put_WiffFileName (
+        /*[in]*/ BSTR pVal ) = 0;
+      virtual HRESULT __stdcall raw_GetSampleNumber (
+        /*[out,retval]*/ long * sampleNumber ) = 0;
+      virtual HRESULT __stdcall raw_SetSampleNumber (
+        /*[in]*/ long sampleNumber ) = 0;
+      virtual HRESULT __stdcall raw_GetPeriodRange (
+        /*[in]*/ long periodNumber,
+        /*[out]*/ long * startOfPeriodPointNumber,
+        /*[out]*/ long * endOfPeriodPointNumber ) = 0;
+      virtual HRESULT __stdcall get_DataIsBeingAcquired (
+        /*[out,retval]*/ long * pVal ) = 0;
+      virtual HRESULT __stdcall put_DataIsBeingAcquired (
+        /*[in]*/ long pVal ) = 0;
+      virtual HRESULT __stdcall raw_GetColour (
+        /*[in]*/ long pointNumber,
+        /*[out]*/ long * colour,
+        /*[out]*/ long * pointWhereItChanges ) = 0;
+      virtual HRESULT __stdcall raw_GetPeriodNumber (
+        /*[out,retval]*/ long * periodNumber ) = 0;
+      virtual HRESULT __stdcall raw_SetPeriodNumber (
+        /*[in]*/ long periodNumber ) = 0;
+      virtual HRESULT __stdcall raw_GetExperimentNumber (
+        /*[out,retval]*/ long * experimentNumber ) = 0;
+      virtual HRESULT __stdcall raw_SetExperimentNumber (
+        /*[in]*/ long experimentNumber ) = 0;
+      virtual HRESULT __stdcall raw_GetBasePeakMass (
+        /*[in]*/ long pointNumber,
+        /*[out,retval]*/ double * theMass ) = 0;
+      virtual HRESULT __stdcall raw_SetBasePeakMass (
+        /*[in]*/ long pointNumber,
+        /*[in]*/ double theMass ) = 0;
+      virtual HRESULT __stdcall raw_SetToXICZeroWidth (
+        /*[in]*/ long sample,
+        /*[in]*/ long period,
+        /*[in]*/ long experiment,
+        /*[in]*/ short simIndex ) = 0;
+      virtual HRESULT __stdcall raw_GetWiffFileObject (
+        /*[out,retval]*/ IUnknown * * ppIUnknown ) = 0;
+      virtual HRESULT __stdcall raw_GetMassRange (
+        /*[out]*/ double * startMass,
+        /*[out]*/ double * stopMass ) = 0;
+      virtual HRESULT __stdcall raw_SetBasePeakMassTolerance (
+        /*[in]*/ double massTolerance ) = 0;
+      virtual HRESULT __stdcall raw_GetBasePeakMassTolerance (
+        /*[out,retval]*/ double * massTolerance ) = 0;
+      virtual HRESULT __stdcall raw_SetNumberOfPeriods (
+        /*[in]*/ long numberOfPeriods ) = 0;
+      virtual HRESULT __stdcall raw_SetDeviceID (
+        /*[in]*/ long deviceID ) = 0;
+      virtual HRESULT __stdcall raw_SetChannelNumber (
+        /*[in]*/ long channelNumber ) = 0;
+      virtual HRESULT __stdcall raw_DisplayCycleDepParamOnXAxis (
+        /*[in]*/ long displayFirstOne,
+        /*[in]*/ BSTR paramId ) = 0;
+      virtual HRESULT __stdcall raw__SetStartAndStopMass (
+        /*[in]*/ double startMass,
+        /*[in]*/ double stopMass ) = 0;
+      virtual HRESULT __stdcall raw__SetSIMIndex (
+        /*[in]*/ long simIndex ) = 0;
+      virtual HRESULT __stdcall raw__SetCycleDependentStartAndStep (
+        /*[in]*/ double startValue,
+        /*[in]*/ double stepValue ) = 0;
+      virtual HRESULT __stdcall raw_GetDeviceAndChannelID (
+        /*[out]*/ long * deviceID,
+        /*[out]*/ long * channelNumber ) = 0;
+      virtual HRESULT __stdcall raw_SetToDADTWC (
+        /*[in]*/ long sample,
+        /*[in]*/ long deviceID ) = 0;
+      virtual HRESULT __stdcall raw_SetToDADXWC (
+        /*[in]*/ long sample,
+        /*[in]*/ long devID,
+        /*[in]*/ double startWaveLength,
+        /*[in]*/ double stopWaveLength ) = 0;
+      virtual HRESULT __stdcall raw_GetDADDeviceID (
+        /*[in]*/ long sample,
+        /*[out]*/ long * deviceID ) = 0;
+      virtual HRESULT __stdcall raw_GetStartAndStopWaveLengths (
+        /*[out]*/ float * startWaveLength,
+        /*[out]*/ float * stopWaveLength ) = 0;
+      virtual HRESULT __stdcall raw_SetStartAndStopWaveLengths (
+        /*[in]*/ float startWaveLength,
+        /*[in]*/ float stopWaveLength ) = 0;
+};
+
+struct __declspec(uuid("b1735c53-c175-11d4-9fbb-00c04f1961f5"))
+IContourData : IDispatch
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetCount))
+    long Count;
+    __declspec(property(get=GetItem))
+    IDispatchPtr Item[];
+    __declspec(property(get=GetWiffFileName,put=PutWiffFileName))
+    _bstr_t WiffFileName;
+    __declspec(property(get=GetActualStartTime))
+    double ActualStartTime;
+    __declspec(property(get=GetActualStopTime))
+    double ActualStopTime;
+    __declspec(property(get=GetActualStartCycle))
+    long ActualStartCycle;
+    __declspec(property(get=GetActualStopCycle))
+    long ActualStopCycle;
+    __declspec(property(get=GetIFMANSpecData))
+    IFMANSpecDataPtr IFMANSpecData;
+    __declspec(property(get=GetIFMANChromData))
+    IFMANChromDataPtr IFMANChromData;
+    __declspec(property(get=GetMaxIntensity))
+    double MaxIntensity;
+    __declspec(property(get=GetMinIntensity))
+    double MinIntensity;
+    __declspec(property(get=Getsample))
+    long sample;
+    __declspec(property(get=GetIsNoData))
+    long IsNoData;
+    __declspec(property(get=Get_NewEnum))
+    IUnknownPtr _NewEnum;
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    long GetCount ( );
+    IDispatchPtr GetItem (
+        long n );
+    IUnknownPtr Get_NewEnum ( );
+    _bstr_t GetWiffFileName ( );
+    void PutWiffFileName (
+        _bstr_t pVal );
+    HRESULT SetContour (
+        double dStartTime,
+        double dEndTime,
+        long nSample,
+        long lPeriod,
+        long lExperiment );
+    double GetActualStartTime ( );
+    double GetActualStopTime ( );
+    long GetActualStartCycle ( );
+    long GetActualStopCycle ( );
+    IFMANSpecDataPtr GetIFMANSpecData ( );
+    IFMANChromDataPtr GetIFMANChromData ( );
+    double GetMaxIntensity ( );
+    HRESULT ReBinRange (
+        double dStartMass,
+        double dStopMass );
+    long Getsample ( );
+    HRESULT GetTitle (
+        BSTR * pVal );
+    HRESULT put_DataTitle (
+        _bstr_t newVal );
+    HRESULT Copy (
+        IUnknown * * ppCopy );
+    HRESULT put_Sample (
+        long lVal );
+    HRESULT put_MaxIntensity (
+        double dVal );
+    HRESULT put_ActualStopCycle (
+        long lVal );
+    HRESULT put_ActualStartCycle (
+        long lVal );
+    HRESULT put_ActualStartTime (
+        double dVal );
+    HRESULT put_ActualStopTime (
+        double dVal );
+    HRESULT put_Experiment (
+        long lVal );
+    HRESULT put_Period (
+        long lVal );
+    HRESULT put_DataYAxisTitle (
+        _bstr_t newVal );
+    HRESULT put_DataXAxisTitle (
+        _bstr_t newVal );
+    HRESULT GetXAxisTitle (
+        BSTR * pVal );
+    HRESULT GetYAxisTitle (
+        BSTR * pVal );
+    HRESULT SetDADContour (
+        double dStartTime,
+        double dStopTime,
+        long nSample,
+        long lPeriod,
+        long lExperiment );
+    HRESULT put_DataXAxisUnits (
+        _bstr_t newVal );
+    HRESULT put_DataYAxisUnits (
+        _bstr_t newVal );
+    HRESULT GetXAxisUnits (
+        BSTR * pVal );
+    HRESULT GetYAxisUnits (
+        BSTR * pVal );
+    HRESULT GetYAxisRange (
+        double * dMinVal,
+        double * dMaxVal );
+    HRESULT GetStepSize (
+        double * dVal );
+    HRESULT get_ChromatogramType (
+        enum ChromatogramType * pVal );
+    HRESULT put_ChromatogramType (
+        enum ChromatogramType Val );
+    double GetMinIntensity ( );
+    HRESULT put_MinIntensity (
+        double Val );
+    long GetIsNoData ( );
+    HRESULT put_DataZAxisUnits (
+        _bstr_t newVal );
+    HRESULT GetZAxisUnits (
+        BSTR * pVal );
+    _bstr_t GetObjectID ( );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall get_Count (
+        /*[out,retval]*/ long * pnCount ) = 0;
+      virtual HRESULT __stdcall get_Item (
+        /*[in]*/ long n,
+        /*[out,retval]*/ IDispatch * * ppMethod ) = 0;
+      virtual HRESULT __stdcall get__NewEnum (
+        /*[out,retval]*/ IUnknown * * ppEnum ) = 0;
+      virtual HRESULT __stdcall get_WiffFileName (
+        /*[out,retval]*/ BSTR * pVal ) = 0;
+      virtual HRESULT __stdcall put_WiffFileName (
+        /*[in]*/ BSTR pVal ) = 0;
+      virtual HRESULT __stdcall raw_SetContour (
+        double dStartTime,
+        double dEndTime,
+        long nSample,
+        long lPeriod,
+        long lExperiment ) = 0;
+      virtual HRESULT __stdcall get_ActualStartTime (
+        /*[out,retval]*/ double * pVal ) = 0;
+      virtual HRESULT __stdcall get_ActualStopTime (
+        /*[out,retval]*/ double * pVal ) = 0;
+      virtual HRESULT __stdcall get_ActualStartCycle (
+        /*[out,retval]*/ long * pVal ) = 0;
+      virtual HRESULT __stdcall get_ActualStopCycle (
+        /*[out,retval]*/ long * pVal ) = 0;
+      virtual HRESULT __stdcall get_IFMANSpecData (
+        /*[out,retval]*/ struct IFMANSpecData * * pIFMANSpecData ) = 0;
+      virtual HRESULT __stdcall get_IFMANChromData (
+        /*[out,retval]*/ struct IFMANChromData * * pIFMANChromData ) = 0;
+      virtual HRESULT __stdcall get_MaxIntensity (
+        /*[out,retval]*/ double * pVal ) = 0;
+      virtual HRESULT __stdcall raw_ReBinRange (
+        double dStartMass,
+        double dStopMass ) = 0;
+      virtual HRESULT __stdcall get_sample (
+        /*[out,retval]*/ long * pVal ) = 0;
+      virtual HRESULT __stdcall raw_GetTitle (
+        /*[out]*/ BSTR * pVal ) = 0;
+      virtual HRESULT __stdcall raw_put_DataTitle (
+        BSTR newVal ) = 0;
+      virtual HRESULT __stdcall raw_Copy (
+        IUnknown * * ppCopy ) = 0;
+      virtual HRESULT __stdcall raw_put_Sample (
+        long lVal ) = 0;
+      virtual HRESULT __stdcall raw_put_MaxIntensity (
+        double dVal ) = 0;
+      virtual HRESULT __stdcall raw_put_ActualStopCycle (
+        long lVal ) = 0;
+      virtual HRESULT __stdcall raw_put_ActualStartCycle (
+        long lVal ) = 0;
+      virtual HRESULT __stdcall raw_put_ActualStartTime (
+        double dVal ) = 0;
+      virtual HRESULT __stdcall raw_put_ActualStopTime (
+        double dVal ) = 0;
+      virtual HRESULT __stdcall raw_put_Experiment (
+        long lVal ) = 0;
+      virtual HRESULT __stdcall raw_put_Period (
+        long lVal ) = 0;
+      virtual HRESULT __stdcall raw_put_DataYAxisTitle (
+        BSTR newVal ) = 0;
+      virtual HRESULT __stdcall raw_put_DataXAxisTitle (
+        BSTR newVal ) = 0;
+      virtual HRESULT __stdcall raw_GetXAxisTitle (
+        BSTR * pVal ) = 0;
+      virtual HRESULT __stdcall raw_GetYAxisTitle (
+        BSTR * pVal ) = 0;
+      virtual HRESULT __stdcall raw_SetDADContour (
+        double dStartTime,
+        double dStopTime,
+        long nSample,
+        long lPeriod,
+        long lExperiment ) = 0;
+      virtual HRESULT __stdcall raw_put_DataXAxisUnits (
+        BSTR newVal ) = 0;
+      virtual HRESULT __stdcall raw_put_DataYAxisUnits (
+        BSTR newVal ) = 0;
+      virtual HRESULT __stdcall raw_GetXAxisUnits (
+        BSTR * pVal ) = 0;
+      virtual HRESULT __stdcall raw_GetYAxisUnits (
+        BSTR * pVal ) = 0;
+      virtual HRESULT __stdcall raw_GetYAxisRange (
+        double * dMinVal,
+        double * dMaxVal ) = 0;
+      virtual HRESULT __stdcall raw_GetStepSize (
+        double * dVal ) = 0;
+      virtual HRESULT __stdcall raw_get_ChromatogramType (
+        enum ChromatogramType * pVal ) = 0;
+      virtual HRESULT __stdcall raw_put_ChromatogramType (
+        enum ChromatogramType Val ) = 0;
+      virtual HRESULT __stdcall get_MinIntensity (
+        /*[out,retval]*/ double * pVal ) = 0;
+      virtual HRESULT __stdcall raw_put_MinIntensity (
+        double Val ) = 0;
+      virtual HRESULT __stdcall get_IsNoData (
+        /*[out,retval]*/ long * pVal ) = 0;
+      virtual HRESULT __stdcall raw_put_DataZAxisUnits (
+        BSTR newVal ) = 0;
+      virtual HRESULT __stdcall raw_GetZAxisUnits (
+        BSTR * pVal ) = 0;
+      virtual HRESULT __stdcall raw_GetObjectID (
+        /*[out,retval]*/ BSTR * objectID ) = 0;
+};
+
+struct __declspec(uuid("59cfc430-ca9f-11d3-bedd-00c04f7b40c7"))
+IBinData : IUnknown
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetBinDeviceWidth,put=PutBinDeviceWidth))
+    short BinDeviceWidth;
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    HRESULT BinAll ( );
+    HRESULT BinRange (
+        double StrMass,
+        double EndMass );
+    HRESULT BinGetDataPoint (
+        long cPnt,
+        double * xVal,
+        double * yVal );
+    long BinGetNumberOfDataPoints ( );
+    short GetBinDeviceWidth ( );
+    void PutBinDeviceWidth (
+        short pVal );
+    HRESULT BinRangeOffset (
+        long StrPos,
+        long EndPos );
+    HRESULT BinGetClosestPointNumberForXValue (
+        double xValue,
+        enum WhichClosestPointType whichClosetPoint,
+        long * pointNumber );
+    HRESULT BinGetStepSize (
+        long pointNumber,
+        double * StepSize,
+        long * pointWhereItChanges );
+    HRESULT BinGetYValueRange (
+        double * minimumYValue,
+        double * maximumYValue );
+    HRESULT BinGetYValueRangeForXValueRange (
+        double minimumXValue,
+        double maximumXValue,
+        long * pointWithMinimumYValue,
+        long * pointWithMaximumYValue );
+    HRESULT BinGetXAxisRange (
+        double * minimumXValue,
+        double * maximumXValue );
+    short BinConnectNextPoint (
+        long pos );
+    double BinGetDataPointXValue (
+        long pointNumber );
+    double BinGetDataPointYValue (
+        long pointNumber );
+    HRESULT ReBinRange (
+        double StrMass,
+        double EndMass );
+    HRESULT InValidateBin ( );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall raw_BinAll ( ) = 0;
+      virtual HRESULT __stdcall raw_BinRange (
+        /*[in]*/ double StrMass,
+        /*[in]*/ double EndMass ) = 0;
+      virtual HRESULT __stdcall raw_BinGetDataPoint (
+        /*[in]*/ long cPnt,
+        /*[out]*/ double * xVal,
+        /*[out]*/ double * yVal ) = 0;
+      virtual HRESULT __stdcall raw_BinGetNumberOfDataPoints (
+        /*[out,retval]*/ long * pVal ) = 0;
+      virtual HRESULT __stdcall get_BinDeviceWidth (
+        /*[out,retval]*/ short * pVal ) = 0;
+      virtual HRESULT __stdcall put_BinDeviceWidth (
+        /*[in]*/ short pVal ) = 0;
+      virtual HRESULT __stdcall raw_BinRangeOffset (
+        /*[in]*/ long StrPos,
+        /*[in]*/ long EndPos ) = 0;
+      virtual HRESULT __stdcall raw_BinGetClosestPointNumberForXValue (
+        /*[in]*/ double xValue,
+        /*[in]*/ enum WhichClosestPointType whichClosetPoint,
+        /*[out]*/ long * pointNumber ) = 0;
+      virtual HRESULT __stdcall raw_BinGetStepSize (
+        /*[in]*/ long pointNumber,
+        /*[out]*/ double * StepSize,
+        /*[out]*/ long * pointWhereItChanges ) = 0;
+      virtual HRESULT __stdcall raw_BinGetYValueRange (
+        /*[out]*/ double * minimumYValue,
+        /*[out]*/ double * maximumYValue ) = 0;
+      virtual HRESULT __stdcall raw_BinGetYValueRangeForXValueRange (
+        /*[in]*/ double minimumXValue,
+        /*[in]*/ double maximumXValue,
+        /*[out]*/ long * pointWithMinimumYValue,
+        /*[out]*/ long * pointWithMaximumYValue ) = 0;
+      virtual HRESULT __stdcall raw_BinGetXAxisRange (
+        /*[out]*/ double * minimumXValue,
+        /*[out]*/ double * maximumXValue ) = 0;
+      virtual HRESULT __stdcall raw_BinConnectNextPoint (
+        /*[in]*/ long pos,
+        /*[out,retval]*/ short * ConPoint ) = 0;
+      virtual HRESULT __stdcall raw_BinGetDataPointXValue (
+        /*[in]*/ long pointNumber,
+        /*[out,retval]*/ double * xValue ) = 0;
+      virtual HRESULT __stdcall raw_BinGetDataPointYValue (
+        /*[in]*/ long pointNumber,
+        /*[out,retval]*/ double * xValue ) = 0;
+      virtual HRESULT __stdcall raw_ReBinRange (
+        /*[in]*/ double StrMass,
+        /*[in]*/ double EndMass ) = 0;
+      virtual HRESULT __stdcall raw_InValidateBin ( ) = 0;
+};
+
+struct __declspec(uuid("e26e4381-c608-11d4-9fc0-00c04f1961f5"))
+IContourCycle : IDispatch
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetCount))
+    long Count;
+    __declspec(property(get=GetItem))
+    IDispatchPtr Item[];
+    __declspec(property(get=Getcycle))
+    long cycle;
+    __declspec(property(get=GetTimeInSeconds))
+    double TimeInSeconds;
+    __declspec(property(get=GetMaxIntensity))
+    double MaxIntensity;
+    __declspec(property(get=GetLength))
+    long Length;
+    __declspec(property(get=GetMinIntensity))
+    double MinIntensity;
+    __declspec(property(get=GetIsNoData))
+    long IsNoData;
+    __declspec(property(get=Get_NewEnum))
+    IUnknownPtr _NewEnum;
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    long GetCount ( );
+    IDispatchPtr GetItem (
+        long n );
+    IUnknownPtr Get_NewEnum ( );
+    long Getcycle ( );
+    double GetTimeInSeconds ( );
+    HRESULT AddCycle (
+        long nCycle,
+        double dTimeInSeconds,
+        long nLengthOfFloatArray,
+        float * pfPoints );
+    HRESULT AddCycleFromIBinData (
+        long nCycle,
+        double dTimeInSeconds,
+        struct IBinData * pIBinData );
+    double GetMaxIntensity ( );
+    HRESULT AddCycleEx (
+        long nCycle,
+        double dTimeInSeconds,
+        double dStepMass,
+        long nLengthOfFloatArray,
+        float * pfPoints );
+    HRESULT GetPoints (
+        float * * pfPoints,
+        short * * pbConnectedPoints,
+        long * nLengtsOfArray );
+    long GetLength ( );
+    HRESULT AddCycleFromIBinDataEx (
+        long nCycle,
+        double dTimeInSeconds,
+        struct IBinData * pIBinData );
+    HRESULT AddDADCycle (
+        long nCycle,
+        double dTimeInSeconds,
+        double dStartWaveLength,
+        double dStopWaveLength,
+        double dStepWaveLength,
+        long lNumberOfDataPoints,
+        float * pfScanData );
+    double GetMinIntensity ( );
+    long GetIsNoData ( );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall get_Count (
+        /*[out,retval]*/ long * pnCount ) = 0;
+      virtual HRESULT __stdcall get_Item (
+        /*[in]*/ long n,
+        /*[out,retval]*/ IDispatch * * ppMethod ) = 0;
+      virtual HRESULT __stdcall get__NewEnum (
+        /*[out,retval]*/ IUnknown * * ppEnum ) = 0;
+      virtual HRESULT __stdcall get_cycle (
+        /*[out,retval]*/ long * pVal ) = 0;
+      virtual HRESULT __stdcall get_TimeInSeconds (
+        /*[out,retval]*/ double * pVal ) = 0;
+      virtual HRESULT __stdcall raw_AddCycle (
+        /*[in]*/ long nCycle,
+        /*[in]*/ double dTimeInSeconds,
+        /*[in]*/ long nLengthOfFloatArray,
+        /*[in]*/ float * pfPoints ) = 0;
+      virtual HRESULT __stdcall raw_AddCycleFromIBinData (
+        /*[in]*/ long nCycle,
+        /*[in]*/ double dTimeInSeconds,
+        /*[in]*/ struct IBinData * pIBinData ) = 0;
+      virtual HRESULT __stdcall get_MaxIntensity (
+        /*[out,retval]*/ double * pVal ) = 0;
+      virtual HRESULT __stdcall raw_AddCycleEx (
+        long nCycle,
+        double dTimeInSeconds,
+        double dStepMass,
+        long nLengthOfFloatArray,
+        float * pfPoints ) = 0;
+      virtual HRESULT __stdcall raw_GetPoints (
+        /*[out]*/ float * * pfPoints,
+        /*[out]*/ short * * pbConnectedPoints,
+        /*[out]*/ long * nLengtsOfArray ) = 0;
+      virtual HRESULT __stdcall get_Length (
+        /*[out,retval]*/ long * pVal ) = 0;
+      virtual HRESULT __stdcall raw_AddCycleFromIBinDataEx (
+        long nCycle,
+        double dTimeInSeconds,
+        struct IBinData * pIBinData ) = 0;
+      virtual HRESULT __stdcall raw_AddDADCycle (
+        long nCycle,
+        double dTimeInSeconds,
+        double dStartWaveLength,
+        double dStopWaveLength,
+        double dStepWaveLength,
+        long lNumberOfDataPoints,
+        float * pfScanData ) = 0;
+      virtual HRESULT __stdcall get_MinIntensity (
+        /*[out,retval]*/ double * pVal ) = 0;
+      virtual HRESULT __stdcall get_IsNoData (
+        /*[out,retval]*/ long * pVal ) = 0;
+};
+
+struct __declspec(uuid("e26e4383-c608-11d4-9fc0-00c04f1961f5"))
+IContourCyclePoint : IDispatch
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetMass,put=PutMass))
+    double Mass;
+    __declspec(property(get=GetIntensity,put=PutIntensity))
+    double Intensity;
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    double GetMass ( );
+    void PutMass (
+        double pVal );
+    double GetIntensity ( );
+    void PutIntensity (
+        double pVal );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall get_Mass (
+        /*[out,retval]*/ double * pVal ) = 0;
+      virtual HRESULT __stdcall put_Mass (
+        /*[in]*/ double pVal ) = 0;
+      virtual HRESULT __stdcall get_Intensity (
+        /*[out,retval]*/ double * pVal ) = 0;
+      virtual HRESULT __stdcall put_Intensity (
+        /*[in]*/ double pVal ) = 0;
+};
+
+struct __declspec(uuid("9a647fa0-6021-11d1-a9c6-0060977f5c78"))
+XYData;
+    // [ default ] interface IXYData
+    // interface IGetRawData
+    // interface IFastDataAccess
+    // interface IBinData
+    // interface IXYSetDisplay
+    // [ default, source ] dispinterface _DataEvents
+
+struct __declspec(uuid("000d81ea-e25a-11d4-8aa3-00b0d0285b37"))
+IGetRawData : IUnknown
+{
+    //
+    // Wrapper methods for error-handling
+    //
+
+    HRESULT GetRawScanInfo (
+        long * NumberPnts,
+        VARIANT * dXMass,
+        VARIANT * dYInts,
+        VARIANT * cConPoints );
+    HRESULT GetRawScanXPoints (
+        long * NumberPnts,
+        VARIANT * dXMass );
+    HRESULT GetRawScanYPoints (
+        long * NumberPnts,
+        VARIANT * dYInts );
+    HRESULT GetRawScanXYPoints (
+        long * NumberPnts,
+        VARIANT * dXMass,
+        VARIANT * dYInts );
+    HRESULT GetRawScanTOFXYOffset (
+        long * NumberPnts,
+        VARIANT * dXOffset,
+        VARIANT * dYInts );
+    HRESULT GetRawScanTOFXYTime (
+        long * NumberPnts,
+        VARIANT * dXTime,
+        VARIANT * dYInts );
+    HRESULT GetRawPointer (
+        long * pCount,
+        double * * ppRawData,
+        long * isLongPointer,
+        double * pCalA,
+        double * pTNt,
+        long * pNumScans );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall raw_GetRawScanInfo (
+        /*[out]*/ long * NumberPnts,
+        /*[out]*/ VARIANT * dXMass,
+        /*[out]*/ VARIANT * dYInts,
+        /*[out]*/ VARIANT * cConPoints ) = 0;
+      virtual HRESULT __stdcall raw_GetRawScanXPoints (
+        /*[out]*/ long * NumberPnts,
+        /*[out]*/ VARIANT * dXMass ) = 0;
+      virtual HRESULT __stdcall raw_GetRawScanYPoints (
+        /*[out]*/ long * NumberPnts,
+        /*[out]*/ VARIANT * dYInts ) = 0;
+      virtual HRESULT __stdcall raw_GetRawScanXYPoints (
+        /*[out]*/ long * NumberPnts,
+        /*[out]*/ VARIANT * dXMass,
+        /*[out]*/ VARIANT * dYInts ) = 0;
+      virtual HRESULT __stdcall raw_GetRawScanTOFXYOffset (
+        /*[out]*/ long * NumberPnts,
+        /*[out]*/ VARIANT * dXOffset,
+        /*[out]*/ VARIANT * dYInts ) = 0;
+      virtual HRESULT __stdcall raw_GetRawScanTOFXYTime (
+        /*[out]*/ long * NumberPnts,
+        /*[out]*/ VARIANT * dXTime,
+        /*[out]*/ VARIANT * dYInts ) = 0;
+      virtual HRESULT __stdcall raw_GetRawPointer (
+        /*[out]*/ long * pCount,
+        /*[out]*/ double * * ppRawData,
+        /*[out]*/ long * isLongPointer,
+        /*[out]*/ double * pCalA,
+        /*[out]*/ double * pTNt,
+        /*[out]*/ long * pNumScans ) = 0;
+};
+
+struct __declspec(uuid("e28a3a91-bab4-11d1-aa0f-0060977f5c78"))
+IFastDataAccess : IUnknown
+{
+    //
+    // Wrapper methods for error-handling
+    //
+
+    HRESULT GetDataPointFast (
+        long pointNumber,
+        double * xValue,
+        double * yValue );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall raw_GetDataPointFast (
+        /*[in]*/ long pointNumber,
+        /*[out]*/ double * xValue,
+        /*[out]*/ double * yValue ) = 0;
+};
+
+enum XYDisplayType
+{
+    XYDT_QuadData = 0,
+    XYDT_TOFData = 1
+};
+
+enum ChromDataFormat
+{
+    CDF_Unknown = 0,
+    CDF_QuadData = 1,
+    CDF_TOFData = 2,
+    CDF_TOFPC_MassOnly = 3,
+    CDF_TOFPC_Scans = 4
+};
+
+struct __declspec(uuid("49d092b0-408b-11d4-bf2c-00c04f7b40c7"))
+IXYSetDisplay : IUnknown
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetDisplaySource,put=PutDisplaySource))
+    enum XYDisplayType DisplaySource;
+    __declspec(property(get=GetIsQuadScan))
+    short IsQuadScan;
+    __declspec(property(get=GetIsTOFScan))
+    short IsTOFScan;
+    __declspec(property(get=GetIsTOFPreCursor))
+    short IsTOFPreCursor;
+    __declspec(property(get=GetSavedScanType,put=PutSavedScanType))
+    enum ChromDataFormat SavedScanType;
+    __declspec(property(get=GetIsTP_TOFScan))
+    short IsTP_TOFScan;
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    enum XYDisplayType GetDisplaySource ( );
+    void PutDisplaySource (
+        enum XYDisplayType pVal );
+    HRESULT SetTOFData (
+        IUnknown * ITOFUnknown );
+    short GetIsQuadScan ( );
+    short GetIsTOFScan ( );
+    short GetIsTOFPreCursor ( );
+    enum ChromDataFormat GetSavedScanType ( );
+    void PutSavedScanType (
+        enum ChromDataFormat pVal );
+    short GetIsTP_TOFScan ( );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall get_DisplaySource (
+        /*[out,retval]*/ enum XYDisplayType * pVal ) = 0;
+      virtual HRESULT __stdcall put_DisplaySource (
+        /*[in]*/ enum XYDisplayType pVal ) = 0;
+      virtual HRESULT __stdcall raw_SetTOFData (
+        /*[in]*/ IUnknown * ITOFUnknown ) = 0;
+      virtual HRESULT __stdcall get_IsQuadScan (
+        /*[out,retval]*/ short * pVal ) = 0;
+      virtual HRESULT __stdcall get_IsTOFScan (
+        /*[out,retval]*/ short * pVal ) = 0;
+      virtual HRESULT __stdcall get_IsTOFPreCursor (
+        /*[out,retval]*/ short * pVal ) = 0;
+      virtual HRESULT __stdcall get_SavedScanType (
+        /*[out,retval]*/ enum ChromDataFormat * pVal ) = 0;
+      virtual HRESULT __stdcall put_SavedScanType (
+        /*[in]*/ enum ChromDataFormat pVal ) = 0;
+      virtual HRESULT __stdcall get_IsTP_TOFScan (
+        /*[out,retval]*/ short * pVal ) = 0;
+};
+
+struct __declspec(uuid("166c1ff2-8d14-11d1-a9ef-0060977f5c78"))
+ChromData;
+    // [ default ] interface IChromData
+    // [ default, source ] dispinterface _DataEvents
+    // interface IBinData
+    // interface IGetRawData
+
+struct __declspec(uuid("cc5d48a2-8d13-11d1-a9ef-0060977f5c78"))
+SpecData;
+    // [ default ] interface ISpecData
+    // interface ISequentialStream
+    // interface IGetRawData
+    // interface IBinData
+    // interface ITOFData
+    // interface ISpecDataEx
+    // interface IXYSetDisplay
+    // [ default, source ] dispinterface _DataEvents
+
+enum TOFDisplayType
+{
+    DT_MassIntensity = 0,
+    DT_Time = 1
+};
+
+enum TOFXDataFormat
+{
+    XDF_BinOffset = 0,
+    XDF_Mass = 1,
+    XDF_TimeUs = 2
+};
+
+struct __declspec(uuid("d62d9e63-e5f9-11d3-bef9-00c04f7b40c7"))
+ITOFData : IUnknown
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetnumberOfScans,put=PutnumberOfScans))
+    short numberOfScans;
+    __declspec(property(get=GetIntensityLimit,put=PutIntensityLimit))
+    long IntensityLimit;
+    __declspec(property(get=GetTimeOffset))
+    long TimeOffset[];
+    __declspec(property(get=GetTOFDisplayFormat,put=PutTOFDisplayFormat))
+    enum TOFDisplayType TOFDisplayFormat;
+    __declspec(property(get=GetTOFIntensity,put=PutTOFIntensity))
+    long TOFIntensity[];
+    __declspec(property(get=GetTOFMass))
+    double TOFMass[];
+    __declspec(property(get=GetTOFTime))
+    double TOFTime[];
+    __declspec(property(get=GetScansAdded))
+    short ScansAdded;
+    __declspec(property(get=GetNumberOfCalibrations))
+    short NumberOfCalibrations;
+    __declspec(property(get=GetUsePPM,put=PutUsePPM))
+    short UsePPM;
+    __declspec(property(get=GetTOFXPoint))
+    double TOFXPoint[];
+    __declspec(property(get=GetTOFTimeValue))
+    double TOFTimeValue[];
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    HRESULT GetTOFCalibration (
+        double * CalA,
+        double * TNt );
+    HRESULT ReSetCalibration (
+        double CalA,
+        double TNt );
+    HRESULT SetTOFCalibration (
+        double CalA,
+        double TNt );
+    HRESULT NumberOfPoints (
+        long * Size );
+    HRESULT AddScan (
+        long nPnts,
+        long * DataPnts,
+        double CalA,
+        double TNt );
+    HRESULT InsertPoint (
+        long TimePos,
+        long Intensity );
+    long GetIntensityLimit ( );
+    void PutIntensityLimit (
+        long pVal );
+    long GetTimeOffset (
+        long pos );
+    enum TOFDisplayType GetTOFDisplayFormat ( );
+    void PutTOFDisplayFormat (
+        enum TOFDisplayType pVal );
+    long GetTOFIntensity (
+        long pos );
+    void PutTOFIntensity (
+        long pos,
+        long pVal );
+    HRESULT AppendPoint (
+        long Time,
+        long Intensity );
+    double GetTOFMass (
+        long pos );
+    double GetTOFTime (
+        long pos );
+    short GetScansAdded ( );
+    HRESULT GetDataPoint (
+        long pos,
+        long * TimeOffset,
+        long * Intensity );
+    IUnknownPtr Copy ( );
+    IUnknownPtr CopyData ( );
+    HRESULT SetSize (
+        long NewSize );
+    HRESULT Trim ( );
+    long ConvertMassToOffset (
+        double Mass );
+    HRESULT AddScanType (
+        long nPnts,
+        long * DataPnts,
+        double CalA,
+        double TNt,
+        short eDataFormat );
+    short GetNumberOfCalibrations ( );
+    HRESULT getAveragedTOFIntensity (
+        long pos,
+        double * averInt );
+    short GetUsePPM ( );
+    void PutUsePPM (
+        short pVal );
+    HRESULT TOFAddOrSubtract (
+        short addData,
+        IUnknown * pOtherIUnknow,
+        double toleranceForXValues,
+        short keepNegativeValues );
+    double GetTOFXPoint (
+        long pos );
+    double GetTOFTimeValue (
+        long pos );
+    HRESULT ConvertMassToTimeValue (
+        double Mass,
+        double * TimValue );
+    HRESULT Reset ( );
+    HRESULT CopyRawData (
+        long * lPnts,
+        long * * RawData );
+    HRESULT SetToOneScan ( );
+    HRESULT SetNumberOfPoints (
+        long NewSize );
+    HRESULT SetDataPoint (
+        long pos,
+        long TimePos,
+        long Intensity );
+    HRESULT TOFSort ( );
+    short GetnumberOfScans ( );
+    void PutnumberOfScans (
+        short pVal );
+    HRESULT AppendMassIntensityPoint (
+        double MassValue,
+        double Intensity );
+    HRESULT SetScan (
+        long nPnts,
+        long * DataPnts,
+        double CalA,
+        double TNt );
+    HRESULT TOFRawData (
+        long * NumberPnts,
+        VARIANT * dXMass,
+        VARIANT * dYInts,
+        enum TOFXDataFormat Format );
+    HRESULT TOFConPoints (
+        long * NumberPnts,
+        VARIANT * cConPoints );
+    HRESULT GetRawDataPointer (
+        long * * ppRawData,
+        double * CalA,
+        double * TNt );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall raw_GetTOFCalibration (
+        /*[out]*/ double * CalA,
+        /*[out]*/ double * TNt ) = 0;
+      virtual HRESULT __stdcall raw_ReSetCalibration (
+        /*[in]*/ double CalA,
+        /*[in]*/ double TNt ) = 0;
+      virtual HRESULT __stdcall raw_SetTOFCalibration (
+        /*[in]*/ double CalA,
+        /*[in]*/ double TNt ) = 0;
+      virtual HRESULT __stdcall raw_NumberOfPoints (
+        /*[out]*/ long * Size ) = 0;
+      virtual HRESULT __stdcall raw_AddScan (
+        /*[in]*/ long nPnts,
+        /*[in]*/ long * DataPnts,
+        /*[in]*/ double CalA,
+        /*[in]*/ double TNt ) = 0;
+      virtual HRESULT __stdcall raw_InsertPoint (
+        /*[in]*/ long TimePos,
+        /*[in]*/ long Intensity ) = 0;
+      virtual HRESULT __stdcall get_IntensityLimit (
+        /*[out,retval]*/ long * pVal ) = 0;
+      virtual HRESULT __stdcall put_IntensityLimit (
+        /*[in]*/ long pVal ) = 0;
+      virtual HRESULT __stdcall get_TimeOffset (
+        /*[in]*/ long pos,
+        /*[out,retval]*/ long * pVal ) = 0;
+      virtual HRESULT __stdcall get_TOFDisplayFormat (
+        /*[out,retval]*/ enum TOFDisplayType * pVal ) = 0;
+      virtual HRESULT __stdcall put_TOFDisplayFormat (
+        /*[in]*/ enum TOFDisplayType pVal ) = 0;
+      virtual HRESULT __stdcall get_TOFIntensity (
+        /*[in]*/ long pos,
+        /*[out,retval]*/ long * pVal ) = 0;
+      virtual HRESULT __stdcall put_TOFIntensity (
+        /*[in]*/ long pos,
+        /*[in]*/ long pVal ) = 0;
+      virtual HRESULT __stdcall raw_AppendPoint (
+        /*[in]*/ long Time,
+        /*[in]*/ long Intensity ) = 0;
+      virtual HRESULT __stdcall get_TOFMass (
+        /*[in]*/ long pos,
+        /*[out,retval]*/ double * pVal ) = 0;
+      virtual HRESULT __stdcall get_TOFTime (
+        /*[in]*/ long pos,
+        /*[out,retval]*/ double * pVal ) = 0;
+      virtual HRESULT __stdcall get_ScansAdded (
+        /*[out,retval]*/ short * pVal ) = 0;
+      virtual HRESULT __stdcall raw_GetDataPoint (
+        /*[in]*/ long pos,
+        /*[out]*/ long * TimeOffset,
+        /*[out]*/ long * Intensity ) = 0;
+      virtual HRESULT __stdcall raw_Copy (
+        /*[out,retval]*/ IUnknown * * ppCopy ) = 0;
+      virtual HRESULT __stdcall raw_CopyData (
+        /*[out,retval]*/ IUnknown * * ppCopy ) = 0;
+      virtual HRESULT __stdcall raw_SetSize (
+        /*[in]*/ long NewSize ) = 0;
+      virtual HRESULT __stdcall raw_Trim ( ) = 0;
+      virtual HRESULT __stdcall raw_ConvertMassToOffset (
+        /*[in]*/ double Mass,
+        /*[out,retval]*/ long * Offset ) = 0;
+      virtual HRESULT __stdcall raw_AddScanType (
+        /*[in]*/ long nPnts,
+        /*[in]*/ long * DataPnts,
+        /*[in]*/ double CalA,
+        /*[in]*/ double TNt,
+        /*[in]*/ short eDataFormat ) = 0;
+      virtual HRESULT __stdcall get_NumberOfCalibrations (
+        /*[out,retval]*/ short * pVal ) = 0;
+      virtual HRESULT __stdcall raw_getAveragedTOFIntensity (
+        /*[in]*/ long pos,
+        /*[out]*/ double * averInt ) = 0;
+      virtual HRESULT __stdcall get_UsePPM (
+        /*[out,retval]*/ short * pVal ) = 0;
+      virtual HRESULT __stdcall put_UsePPM (
+        /*[in]*/ short pVal ) = 0;
+      virtual HRESULT __stdcall raw_TOFAddOrSubtract (
+        /*[in]*/ short addData,
+        /*[in]*/ IUnknown * pOtherIUnknow,
+        /*[in]*/ double toleranceForXValues,
+        /*[in]*/ short keepNegativeValues ) = 0;
+      virtual HRESULT __stdcall get_TOFXPoint (
+        /*[in]*/ long pos,
+        /*[out,retval]*/ double * pVal ) = 0;
+      virtual HRESULT __stdcall get_TOFTimeValue (
+        /*[in]*/ long pos,
+        /*[out,retval]*/ double * pVal ) = 0;
+      virtual HRESULT __stdcall raw_ConvertMassToTimeValue (
+        /*[in]*/ double Mass,
+        /*[out]*/ double * TimValue ) = 0;
+      virtual HRESULT __stdcall raw_Reset ( ) = 0;
+      virtual HRESULT __stdcall raw_CopyRawData (
+        /*[out]*/ long * lPnts,
+        /*[out]*/ long * * RawData ) = 0;
+      virtual HRESULT __stdcall raw_SetToOneScan ( ) = 0;
+      virtual HRESULT __stdcall raw_SetNumberOfPoints (
+        /*[in]*/ long NewSize ) = 0;
+      virtual HRESULT __stdcall raw_SetDataPoint (
+        /*[in]*/ long pos,
+        /*[in]*/ long TimePos,
+        /*[in]*/ long Intensity ) = 0;
+      virtual HRESULT __stdcall raw_TOFSort ( ) = 0;
+      virtual HRESULT __stdcall get_numberOfScans (
+        /*[out,retval]*/ short * pVal ) = 0;
+      virtual HRESULT __stdcall put_numberOfScans (
+        /*[in]*/ short pVal ) = 0;
+      virtual HRESULT __stdcall raw_AppendMassIntensityPoint (
+        /*[in]*/ double MassValue,
+        /*[in]*/ double Intensity ) = 0;
+      virtual HRESULT __stdcall raw_SetScan (
+        /*[in]*/ long nPnts,
+        /*[in]*/ long * DataPnts,
+        /*[in]*/ double CalA,
+        /*[in]*/ double TNt ) = 0;
+      virtual HRESULT __stdcall raw_TOFRawData (
+        /*[out]*/ long * NumberPnts,
+        /*[out]*/ VARIANT * dXMass,
+        /*[out]*/ VARIANT * dYInts,
+        /*[in]*/ enum TOFXDataFormat Format ) = 0;
+      virtual HRESULT __stdcall raw_TOFConPoints (
+        /*[out]*/ long * NumberPnts,
+        VARIANT * cConPoints ) = 0;
+      virtual HRESULT __stdcall raw_GetRawDataPointer (
+        /*[out]*/ long * * ppRawData,
+        /*[out]*/ double * CalA,
+        /*[out]*/ double * TNt ) = 0;
+};
+
+enum TOFPreCursorFormat
+{
+    TF_Undefined = 0,
+    TF_MassIntensityOnly = 1,
+    TF_All_Scans = 2,
+    TF_Partail_Scans = 3,
+    TF_TOF_Display = 4
+};
+
+struct __declspec(uuid("d47380e0-36ec-11d4-bf28-00c04f7b40c7"))
+ISpecDataEx : IUnknown
+{
+    //
+    // Wrapper methods for error-handling
+    //
+
+    HRESULT SetDaughterMasses (
+        short sNmbDtr,
+        double * dMass );
+    HRESULT GetRequestedMasses (
+        short * numberOfMasses,
+        double * * dMass );
+    HRESULT AppendSpectra (
+        double dtSMass,
+        double dtEMass,
+        struct ISpecData * pSpecData );
+    HRESULT GetNumberOfSpectra (
+        short * SavedScanCount );
+    HRESULT GetSpectra (
+        short Offset,
+        struct ISpecData * * ITPCSpecData );
+    HRESULT GetScanDaughterMass (
+        short Offset,
+        double * Mass );
+    HRESULT ClearExtraSpectra ( );
+    HRESULT TOFSavedFormat (
+        enum TOFPreCursorFormat * SavedFormat );
+    HRESULT SetSaveFormat (
+        enum TOFPreCursorFormat SavedFormat );
+    HRESULT GetQuad1Limits (
+        float * StrMass,
+        float * EndMass,
+        float * StepSize );
+    HRESULT SetQuad1Limits (
+        float StrMass,
+        float EndMass,
+        float StepSize );
+    HRESULT SetDisplayTOFData (
+        short sFlagTOFOnly,
+        double StrMass,
+        double EndMass );
+    HRESULT GetDisplayTOFData (
+        short * sFlagDisplayTOF,
+        double * StrMass,
+        double * EndMass );
+    HRESULT GetTOFObject (
+        struct ITOFData * * pITOFData );
+    HRESULT GetMaxTPCSSpectraAllowed (
+        short * MaxNumberSpectra );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall raw_SetDaughterMasses (
+        /*[in]*/ short sNmbDtr,
+        /*[in]*/ double * dMass ) = 0;
+      virtual HRESULT __stdcall raw_GetRequestedMasses (
+        /*[out]*/ short * numberOfMasses,
+        /*[out]*/ double * * dMass ) = 0;
+      virtual HRESULT __stdcall raw_AppendSpectra (
+        /*[in]*/ double dtSMass,
+        /*[in]*/ double dtEMass,
+        /*[in]*/ struct ISpecData * pSpecData ) = 0;
+      virtual HRESULT __stdcall raw_GetNumberOfSpectra (
+        /*[out]*/ short * SavedScanCount ) = 0;
+      virtual HRESULT __stdcall raw_GetSpectra (
+        /*[in]*/ short Offset,
+        /*[out]*/ struct ISpecData * * ITPCSpecData ) = 0;
+      virtual HRESULT __stdcall raw_GetScanDaughterMass (
+        /*[in]*/ short Offset,
+        /*[out]*/ double * Mass ) = 0;
+      virtual HRESULT __stdcall raw_ClearExtraSpectra ( ) = 0;
+      virtual HRESULT __stdcall raw_TOFSavedFormat (
+        /*[out]*/ enum TOFPreCursorFormat * SavedFormat ) = 0;
+      virtual HRESULT __stdcall raw_SetSaveFormat (
+        /*[in]*/ enum TOFPreCursorFormat SavedFormat ) = 0;
+      virtual HRESULT __stdcall raw_GetQuad1Limits (
+        /*[out]*/ float * StrMass,
+        /*[out]*/ float * EndMass,
+        /*[out]*/ float * StepSize ) = 0;
+      virtual HRESULT __stdcall raw_SetQuad1Limits (
+        /*[in]*/ float StrMass,
+        /*[in]*/ float EndMass,
+        /*[in]*/ float StepSize ) = 0;
+      virtual HRESULT __stdcall raw_SetDisplayTOFData (
+        /*[in]*/ short sFlagTOFOnly,
+        /*[in]*/ double StrMass,
+        /*[in]*/ double EndMass ) = 0;
+      virtual HRESULT __stdcall raw_GetDisplayTOFData (
+        /*[out]*/ short * sFlagDisplayTOF,
+        /*[out]*/ double * StrMass,
+        /*[out]*/ double * EndMass ) = 0;
+      virtual HRESULT __stdcall raw_GetTOFObject (
+        /*[out]*/ struct ITOFData * * pITOFData ) = 0;
+      virtual HRESULT __stdcall raw_GetMaxTPCSSpectraAllowed (
+        /*[out]*/ short * MaxNumberSpectra ) = 0;
+};
+
+struct __declspec(uuid("c09d0ef6-926d-11d1-a9f2-0060977f5c78"))
+FMANChromData;
+    // [ default ] interface IFMANChromData
+    // [ default, source ] dispinterface _DataEvents
+    // [ source ] dispinterface _FMANChromDataEvents
+    // interface IBinData
+    // interface IGetRawData
+
+struct __declspec(uuid("c09d0ef8-926d-11d1-a9f2-0060977f5c78"))
+FMANSpecData;
+    // [ default ] interface IFMANSpecData
+    // interface IQTrap
+    // interface ISequentialStream
+    // interface IBinData
+    // interface IGetRawData
+    // interface ISpecDataEx
+    // interface IXYSetDisplay
+    // [ default, source ] dispinterface _DataEvents
+
+struct __declspec(uuid("553f7892-d2f1-4049-86f7-33685249d7f5"))
+IQTrap : IUnknown
+{
+    //
+    // Wrapper methods for error-handling
+    //
+
+    HRESULT GetScanSpeed (
+        double * pdScanSpeed );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall raw_GetScanSpeed (
+        /*[out]*/ double * pdScanSpeed ) = 0;
+};
+
+struct __declspec(uuid("26e42184-9803-11d1-a9f6-0060977f5c78"))
+FMANWiffFile;
+    // [ default ] interface IFMANWiffFile
+    // interface _IFMANWiffFileInternal
+    // [ default, source ] interface _FMANWiffFileEvents
+    // interface ITDCStatistics
+    // interface IFMANWiffFile2
+    // interface IFMANWiffFile3
+    // interface IFMANWiffFile4
+
+struct __declspec(uuid("26e42183-9803-11d1-a9f6-0060977f5c78"))
+IFMANWiffFile : IDispatch
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetDataIsBeingAcquired,put=PutDataIsBeingAcquired))
+    long DataIsBeingAcquired;
+    __declspec(property(get=GetPeriodBeingAcquired,put=PutPeriodBeingAcquired))
+    long PeriodBeingAcquired;
+    __declspec(property(get=GetIsTuneMode,put=PutIsTuneMode))
+    long IsTuneMode;
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    HRESULT GetTIC (
+        long sample,
+        long period,
+        long experiment,
+        long startCycle,
+        long endCycle,
+        double Offset,
+        struct IFMANChromData * pIFMANChromData,
+        long * allDataAvailableNow );
+    HRESULT GetSpectrum (
+        long sample,
+        long period,
+        long experiment,
+        float startTime,
+        float endTime,
+        struct IFMANSpecData * pIFMANSpecData,
+        long * inRealTimeMode,
+        long * numberOfScans,
+        long * actualPeriod,
+        float * ActualStartTime,
+        float * actualEndTime );
+    HRESULT OpenWiffFile (
+        _bstr_t fileName );
+    HRESULT CloseWiffFile ( );
+    long GetActualNumberOfPeriods (
+        long sample );
+    long GetActualNumberOfCycles (
+        long sample,
+        long period );
+    HRESULT GetActualPeriodAndCycleFromTime (
+        long sample,
+        long experiment,
+        float Time,
+        long * period,
+        long * cycle );
+    long GetActualNumberOfSamples ( );
+    IUnknownPtr GetMassSpecMethod (
+        long sample );
+    IUnknownPtr GetExperimentObject (
+        long sample,
+        long period,
+        long experiment );
+    long GetExpectedNumberOfPeriods (
+        long sample );
+    long GetExpectedNumberOfCycles (
+        long sample,
+        long period );
+    long GetNumberOfExperiments (
+        long sample,
+        long period );
+    IUnknownPtr GetPeriodObject (
+        long sample,
+        long period );
+    long GetDataIsBeingAcquired ( );
+    void PutDataIsBeingAcquired (
+        long pVal );
+    long GetPeriodBeingAcquired ( );
+    void PutPeriodBeingAcquired (
+        long pVal );
+    IUnknownPtr GetMassRangeObject (
+        long sample,
+        long period,
+        long experiment,
+        long massRange );
+    HRESULT GetOneFullScanXIC (
+        long sample,
+        long period,
+        long experiment,
+        long startCycle,
+        long endCycle,
+        double startMass,
+        double EndMass,
+        double Offset,
+        struct IFMANChromData * pIFMANChromData,
+        long * allDataAvailableNow );
+    HRESULT GetDefaultBPC (
+        long sample,
+        long period,
+        long experiment,
+        long startCycle,
+        long endCycle,
+        double Offset,
+        struct IFMANChromData * pIFMANChromData,
+        long * allDataAvailableNow );
+    HRESULT GetBasePeakChromatogram (
+        long sample,
+        long period,
+        long experiment,
+        long startCycle,
+        long endCycle,
+        double startMass,
+        double EndMass,
+        double Offset,
+        struct IFMANChromData * pIFMANChromData,
+        long * allDataAvailableNow );
+    HRESULT GetOneSingleIonXIC (
+        long sample,
+        long period,
+        long experiment,
+        long startCycle,
+        long endCycle,
+        short simIndex,
+        double Offset,
+        struct IFMANChromData * pIFMANChromData,
+        long * allDataAvailableNow );
+    _bstr_t GetWiffFileName ( );
+    HRESULT GetScanRange (
+        long sample,
+        long period,
+        long experiment,
+        double * startMass,
+        double * stepMass,
+        double * stopMass );
+    float GetActualTimeFromPeriodAndCycle (
+        long sample,
+        long period,
+        long experiment,
+        long cycle );
+    HRESULT GetSIMBPC (
+        long sample,
+        long period,
+        long experiment,
+        long startCycle,
+        long endCycle,
+        double Offset,
+        struct IFMANChromData * pIFMANChromData,
+        long * allDataAvailableNow );
+    IUnknownPtr GetDABSObject (
+        long sample );
+    HRESULT GetDABSInfo (
+        long sample,
+        short * methodID,
+        BSTR * sampleName,
+        BSTR * sampleID,
+        BSTR * vialNumber,
+        short * rackNumber,
+        BSTR * rackID,
+        long * acquisitionTime );
+    _bstr_t GetSampleName (
+        long sample );
+    HRESULT GetADC (
+        long sample,
+        long deviceID,
+        long channel,
+        double Offset,
+        struct IFMANChromData * pIFMANChromData,
+        long * allDataAvailableNow );
+    long GetNumberOfADCDevices (
+        long sample );
+    HRESULT GetADCDeviceInfo (
+        long sample,
+        long deviceID,
+        long * numberOfChannels,
+        BSTR * deviceName,
+        BSTR * modelName,
+        long * deviceType );
+    HRESULT GetADCChannelInfo (
+        long sample,
+        long deviceID,
+        long channel,
+        BSTR * channelName );
+    long GetExperimentsInPeriodAreSameType (
+        long sample,
+        long period );
+    IUnknownPtr GetAcquisitionMethod (
+        long sample );
+    _bstr_t _LookupFieldValue (
+        long sample,
+        long period,
+        long experiment,
+        long fieldID );
+    IUnknownPtr GetFileManagerObject ( );
+    HRESULT GetScanInfo (
+        long sample,
+        long period,
+        long experiment,
+        long cycle,
+        short * scanType,
+        double * fixedMass,
+        double * fixedMass2,
+        double * collisionEnergy,
+        short * chargeState );
+    HRESULT GetNumberOfDADScans (
+        long sample,
+        long deviceID,
+        long * numberOfDevices );
+    HRESULT GetDADDeviceInfo (
+        long sample,
+        long deviceID,
+        BSTR * deviceName,
+        BSTR * modelName,
+        long * deviceType );
+    HRESULT GetDADTWC (
+        long sample,
+        long deviceID,
+        long startCycle,
+        long endCycle,
+        double Offset,
+        struct IFMANChromData * pIFMANChromData,
+        long * allDataAvailableNow );
+    HRESULT GetDADSpectrum (
+        long sample,
+        float startTime,
+        float endTime,
+        struct IFMANSpecData * pIFMANSpecData,
+        long * inRealTimeMode,
+        long * DADnumberOfScans,
+        float * ActualStartTime,
+        float * actualEndTime );
+    HRESULT GetDADXWC (
+        long sample,
+        long deviceID,
+        long operatingMode,
+        long startCycle,
+        long endCycle,
+        double startWaveLength,
+        double endWaveLength,
+        double Offset,
+        struct IFMANChromData * pIFMANChromData,
+        long * allDataAvailableNow );
+    HRESULT GetWaveLengthRange (
+        long sample,
+        long deviceID,
+        float * startWaveLength,
+        float * endWaveLength,
+        float * stepWaveLength );
+    HRESULT GetCenterWaveLengths (
+        long sample,
+        long deviceID,
+        float * pfCenterWaveLengths );
+    HRESULT GetDADDeviceID (
+        long sample,
+        long * deviceID );
+    HRESULT GetDADOperatingMode (
+        long sample,
+        long deviceID,
+        short * operatingMode );
+    HRESULT GetNumberOfDADChannels (
+        long sample,
+        long deviceID,
+        short * numberOfChannels );
+    HRESULT GetAllChannelsIDFlag (
+        long sample,
+        long deviceID,
+        long * allChannelsIDFlag );
+    long GetIsTuneMode ( );
+    void PutIsTuneMode (
+        long pVal );
+    HRESULT GetAcquisitionMethodPath (
+        long sample,
+        BSTR * methodName,
+        BSTR * modifiedTime );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall raw_GetTIC (
+        /*[in]*/ long sample,
+        /*[in]*/ long period,
+        /*[in]*/ long experiment,
+        /*[in]*/ long startCycle,
+        /*[in]*/ long endCycle,
+        /*[in]*/ double Offset,
+        /*[in]*/ struct IFMANChromData * pIFMANChromData,
+        /*[out]*/ long * allDataAvailableNow ) = 0;
+      virtual HRESULT __stdcall raw_GetSpectrum (
+        /*[in]*/ long sample,
+        /*[in]*/ long period,
+        /*[in]*/ long experiment,
+        /*[in]*/ float startTime,
+        /*[in]*/ float endTime,
+        /*[in]*/ struct IFMANSpecData * pIFMANSpecData,
+        /*[out]*/ long * inRealTimeMode,
+        /*[out]*/ long * numberOfScans,
+        /*[out]*/ long * actualPeriod,
+        /*[out]*/ float * ActualStartTime,
+        /*[out]*/ float * actualEndTime ) = 0;
+      virtual HRESULT __stdcall raw_OpenWiffFile (
+        /*[in]*/ BSTR fileName ) = 0;
+      virtual HRESULT __stdcall raw_CloseWiffFile ( ) = 0;
+      virtual HRESULT __stdcall raw_GetActualNumberOfPeriods (
+        /*[in]*/ long sample,
+        /*[out,retval]*/ long * numberOfPeriods ) = 0;
+      virtual HRESULT __stdcall raw_GetActualNumberOfCycles (
+        /*[in]*/ long sample,
+        /*[in]*/ long period,
+        /*[out,retval]*/ long * numberOfCycles ) = 0;
+      virtual HRESULT __stdcall raw_GetActualPeriodAndCycleFromTime (
+        /*[in]*/ long sample,
+        /*[in]*/ long experiment,
+        /*[in]*/ float Time,
+        /*[out]*/ long * period,
+        /*[out]*/ long * cycle ) = 0;
+      virtual HRESULT __stdcall raw_GetActualNumberOfSamples (
+        /*[out,retval]*/ long * numberOfSamples ) = 0;
+      virtual HRESULT __stdcall raw_GetMassSpecMethod (
+        /*[in]*/ long sample,
+        /*[out,retval]*/ IUnknown * * pIUnknownMassSpecMethod ) = 0;
+      virtual HRESULT __stdcall raw_GetExperimentObject (
+        /*[in]*/ long sample,
+        /*[in]*/ long period,
+        /*[in]*/ long experiment,
+        /*[out,retval]*/ IUnknown * * pIUnknownExperiment ) = 0;
+      virtual HRESULT __stdcall raw_GetExpectedNumberOfPeriods (
+        /*[in]*/ long sample,
+        /*[out,retval]*/ long * numberOfPeriods ) = 0;
+      virtual HRESULT __stdcall raw_GetExpectedNumberOfCycles (
+        /*[in]*/ long sample,
+        /*[in]*/ long period,
+        /*[out,retval]*/ long * numberOfCycles ) = 0;
+      virtual HRESULT __stdcall raw_GetNumberOfExperiments (
+        /*[in]*/ long sample,
+        /*[in]*/ long period,
+        /*[out,retval]*/ long * numberOfExperiments ) = 0;
+      virtual HRESULT __stdcall raw_GetPeriodObject (
+        /*[in]*/ long sample,
+        /*[in]*/ long period,
+        /*[out,retval]*/ IUnknown * * pIUnknownPeriod ) = 0;
+      virtual HRESULT __stdcall get_DataIsBeingAcquired (
+        /*[out,retval]*/ long * pVal ) = 0;
+      virtual HRESULT __stdcall put_DataIsBeingAcquired (
+        /*[in]*/ long pVal ) = 0;
+      virtual HRESULT __stdcall get_PeriodBeingAcquired (
+        /*[out,retval]*/ long * pVal ) = 0;
+      virtual HRESULT __stdcall put_PeriodBeingAcquired (
+        /*[in]*/ long pVal ) = 0;
+      virtual HRESULT __stdcall raw_GetMassRangeObject (
+        /*[in]*/ long sample,
+        /*[in]*/ long period,
+        /*[in]*/ long experiment,
+        /*[in]*/ long massRange,
+        /*[out,retval]*/ IUnknown * * pIUnknownMassRange ) = 0;
+      virtual HRESULT __stdcall raw_GetOneFullScanXIC (
+        /*[in]*/ long sample,
+        /*[in]*/ long period,
+        /*[in]*/ long experiment,
+        /*[in]*/ long startCycle,
+        /*[in]*/ long endCycle,
+        /*[in]*/ double startMass,
+        /*[in]*/ double EndMass,
+        /*[in]*/ double Offset,
+        /*[in]*/ struct IFMANChromData * pIFMANChromData,
+        /*[out]*/ long * allDataAvailableNow ) = 0;
+      virtual HRESULT __stdcall raw_GetDefaultBPC (
+        /*[in]*/ long sample,
+        /*[in]*/ long period,
+        /*[in]*/ long experiment,
+        /*[in]*/ long startCycle,
+        /*[in]*/ long endCycle,
+        /*[in]*/ double Offset,
+        /*[in]*/ struct IFMANChromData * pIFMANChromData,
+        /*[out]*/ long * allDataAvailableNow ) = 0;
+      virtual HRESULT __stdcall raw_GetBasePeakChromatogram (
+        /*[in]*/ long sample,
+        /*[in]*/ long period,
+        /*[in]*/ long experiment,
+        /*[in]*/ long startCycle,
+        /*[in]*/ long endCycle,
+        /*[in]*/ double startMass,
+        /*[in]*/ double EndMass,
+        /*[in]*/ double Offset,
+        /*[in]*/ struct IFMANChromData * pIFMANChromData,
+        /*[out]*/ long * allDataAvailableNow ) = 0;
+      virtual HRESULT __stdcall raw_GetOneSingleIonXIC (
+        /*[in]*/ long sample,
+        /*[in]*/ long period,
+        /*[in]*/ long experiment,
+        /*[in]*/ long startCycle,
+        /*[in]*/ long endCycle,
+        /*[in]*/ short simIndex,
+        /*[in]*/ double Offset,
+        /*[in]*/ struct IFMANChromData * pIFMANChromData,
+        /*[out]*/ long * allDataAvailableNow ) = 0;
+      virtual HRESULT __stdcall raw_GetWiffFileName (
+        /*[out,retval]*/ BSTR * WiffFileName ) = 0;
+      virtual HRESULT __stdcall raw_GetScanRange (
+        /*[in]*/ long sample,
+        /*[in]*/ long period,
+        /*[in]*/ long experiment,
+        /*[out]*/ double * startMass,
+        /*[out]*/ double * stepMass,
+        /*[out]*/ double * stopMass ) = 0;
+      virtual HRESULT __stdcall raw_GetActualTimeFromPeriodAndCycle (
+        /*[in]*/ long sample,
+        /*[in]*/ long period,
+        /*[in]*/ long experiment,
+        /*[in]*/ long cycle,
+        /*[out,retval]*/ float * Time ) = 0;
+      virtual HRESULT __stdcall raw_GetSIMBPC (
+        /*[in]*/ long sample,
+        /*[in]*/ long period,
+        /*[in]*/ long experiment,
+        /*[in]*/ long startCycle,
+        /*[in]*/ long endCycle,
+        /*[in]*/ double Offset,
+        /*[in]*/ struct IFMANChromData * pIFMANChromData,
+        /*[out]*/ long * allDataAvailableNow ) = 0;
+      virtual HRESULT __stdcall raw_GetDABSObject (
+        /*[in]*/ long sample,
+        /*[out,retval]*/ IUnknown * * pIUnknownDABSObject ) = 0;
+      virtual HRESULT __stdcall raw_GetDABSInfo (
+        /*[in]*/ long sample,
+        /*[out]*/ short * methodID,
+        /*[out]*/ BSTR * sampleName,
+        /*[out]*/ BSTR * sampleID,
+        /*[out]*/ BSTR * vialNumber,
+        /*[out]*/ short * rackNumber,
+        /*[out]*/ BSTR * rackID,
+        /*[out]*/ long * acquisitionTime ) = 0;
+      virtual HRESULT __stdcall raw_GetSampleName (
+        /*[in]*/ long sample,
+        /*[out,retval]*/ BSTR * sampleName ) = 0;
+      virtual HRESULT __stdcall raw_GetADC (
+        /*[in]*/ long sample,
+        /*[in]*/ long deviceID,
+        /*[in]*/ long channel,
+        /*[in]*/ double Offset,
+        /*[in]*/ struct IFMANChromData * pIFMANChromData,
+        /*[out]*/ long * allDataAvailableNow ) = 0;
+      virtual HRESULT __stdcall raw_GetNumberOfADCDevices (
+        /*[in]*/ long sample,
+        /*[out,retval]*/ long * numberOfDevices ) = 0;
+      virtual HRESULT __stdcall raw_GetADCDeviceInfo (
+        /*[in]*/ long sample,
+        /*[in]*/ long deviceID,
+        /*[out]*/ long * numberOfChannels,
+        /*[out]*/ BSTR * deviceName,
+        /*[out]*/ BSTR * modelName,
+        /*[out]*/ long * deviceType ) = 0;
+      virtual HRESULT __stdcall raw_GetADCChannelInfo (
+        /*[in]*/ long sample,
+        /*[in]*/ long deviceID,
+        /*[in]*/ long channel,
+        /*[out]*/ BSTR * channelName ) = 0;
+      virtual HRESULT __stdcall raw_GetExperimentsInPeriodAreSameType (
+        /*[in]*/ long sample,
+        /*[in]*/ long period,
+        /*[out,retval]*/ long * experimentsAreSameType ) = 0;
+      virtual HRESULT __stdcall raw_GetAcquisitionMethod (
+        /*[in]*/ long sample,
+        /*[out,retval]*/ IUnknown * * pIUnknownAcquisitionMethod ) = 0;
+      virtual HRESULT __stdcall raw__LookupFieldValue (
+        /*[in]*/ long sample,
+        /*[in]*/ long period,
+        /*[in]*/ long experiment,
+        /*[in]*/ long fieldID,
+        /*[out,retval]*/ BSTR * fieldValue ) = 0;
+      virtual HRESULT __stdcall raw_GetFileManagerObject (
+        /*[out,retval]*/ IUnknown * * pFileManagerObject ) = 0;
+      virtual HRESULT __stdcall raw_GetScanInfo (
+        /*[in]*/ long sample,
+        /*[in]*/ long period,
+        /*[in]*/ long experiment,
+        /*[in]*/ long cycle,
+        /*[out]*/ short * scanType,
+        /*[out]*/ double * fixedMass,
+        /*[out]*/ double * fixedMass2,
+        /*[out]*/ double * collisionEnergy,
+        /*[out]*/ short * chargeState ) = 0;
+      virtual HRESULT __stdcall raw_GetNumberOfDADScans (
+        /*[in]*/ long sample,
+        /*[in]*/ long deviceID,
+        /*[out]*/ long * numberOfDevices ) = 0;
+      virtual HRESULT __stdcall raw_GetDADDeviceInfo (
+        /*[in]*/ long sample,
+        /*[in]*/ long deviceID,
+        /*[out]*/ BSTR * deviceName,
+        /*[out]*/ BSTR * modelName,
+        /*[out]*/ long * deviceType ) = 0;
+      virtual HRESULT __stdcall raw_GetDADTWC (
+        /*[in]*/ long sample,
+        /*[in]*/ long deviceID,
+        /*[in]*/ long startCycle,
+        /*[in]*/ long endCycle,
+        /*[in]*/ double Offset,
+        /*[in]*/ struct IFMANChromData * pIFMANChromData,
+        /*[out]*/ long * allDataAvailableNow ) = 0;
+      virtual HRESULT __stdcall raw_GetDADSpectrum (
+        /*[in]*/ long sample,
+        /*[in]*/ float startTime,
+        /*[in]*/ float endTime,
+        /*[in]*/ struct IFMANSpecData * pIFMANSpecData,
+        /*[out]*/ long * inRealTimeMode,
+        /*[out]*/ long * DADnumberOfScans,
+        /*[out]*/ float * ActualStartTime,
+        /*[out]*/ float * actualEndTime ) = 0;
+      virtual HRESULT __stdcall raw_GetDADXWC (
+        /*[in]*/ long sample,
+        /*[in]*/ long deviceID,
+        /*[in]*/ long operatingMode,
+        /*[in]*/ long startCycle,
+        /*[in]*/ long endCycle,
+        /*[in]*/ double startWaveLength,
+        /*[in]*/ double endWaveLength,
+        /*[in]*/ double Offset,
+        /*[in]*/ struct IFMANChromData * pIFMANChromData,
+        /*[out]*/ long * allDataAvailableNow ) = 0;
+      virtual HRESULT __stdcall raw_GetWaveLengthRange (
+        /*[in]*/ long sample,
+        /*[in]*/ long deviceID,
+        /*[out]*/ float * startWaveLength,
+        /*[out]*/ float * endWaveLength,
+        /*[out]*/ float * stepWaveLength ) = 0;
+      virtual HRESULT __stdcall raw_GetCenterWaveLengths (
+        /*[in]*/ long sample,
+        /*[in]*/ long deviceID,
+        /*[out]*/ float * pfCenterWaveLengths ) = 0;
+      virtual HRESULT __stdcall raw_GetDADDeviceID (
+        /*[in]*/ long sample,
+        /*[out]*/ long * deviceID ) = 0;
+      virtual HRESULT __stdcall raw_GetDADOperatingMode (
+        /*[in]*/ long sample,
+        /*[in]*/ long deviceID,
+        /*[out]*/ short * operatingMode ) = 0;
+      virtual HRESULT __stdcall raw_GetNumberOfDADChannels (
+        /*[in]*/ long sample,
+        /*[in]*/ long deviceID,
+        /*[out]*/ short * numberOfChannels ) = 0;
+      virtual HRESULT __stdcall raw_GetAllChannelsIDFlag (
+        /*[in]*/ long sample,
+        /*[in]*/ long deviceID,
+        /*[out]*/ long * allChannelsIDFlag ) = 0;
+      virtual HRESULT __stdcall get_IsTuneMode (
+        /*[out,retval]*/ long * pVal ) = 0;
+      virtual HRESULT __stdcall put_IsTuneMode (
+        /*[in]*/ long pVal ) = 0;
+      virtual HRESULT __stdcall raw_GetAcquisitionMethodPath (
+        /*[in]*/ long sample,
+        /*[out]*/ BSTR * methodName,
+        /*[out]*/ BSTR * modifiedTime ) = 0;
+};
+
+struct __declspec(uuid("939eddb0-d3ca-11d1-aa27-0060977f5c78"))
+_IFMANWiffFileInternal : IUnknown
+{
+    //
+    // Wrapper methods for error-handling
+    //
+
+    HRESULT NewDataArrived (
+        long sampleNumber );
+    HRESULT AllDataArrived (
+        long sampleNumber );
+    HRESULT SetSamplesAssociatedWith (
+        long firstSample,
+        long lastSample );
+    HRESULT GetIsSampleInRealTime (
+        long sampleNum,
+        short * pVal );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall raw_NewDataArrived (
+        /*[in]*/ long sampleNumber ) = 0;
+      virtual HRESULT __stdcall raw_AllDataArrived (
+        /*[in]*/ long sampleNumber ) = 0;
+      virtual HRESULT __stdcall raw_SetSamplesAssociatedWith (
+        /*[in]*/ long firstSample,
+        /*[in]*/ long lastSample ) = 0;
+      virtual HRESULT __stdcall raw_GetIsSampleInRealTime (
+        /*[in]*/ long sampleNum,
+        /*[out]*/ short * pVal ) = 0;
+};
+
+struct __declspec(uuid("abdc6fe0-4b68-11d4-986c-00c04f1961e6"))
+ITDCStatistics : IUnknown
+{
+    //
+    // Wrapper methods for error-handling
+    //
+
+    HRESULT GetCurrentTDCStatisticsParameters (
+        long lPeriodNumber,
+        long * llIonsHitDetector1,
+        long * lIonsHitDetector2,
+        long * lIonsHitDetector3,
+        long * lIonsHitDetector4,
+        long * lStartRate );
+    HRESULT TDCArrOpen (
+        long bTDCRealTime );
+    HRESULT TDCArrClose ( );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall raw_GetCurrentTDCStatisticsParameters (
+        long lPeriodNumber,
+        long * llIonsHitDetector1,
+        long * lIonsHitDetector2,
+        long * lIonsHitDetector3,
+        long * lIonsHitDetector4,
+        long * lStartRate ) = 0;
+      virtual HRESULT __stdcall raw_TDCArrOpen (
+        long bTDCRealTime ) = 0;
+      virtual HRESULT __stdcall raw_TDCArrClose ( ) = 0;
+};
+
+enum FileVersion
+{
+    VERS_Undefined = 0,
+    VERS_MAC = 1,
+    VERS_OPT2 = 2,
+    VERS_1_1 = 3,
+    VERS_1_3_Collaborator = 4,
+    VERS_1_2 = 5,
+    VERS_QS = 6,
+    VERS_1_3 = 7,
+    VERS_1_4 = 8,
+    VERS_2_0 = 9,
+    VERS_END = 10
+};
+
+struct __declspec(uuid("d982f531-d5d3-11d4-8bfd-00c04f731047"))
+IFMANWiffFile2 : IUnknown
+{
+    //
+    // Wrapper methods for error-handling
+    //
+
+    HRESULT GetScanDescription2 (
+        long sample,
+        long period,
+        long experiment,
+        long cycle,
+        long forChromatogram,
+        BSTR * scanDescription,
+        double * fixedMass );
+    HRESULT GetDataFormat (
+        long * nDataFormat );
+    HRESULT GetScanInfoEx (
+        long sample,
+        long period,
+        long experiment,
+        long cycle,
+        short * scanType,
+        VARIANT * fixedMass,
+        VARIANT * fixedMass2,
+        short * sCADValue,
+        VARIANT * collisionEnergy,
+        VARIANT * chargeState );
+    HRESULT IsIDA (
+        long sample,
+        long period,
+        long experiment,
+        enum FileVersion * IsIDA,
+        short * IDALevel,
+        short * IDAType );
+    enum FileVersion GetFileVersion ( );
+    HRESULT GetIDAScanInfo (
+        long sample,
+        long period,
+        long experiment,
+        long cycle,
+        enum FileVersion IDAVers,
+        short * scanType,
+        VARIANT * fixedMass,
+        VARIANT * fixedMass2,
+        VARIANT * collisionEnergy,
+        VARIANT * chargeState );
+    HRESULT GetNonIDAScanInfo (
+        long sample,
+        long period,
+        long experiment,
+        long cycle,
+        short * scanType,
+        VARIANT * fixedMass,
+        VARIANT * fixedMass2,
+        VARIANT * collisionEnergy,
+        VARIANT * chargeState );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall raw_GetScanDescription2 (
+        /*[in]*/ long sample,
+        /*[in]*/ long period,
+        /*[in]*/ long experiment,
+        /*[in]*/ long cycle,
+        /*[in]*/ long forChromatogram,
+        /*[out]*/ BSTR * scanDescription,
+        /*[out]*/ double * fixedMass ) = 0;
+      virtual HRESULT __stdcall raw_GetDataFormat (
+        /*[out]*/ long * nDataFormat ) = 0;
+      virtual HRESULT __stdcall raw_GetScanInfoEx (
+        /*[in]*/ long sample,
+        /*[in]*/ long period,
+        /*[in]*/ long experiment,
+        /*[in]*/ long cycle,
+        /*[out]*/ short * scanType,
+        /*[out]*/ VARIANT * fixedMass,
+        /*[out]*/ VARIANT * fixedMass2,
+        /*[out]*/ short * sCADValue,
+        /*[out]*/ VARIANT * collisionEnergy,
+        /*[out]*/ VARIANT * chargeState ) = 0;
+      virtual HRESULT __stdcall raw_IsIDA (
+        /*[in]*/ long sample,
+        /*[in]*/ long period,
+        /*[in]*/ long experiment,
+        /*[out]*/ enum FileVersion * IsIDA,
+        /*[out]*/ short * IDALevel,
+        /*[out]*/ short * IDAType ) = 0;
+      virtual HRESULT __stdcall raw_GetFileVersion (
+        /*[out,retval]*/ enum FileVersion * vers ) = 0;
+      virtual HRESULT __stdcall raw_GetIDAScanInfo (
+        /*[in]*/ long sample,
+        /*[in]*/ long period,
+        /*[in]*/ long experiment,
+        /*[in]*/ long cycle,
+        /*[in]*/ enum FileVersion IDAVers,
+        /*[out]*/ short * scanType,
+        /*[out]*/ VARIANT * fixedMass,
+        /*[out]*/ VARIANT * fixedMass2,
+        /*[out]*/ VARIANT * collisionEnergy,
+        /*[out]*/ VARIANT * chargeState ) = 0;
+      virtual HRESULT __stdcall raw_GetNonIDAScanInfo (
+        /*[in]*/ long sample,
+        /*[in]*/ long period,
+        /*[in]*/ long experiment,
+        /*[in]*/ long cycle,
+        /*[out]*/ short * scanType,
+        /*[out]*/ VARIANT * fixedMass,
+        /*[out]*/ VARIANT * fixedMass2,
+        /*[out]*/ VARIANT * collisionEnergy,
+        /*[out]*/ VARIANT * chargeState ) = 0;
+};
+
+struct __declspec(uuid("d982f531-d5d3-a154-8b3d-01c043731047"))
+IFMANWiffFile3 : IUnknown
+{
+    //
+    // Wrapper methods for error-handling
+    //
+
+    HRESULT UpdateSampleData (
+        long sample );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall raw_UpdateSampleData (
+        /*[in]*/ long sample ) = 0;
+};
+
+struct __declspec(uuid("dce6a9c5-e67e-48af-858b-9e0667e6acea"))
+IFMANWiffFile4 : IUnknown
+{
+    //
+    // Wrapper methods for error-handling
+    //
+
+    HRESULT GetSourceTypeTitleString (
+        long sample,
+        long period,
+        long experiment,
+        BSTR * sourceTypeTitle );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall raw_GetSourceTypeTitleString (
+        /*[in]*/ long sample,
+        /*[in]*/ long period,
+        /*[in]*/ long experiment,
+        /*[out]*/ BSTR * sourceTypeTitle ) = 0;
+};
+
+struct __declspec(uuid("a1a48ec4-98c6-11d1-a9f6-0060977f5c78"))
+FMANWiffFileControl;
+    // [ default ] interface IFMANWiffFileControl
+    // interface _IFMANWiffFileControlInternal
+
+struct __declspec(uuid("a1a48ec3-98c6-11d1-a9f6-0060977f5c78"))
+IFMANWiffFileControl : IDispatch
+{
+    //
+    // Wrapper methods for error-handling
+    //
+
+    IFMANWiffFilePtr GetWiffFileObject (
+        _bstr_t WiffFileName,
+        long sample );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall raw_GetWiffFileObject (
+        /*[in]*/ BSTR WiffFileName,
+        /*[in]*/ long sample,
+        /*[out,retval]*/ struct IFMANWiffFile * * ppInterface ) = 0;
+};
+
+struct __declspec(uuid("b09b3aa0-b513-11d1-aa08-0060977f5c78"))
+_IFMANWiffFileControlInternal : IUnknown
+{
+    //
+    // Wrapper methods for error-handling
+    //
+
+    HRESULT ReleaseWiffFileReference (
+        IUnknown * pIUnknownFMANWiffFile );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall raw_ReleaseWiffFileReference (
+        /*[in]*/ IUnknown * pIUnknownFMANWiffFile ) = 0;
+};
+
+struct __declspec(uuid("a75e7c24-012a-11d2-aa63-0060977f5c78"))
+SpectralPeakList;
+    // [ default ] interface ISpectralPeakList
+
+struct __declspec(uuid("a75e7c23-012a-11d2-aa63-0060977f5c78"))
+ISpectralPeakList : IDispatch
+{
+    //
+    // Wrapper methods for error-handling
+    //
+
+    long GetNumberOfPeaks ( );
+    HRESULT GetPeak (
+        long peakNumber,
+        double * Mass,
+        double * width,
+        double * Intensity,
+        double * intensityAsPercent );
+    HRESULT FindPeaksInDataObject (
+        IUnknown * pDataObject,
+        double peakHeightForWidthCalculation );
+    long GetClosestPeak (
+        double Mass,
+        double massTolerance );
+    HRESULT Copy (
+        IUnknown * * ppCopy );
+    HRESULT _SetNumberOfPeaks (
+        long numberOfPeaks );
+    HRESULT _SetMaximumIntensity (
+        double maximumIntensity );
+    HRESULT _SetPeak (
+        long peakNumber,
+        double Mass,
+        double width,
+        double Intensity );
+    long GetLargestPeakInRange (
+        double lowMass,
+        double highMass );
+    _bstr_t GetObjectID ( );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall raw_GetNumberOfPeaks (
+        /*[out,retval]*/ long * numberOfPeaks ) = 0;
+      virtual HRESULT __stdcall raw_GetPeak (
+        /*[in]*/ long peakNumber,
+        /*[out]*/ double * Mass,
+        /*[out]*/ double * width,
+        /*[out]*/ double * Intensity,
+        /*[out]*/ double * intensityAsPercent ) = 0;
+      virtual HRESULT __stdcall raw_FindPeaksInDataObject (
+        /*[in]*/ IUnknown * pDataObject,
+        /*[in]*/ double peakHeightForWidthCalculation ) = 0;
+      virtual HRESULT __stdcall raw_GetClosestPeak (
+        /*[in]*/ double Mass,
+        /*[in]*/ double massTolerance,
+        /*[out,retval]*/ long * peakNumber ) = 0;
+      virtual HRESULT __stdcall raw_Copy (
+        /*[out]*/ IUnknown * * ppCopy ) = 0;
+      virtual HRESULT __stdcall raw__SetNumberOfPeaks (
+        /*[in]*/ long numberOfPeaks ) = 0;
+      virtual HRESULT __stdcall raw__SetMaximumIntensity (
+        /*[in]*/ double maximumIntensity ) = 0;
+      virtual HRESULT __stdcall raw__SetPeak (
+        /*[in]*/ long peakNumber,
+        /*[in]*/ double Mass,
+        /*[in]*/ double width,
+        /*[in]*/ double Intensity ) = 0;
+      virtual HRESULT __stdcall raw_GetLargestPeakInRange (
+        /*[in]*/ double lowMass,
+        /*[in]*/ double highMass,
+        /*[out,retval]*/ long * peakNumber ) = 0;
+      virtual HRESULT __stdcall raw_GetObjectID (
+        /*[out,retval]*/ BSTR * objectID ) = 0;
+};
+
+struct __declspec(uuid("d62d9e64-e5f9-11d3-bef9-00c04f7b40c7"))
+TOFData;
+    // [ default ] interface ITOFData
+
+struct __declspec(uuid("b1735c54-c175-11d4-9fbb-00c04f1961f5"))
+ContourData;
+    // [ default ] interface IContourData
+
+struct __declspec(uuid("e26e4382-c608-11d4-9fc0-00c04f1961f5"))
+ContourCycle;
+    // [ default ] interface IContourCycle
+
+struct __declspec(uuid("e26e4384-c608-11d4-9fc0-00c04f1961f5"))
+ContourCyclePoint;
+    // [ default ] interface IContourCyclePoint
+
+//
+// Wrapper method implementations
+//
+
+#include "wifflib\exploredataobjects.tli"
+
+} // namespace Analyst
+
+#pragma pack(pop)

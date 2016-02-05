@@ -1,0 +1,624 @@
+﻿// Created by Microsoft (R) C/C++ Compiler Version 14.00.50727.762 (85bc2c35).
+//
+// f:\tmp\sashimi-trunk\trans_proteomic_pipeline\src\mzxml\converters\mzwiff\wiffqslib\filemanager.tli
+//
+// Wrapper implementations for Win32 type library ..\\libs\\analystqs\\FileManager.dll
+// compiler-generated file created 07/24/07 at 22:35:44 - DO NOT EDIT!
+
+#pragma once
+
+//
+// interface IFMCore wrapper method implementations
+//
+
+inline HRESULT IFMCore::FMANCreateWIFF ( ) {
+    HRESULT _hr = raw_FMANCreateWIFF();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IFMCore::FMANCloseWIFF ( ) {
+    HRESULT _hr = raw_FMANCloseWIFF();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IFMCore::FMANSampleAdd ( short __MIDL_0015, struct IStorage * * __MIDL_0016, short * __MIDL_0017, IUnknown * * __MIDL_0018 ) {
+    HRESULT _hr = raw_FMANSampleAdd(__MIDL_0015, __MIDL_0016, __MIDL_0017, __MIDL_0018);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IFMCore::FMANNewRec ( LPWSTR __MIDL_0019, long __MIDL_0020, LPWSTR __MIDL_0021, LPWSTR __MIDL_0022 ) {
+    HRESULT _hr = raw_FMANNewRec(__MIDL_0019, __MIDL_0020, __MIDL_0021, __MIDL_0022);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IFMCore::FMANCreateNodataWIFF ( struct IStorage * * ppStgRoot ) {
+    HRESULT _hr = raw_FMANCreateNodataWIFF(ppStgRoot);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IFMCore::FMANGetRoot ( struct IStorage * * ppStgRoot ) {
+    HRESULT _hr = raw_FMANGetRoot(ppStgRoot);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IFMCore::FMANMethodAdd ( struct IStorage * * ppStgMethod, short * psMethodID ) {
+    HRESULT _hr = raw_FMANMethodAdd(ppStgMethod, psMethodID);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IFMCore::FMANOpenWiff ( enum EFmanOpenWIFF eOpenFlags, struct IStorage * * ppStgRoot ) {
+    HRESULT _hr = raw_FMANOpenWiff(eOpenFlags, ppStgRoot);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IFMCore::FMANReadSample ( short sSampleID, IUnknown * * ppUnk ) {
+    HRESULT _hr = raw_FMANReadSample(sSampleID, ppUnk);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IFMCore::FMANValidSamplesCount ( short * sSamplesCount, short * psSamplesCountRT ) {
+    HRESULT _hr = raw_FMANValidSamplesCount(sSamplesCount, psSamplesCountRT);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IFMCore::FMANCloseNodataWIFF ( ) {
+    HRESULT _hr = raw_FMANCloseNodataWIFF();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IFMCore::FMANSampleDelete ( short sSampleID ) {
+    HRESULT _hr = raw_FMANSampleDelete(sSampleID);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IFMCore::FMANOpenNodataWIFF ( enum EFmanOpenWIFF eOpenFlags, struct IStorage * * ppStgRoot ) {
+    HRESULT _hr = raw_FMANOpenNodataWIFF(eOpenFlags, ppStgRoot);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IFMCore::FMANCloseSample ( short sSampleID ) {
+    HRESULT _hr = raw_FMANCloseSample(sSampleID);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IFMCore::FMANBatchHeaderAdd ( struct IStorage * * ppStgBatchHeader, short * psBatchHeaderID ) {
+    HRESULT _hr = raw_FMANBatchHeaderAdd(ppStgBatchHeader, psBatchHeaderID);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IFMCore::FMANBundleFile ( LPWSTR fileNameSrc, LPWSTR fileNameDest, long bFailIfExists ) {
+    HRESULT _hr = raw_FMANBundleFile(fileNameSrc, fileNameDest, bFailIfExists);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IFMCore::FMANSetDabsInfo2 ( short sSampleTableID, LPWSTR achName, LPWSTR achID, LPWSTR achVialID, short sRackNo, LPWSTR achRackID, long lDabsExtraSz ) {
+    HRESULT _hr = raw_FMANSetDabsInfo2(sSampleTableID, achName, achID, achVialID, sRackNo, achRackID, lDabsExtraSz);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IFMCore::FMANSampleRemove ( short sSampleTableID ) {
+    HRESULT _hr = raw_FMANSampleRemove(sSampleTableID);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IFMCore::FMANSetFileCustomProps ( LPWSTR lptPropName1, LPWSTR lptPropVal1, LPWSTR lptPropName2, LPWSTR lptPropVal2 ) {
+    HRESULT _hr = raw_FMANSetFileCustomProps(lptPropName1, lptPropVal1, lptPropName2, lptPropVal2);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IFMCore::FMANGetFileVersion ( long * plVersion, long * plVersionStored ) {
+    HRESULT _hr = raw_FMANGetFileVersion(plVersion, plVersionStored);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IFMCore::FMANGetFiletypeDesciption ( long lFiletypeID, LPWSTR * plpStr ) {
+    HRESULT _hr = raw_FMANGetFiletypeDesciption(lFiletypeID, plpStr);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IFMCore::FMANGetFiletypeExt ( long lFiletypeID, LPWSTR * plpStr ) {
+    HRESULT _hr = raw_FMANGetFiletypeExt(lFiletypeID, plpStr);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IFMCore::FMLogString ( short sSampleTableID, LPWSTR pLogStr, long lLogType ) {
+    HRESULT _hr = raw_FMLogString(sSampleTableID, pLogStr, lLogType);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IFMCore::FMANDefragmentFile ( LPWSTR lpFileName ) {
+    HRESULT _hr = raw_FMANDefragmentFile(lpFileName);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IFMCore::FMANDeleteWIFF ( LPWSTR lpFileName, long bDeleteRawFiles ) {
+    HRESULT _hr = raw_FMANDeleteWIFF(lpFileName, bDeleteRawFiles);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+//
+// interface IFMDae wrapper method implementations
+//
+
+inline HRESULT IFMDae::FMDaeSampleStart ( short sSampleID, enum EFmanFloatFormat eMassFormat, enum EFmanFloatFormat eIntesFormat ) {
+    HRESULT _hr = raw_FMDaeSampleStart(sSampleID, eMassFormat, eIntesFormat);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IFMDae::FMDaeSampleEnd ( enum EFmanSampleEnd eReason ) {
+    HRESULT _hr = raw_FMDaeSampleEnd(eReason);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IFMDae::FMDaeAddData ( double dX, double dY, double dY2 ) {
+    HRESULT _hr = raw_FMDaeAddData(dX, dY, dY2);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IFMDae::FMDaeAddScanIndex ( double dTime, double dTic ) {
+    HRESULT _hr = raw_FMDaeAddScanIndex(dTime, dTic);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IFMDae::FMDaeAddPeriod ( ) {
+    HRESULT _hr = raw_FMDaeAddPeriod();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IFMDae::FMDaeAddUserRange ( unsigned char * pData, long lLength ) {
+    HRESULT _hr = raw_FMDaeAddUserRange(pData, lLength);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IFMDae::FMDaeTableCreate ( short sSampleID, long * plTableID ) {
+    HRESULT _hr = raw_FMDaeTableCreate(sSampleID, plTableID);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IFMDae::FMDaeChangeDataFormat ( enum EFmanDataFormat eDataFormat ) {
+    HRESULT _hr = raw_FMDaeChangeDataFormat(eDataFormat);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IFMDae::FMDaeGetRemote ( IUnknown * * ppRem ) {
+    HRESULT _hr = raw_FMDaeGetRemote(ppRem);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IFMDae::FMDaeTableAddString ( long lTableID, long lTableType, LPWSTR lpStr, long * plStrIdx ) {
+    HRESULT _hr = raw_FMDaeTableAddString(lTableID, lTableType, lpStr, plStrIdx);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IFMDae::FMDaeTableClose ( long lTableID ) {
+    HRESULT _hr = raw_FMDaeTableClose(lTableID);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+//
+// interface IFMProcessing wrapper method implementations
+//
+
+inline HRESULT IFMProcessing::FMProcGetTIC ( short sSampleID, short periodNum, short sExperIndex, short paramNum, unsigned char * * ppData, long * plDataElements ) {
+    HRESULT _hr = raw_FMProcGetTIC(sSampleID, periodNum, sExperIndex, paramNum, ppData, plDataElements);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IFMProcessing::FMProcGetScan ( short sSampleID, short periodNum, short sExper, long lCycleNum, enum EFmanDataFormat eFormatRq, unsigned char * * ppScanOut, long * plScanLength ) {
+    HRESULT _hr = raw_FMProcGetScan(sSampleID, periodNum, sExper, lCycleNum, eFormatRq, ppScanOut, plScanLength);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IFMProcessing::FMProcGetMethodOA ( short sSampleID, IUnknown * * ppUnk ) {
+    HRESULT _hr = raw_FMProcGetMethodOA(sSampleID, ppUnk);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IFMProcessing::FMProcGetNumPeriodsAct ( short sSampleID, short * psNumPeriodsAct ) {
+    HRESULT _hr = raw_FMProcGetNumPeriodsAct(sSampleID, psNumPeriodsAct);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IFMProcessing::FMProcGetNumCyclesPerPeriodAct ( short sSampleID, short sPeriod, long * plNumCyclesAct ) {
+    HRESULT _hr = raw_FMProcGetNumCyclesPerPeriodAct(sSampleID, sPeriod, plNumCyclesAct);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IFMProcessing::FMProcGetPeriodAndCycleByTime ( short sSampleID, float fTime, short * psPeriod, long * plCycle ) {
+    HRESULT _hr = raw_FMProcGetPeriodAndCycleByTime(sSampleID, fTime, psPeriod, plCycle);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IFMProcessing::FMProcGetTimeForPeriodAndCycle ( short sSampleID, short sPeriod, short sExperiment, long lCycle, float * pfTime ) {
+    HRESULT _hr = raw_FMProcGetTimeForPeriodAndCycle(sSampleID, sPeriod, sExperiment, lCycle, pfTime);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IFMProcessing::GetManyXIC ( short sampleID, short periodNum, short exptIndex, long startCycle, long endCycle, struct SFManXICTable * xicTable, short numXIC, float * * times, long * numPoints ) {
+    HRESULT _hr = raw_GetManyXIC(sampleID, periodNum, exptIndex, startCycle, endCycle, xicTable, numXIC, times, numPoints);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IFMProcessing::GetOneFullScanXIC ( short sampleID, short periodNum, short exptIndex, long startCycle, long endCycle, double startMass, double endMass, float * * times, float * * intensities, long * numPoints ) {
+    HRESULT _hr = raw_GetOneFullScanXIC(sampleID, periodNum, exptIndex, startCycle, endCycle, startMass, endMass, times, intensities, numPoints);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IFMProcessing::GetOneSingleIonXIC ( short sampleID, short periodNum, short exptIndex, long startCycle, long endCycle, short simIndex, float * * times, float * * intensities, long * numPoints ) {
+    HRESULT _hr = raw_GetOneSingleIonXIC(sampleID, periodNum, exptIndex, startCycle, endCycle, simIndex, times, intensities, numPoints);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IFMProcessing::GetDefaultBPC ( short sampleID, short periodNum, short exptIndex, long startCycle, long endCycle, struct SFManXYFloatFloat * * chro, float * * masses, long * numPoints ) {
+    HRESULT _hr = raw_GetDefaultBPC(sampleID, periodNum, exptIndex, startCycle, endCycle, chro, masses, numPoints);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IFMProcessing::GetBPC ( short sampleID, short periodNum, short exptIndex, long startCycle, long endCycle, double startMass, double endMass, struct SFManXYFloatFloat * * chro, float * * masses, long * numPoints ) {
+    HRESULT _hr = raw_GetBPC(sampleID, periodNum, exptIndex, startCycle, endCycle, startMass, endMass, chro, masses, numPoints);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IFMProcessing::GetSIMBPC ( short sampleID, short periodNum, short exptIndex, long startCycle, long endCycle, struct SFManXYFloatFloat * * chro, short * * indices, long * numPoints ) {
+    HRESULT _hr = raw_GetSIMBPC(sampleID, periodNum, exptIndex, startCycle, endCycle, chro, indices, numPoints);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IFMProcessing::FMProcGetDabsInfoCFStream ( short sSampleID, IUnknown * * ppcfStr, long * plQuantInfoSz ) {
+    HRESULT _hr = raw_FMProcGetDabsInfoCFStream(sSampleID, ppcfStr, plQuantInfoSz);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IFMProcessing::FMProcGetDabsInfo2 ( short sSampleID, short * psMethodID, LPWSTR * pSampleName, LPWSTR * pSampleID, LPWSTR * pVialID, short * psRackNo, LPWSTR * pRackID, long * pAcqTime ) {
+    HRESULT _hr = raw_FMProcGetDabsInfo2(sSampleID, psMethodID, pSampleName, pSampleID, pVialID, psRackNo, pRackID, pAcqTime);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IFMProcessing::FMProcEnumLogInit ( short sSampleID, long lKeyTypes ) {
+    HRESULT _hr = raw_FMProcEnumLogInit(sSampleID, lKeyTypes);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IFMProcessing::FMProcGetDabsOA ( short sSampleID, IUnknown * * ppUnk ) {
+    HRESULT _hr = raw_FMProcGetDabsOA(sSampleID, ppUnk);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IFMProcessing::FMProcReleaseDabsInfoCFStream ( short sSampleID ) {
+    HRESULT _hr = raw_FMProcReleaseDabsInfoCFStream(sSampleID);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IFMProcessing::FMProcGetDAMethodOA ( short sSampleID, IUnknown * * ppUnk ) {
+    HRESULT _hr = raw_FMProcGetDAMethodOA(sSampleID, ppUnk);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IFMProcessing::FMProcEnumLogNext ( short sSampleID, LPWSTR * plpStr, long * plKeyType, long * plTimeOff ) {
+    HRESULT _hr = raw_FMProcEnumLogNext(sSampleID, plpStr, plKeyType, plTimeOff);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IFMProcessing::FMProcEnumLogReset ( short sSampleID ) {
+    HRESULT _hr = raw_FMProcEnumLogReset(sSampleID);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IFMProcessing::FMProcGLPTablesLoad ( short sSampleID, long * plTableID ) {
+    HRESULT _hr = raw_FMProcGLPTablesLoad(sSampleID, plTableID);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IFMProcessing::FMProcGLPTablesFree ( short sSampleID, long lTableID ) {
+    HRESULT _hr = raw_FMProcGLPTablesFree(sSampleID, lTableID);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IFMProcessing::FMProcGLPTablesEnumInit ( short sSampleID, long lKeyTypes ) {
+    HRESULT _hr = raw_FMProcGLPTablesEnumInit(sSampleID, lKeyTypes);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IFMProcessing::FMProcGLPTablesEnumNext ( short sSampleID, LPWSTR * plpStr, long * plKeyType ) {
+    HRESULT _hr = raw_FMProcGLPTablesEnumNext(sSampleID, plpStr, plKeyType);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IFMProcessing::FMProcGLPTablesEnumReset ( short sSampleID ) {
+    HRESULT _hr = raw_FMProcGLPTablesEnumReset(sSampleID);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IFMProcessing::FMProcTestParamMarshalling ( IUnknown * pUnkIn, long lParam, LPWSTR lpParam ) {
+    HRESULT _hr = raw_FMProcTestParamMarshalling(pUnkIn, lParam, lpParam);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+//
+// interface IFMDev wrapper method implementations
+//
+
+inline HRESULT IFMDev::FMDevDeviceInit ( short sSampleID, long bIsMSDependent, enum EFmanDataFormat eDataFormat, LPWSTR lpName, LPWSTR lpModel, long lType, short sNumChannels, long * plDevID ) {
+    HRESULT _hr = raw_FMDevDeviceInit(sSampleID, bIsMSDependent, eDataFormat, lpName, lpModel, lType, sNumChannels, plDevID);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IFMDev::FMDevDeviceExit ( long devID ) {
+    HRESULT _hr = raw_FMDevDeviceExit(devID);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IFMDev::FMDevChannelSet ( long devID, short sChannel, LPWSTR lpName, LPWSTR lpUnits, double dSampleRate, float fUserFullScale, float fActFullScale, long lExpNumScans ) {
+    HRESULT _hr = raw_FMDevChannelSet(devID, sChannel, lpName, lpUnits, dSampleRate, fUserFullScale, fActFullScale, lExpNumScans);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IFMDev::FMDevAcqStart ( long devID ) {
+    HRESULT _hr = raw_FMDevAcqStart(devID);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IFMDev::FMDevAcqEnd ( long devID, enum EFmanSampleEnd eReason ) {
+    HRESULT _hr = raw_FMDevAcqEnd(devID, eReason);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IFMDev::FMDevDataAdd ( long devID, double dX, double dY, long bScanDone ) {
+    HRESULT _hr = raw_FMDevDataAdd(devID, dX, dY, bScanDone);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IFMDev::FMDevFullScanAdd ( long devID, double * pScan, long lScanSz ) {
+    HRESULT _hr = raw_FMDevFullScanAdd(devID, pScan, lScanSz);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+//
+// interface IFMProcDev wrapper method implementations
+//
+
+inline HRESULT IFMProcDev::FMProcDevReadDevice ( short sSampleTableID, short sDevID, IUnknown * * ppRemDev ) {
+    HRESULT _hr = raw_FMProcDevReadDevice(sSampleTableID, sDevID, ppRemDev);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IFMProcDev::FMProcDevGetDeviceInfo ( short sSampleTableID, short sDevID, short * psNumChannels, LPWSTR * plpDevName, LPWSTR * plpDevModel, long * plType ) {
+    HRESULT _hr = raw_FMProcDevGetDeviceInfo(sSampleTableID, sDevID, psNumChannels, plpDevName, plpDevModel, plType);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IFMProcDev::FMProcDevGetChannelInfo ( short sSampleTableID, short sDevID, short sChannel, LPWSTR * plpChannelName ) {
+    HRESULT _hr = raw_FMProcDevGetChannelInfo(sSampleTableID, sDevID, sChannel, plpChannelName);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IFMProcDev::FMProcDevGetChannelData ( short sSampleTableID, short sDevID, short sChannel, enum EFmanDevData eTimeFormat, double * * ppData, long * plDataElements, double * * ppTime, long * plTimeElements ) {
+    HRESULT _hr = raw_FMProcDevGetChannelData(sSampleTableID, sDevID, sChannel, eTimeFormat, ppData, plDataElements, ppTime, plTimeElements);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IFMProcDev::FMProcDevCloseDevice ( short sSampleTableID, short sDevID ) {
+    HRESULT _hr = raw_FMProcDevCloseDevice(sSampleTableID, sDevID);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IFMProcDev::FMProcDevGetNumDevices ( short sSampleTableID, short * psDevID ) {
+    HRESULT _hr = raw_FMProcDevGetNumDevices(sSampleTableID, psDevID);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+//
+// interface IFMSecurity wrapper method implementations
+//
+
+inline HRESULT IFMSecurity::FMSecurityExportFlagGet ( LPWSTR fileName, long * plExportFlag ) {
+    HRESULT _hr = raw_FMSecurityExportFlagGet(fileName, plExportFlag);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IFMSecurity::FMSecurityExportFlagChange ( LPWSTR fileNameSrc, long lExportFlag, LPWSTR lpAdminKey ) {
+    HRESULT _hr = raw_FMSecurityExportFlagChange(fileNameSrc, lExportFlag, lpAdminKey);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+//
+// interface IFMWIFF wrapper method implementations
+//
+
+inline HRESULT IFMWIFF::FMANGetWIFFDriverFileHandle ( unsigned long * pdwFileHandle ) {
+    HRESULT _hr = raw_FMANGetWIFFDriverFileHandle(pdwFileHandle);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IFMWIFF::FMANWIFFMethodAdd ( IUnknown * pPersistStg, short * psMethodID ) {
+    HRESULT _hr = raw_FMANWIFFMethodAdd(pPersistStg, psMethodID);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IFMWIFF::FMANWIFFSampleAdd ( short MethodID, short * pdSampleID ) {
+    HRESULT _hr = raw_FMANWIFFSampleAdd(MethodID, pdSampleID);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IFMWIFF::FMANWIFFGetWTS ( IUnknown * * ppUnk ) {
+    HRESULT _hr = raw_FMANWIFFGetWTS(ppUnk);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+//
+// interface IRemote wrapper method implementations
+//
+
+inline HRESULT IRemote::UpdateSet ( long lScanNum, long lSize, char * pData, long lParam ) {
+    HRESULT _hr = raw_UpdateSet(lScanNum, lSize, pData, lParam);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IRemote::UpdateCancel ( ) {
+    HRESULT _hr = raw_UpdateCancel();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IRemote::Init ( unsigned char * pDaq, long bIsProcessing, long lParam ) {
+    HRESULT _hr = raw_Init(pDaq, bIsProcessing, lParam);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IRemote::RqUpdateProcessing ( long lParam ) {
+    HRESULT _hr = raw_RqUpdateProcessing(lParam);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IRemote::GetData ( short sVal, long * plParam ) {
+    HRESULT _hr = raw_GetData(sVal, plParam);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IRemote::DevInit ( unsigned char * pDaq, long bIsProcessing, long lParam ) {
+    HRESULT _hr = raw_DevInit(pDaq, bIsProcessing, lParam);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IRemote::DevRqUpdateProcessing ( long lParam ) {
+    HRESULT _hr = raw_DevRqUpdateProcessing(lParam);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+//
+// interface IFMCallerNotify wrapper method implementations
+//
+
+inline HRESULT IFMCallerNotify::RemoteSendData ( long size, unsigned char * data ) {
+    HRESULT _hr = raw_RemoteSendData(size, data);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IFMCallerNotify::RemoteNotify ( long lParam ) {
+    HRESULT _hr = raw_RemoteNotify(lParam);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+//
+// interface IBundlerTsk wrapper method implementations
+//
+
+inline HRESULT IBundlerTsk::BundleFile ( LPWSTR fName ) {
+    HRESULT _hr = raw_BundleFile(fName);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IBundlerTsk::AddFile ( LPWSTR fName ) {
+    HRESULT _hr = raw_AddFile(fName);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IBundlerTsk::RemoveFile ( LPWSTR fName ) {
+    HRESULT _hr = raw_RemoveFile(fName);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IBundlerTsk::InitBundler ( long lTimeRetry, long bForceBundle, LPWSTR srcDir, LPWSTR dstDir, IUnknown * pQSUnk ) {
+    HRESULT _hr = raw_InitBundler(lTimeRetry, bForceBundle, srcDir, dstDir, pQSUnk);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IBundlerTsk::ExitBundler ( long lParam ) {
+    HRESULT _hr = raw_ExitBundler(lParam);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}

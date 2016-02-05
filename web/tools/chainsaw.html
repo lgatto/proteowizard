@@ -1,0 +1,89 @@
+<html>
+<head>
+    <title>ProteoWizard Technical Documentation: chainsaw</title>
+</head>
+
+<body>
+<h2>chainsaw</h2>
+    <p>
+<i>chainsaw</i> is a command-line utility for in-silico digest of amino acid sequences. The utility reads a fasta file and outputs a tab-separated file with the following fields:
+</p>
+
+<P>sequence : the amino acid sequence of the theoretical peptide <BR>
+protein : the protein referenced in the fasta file <BR>
+mass: mass of the theoretical peptide <BR>
+missedCleavages: number of missed cleavages observed <BR>
+specificity:
+</P>
+<UL>	
+    0 = nonspecific cleavage on both N and C termini<BR>
+	1 = nonspecific cleavage on one of the N or C termini<BR>
+	2 = specific cleavage on both termini<BR>
+</UL>
+nTerminusIsSpecific
+<UL>
+	0 = nonspecific N terminus cleavage<BR>
+	1 = specific N terminus cleavage<BR>
+</UL>
+cTerminusIsSpecific
+<UL>
+	0 = nonspecific C terminus cleavage<br>
+	1 = specific C terminus cleavage<BR>
+</UL>
+
+<P>A variety of options are supported to customize the digest.  In particular, one can specify a digestion enzyme in one of three ways: </P>
+<UL>
+  (1) -e, --proteolyticEnzyme:  use one of the enumerated proteolytic enzymes provided<BR>
+  (2) -d, --digestionMotif: use a digestion motif for the enzyme of choice (see example below)<BR>
+  (3) -r, --cleavageAgentRegex: use a regular expression to specify cleavage (see example below)<BR>
+</UL>
+<P>Additional options are shown in the usage string, reproduced below.  To show this string on the command line, run chainsaw without any arguments.
+
+Usage: chainsaw [options] [filenames] </P>
+<pre>
+Options:
+  -e [ --proteolyticEnzyme ] arg        : specify proteolytic enzyme for digest
+                                       ion. Options: trypsin, chromotrypsin, cl
+                                       ostripain, cyanogenBromide, pepsin. 
+                                       Default : trypsin
+  -d [ --digestionMotif ] arg           : specify a digestion motif (e.g. tryps
+                                       in = "[KR]|[^P]")
+  -r [ --cleavageAgentRegex ] arg       : specify a cleavage agent regex (e.g. 
+                                       trypsin = "(?<=[KR])(?!P)")
+  -n [ --numMissedCleavages ] arg (=0)  : specify number of missed cleavages to
+                                       allow.
+  -s [ --specificity ] arg              : specify minimum specificity. Options:
+                                       non, semi, fully. 
+                                       Default: fully
+  -m [ --minLength ] arg (=0)           : specify minimum length of digested pe
+                                       ptides
+  -M [ --maxLength ] arg (=100000)      : specify maximum length of digested pe
+                                       ptides
+  -p [ --massPrecison ] arg (=12)       : specify precision of calculated mass 
+                                       of digested peptides
+  --benchmark                           : do not write results
+
+</pre>
+        <p>
+        Examples:
+        
+        <p>Download an example fasta file <a href="../examples/bsa_precursor.fa">HERE</a></p>
+        <ul>
+            <li><code>chainsaw bsa_precursor.fa</code><BR>
+            (digestion with default params)</li>
+            <li><code>chainsaw -e cyanogenBromide bsa_precursor.fa</code><BR>
+            (digestion with cyanogen bromide, all other params default)</li>
+            <li><code>chainsaw -n 2 -s semi bsa_precursor.fa</code><BR>
+            (digestion with trypsin, 2 missed cleavages, semi-specific cleavage)</li>
+
+
+        </ul>
+        </p>
+
+    <hr/>
+
+</body>
+</html>
+
+
+

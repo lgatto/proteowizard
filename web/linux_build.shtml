@@ -1,0 +1,164 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>ProteoWizard:Linux Build Instructions</title>
+
+<link href="css/pwiz_structure.css" rel="stylesheet" type="text/css">
+<link href="css/pwiz_styles.css" rel="stylesheet" type="text/css">
+
+<script src="SpryAssets/SpryMenuBar.js" type="text/javascript"></script>
+<link href="SpryAssets/SpryMenuBarHorizontal.css" rel="stylesheet" type="text/css" />
+
+
+
+<style type="text/css">
+.indent {
+	font-family: "Courier New", Courier, monospace;
+	font-size: 14px;
+	background-color: #eee;
+	text-indent: 15px;
+}
+</style>
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-54926454-1', 'auto');
+  ga('send', 'pageview');
+
+</script></head>
+
+<body>
+
+<div class="container">
+<!--#include virtual="nav.html" -->
+
+  <div class="content">
+    
+      
+    <!-- Content goes here. -->
+    <p><i>These notes describe using the boost-build bjam build tool officially supported by ProteoWizard.  See the <a href="http://proteowizard.sourceforge.net/downloads.shtml">downloads</a> page for information on using semi-official but perhaps more familiar GNU/Autotools build files instead, which include many examples of building programs that use ProteoWizard.</i></p>
+    
+    <p> MACUSERS - Please note that these instructions mostly work for you as well - however, you will likely need to build using:
+    
+    	<UL>
+        ./quickbuild.sh runtime-link=shared<br />
+        or <<br />
+        ./quickbuild.sh runtime-link=shared address-model=32 architecture=x86 </BR>
+        </UL>
+    </p>
+    
+    
+    
+    <h1>Building with Proteowizard‬</h1>
+    <p>Written by: Jarrett Egertson on 12/15/2010  jegertso &lt;a .t&gt; u.washington.edu</p>
+    <h2>Goal</h2>
+        <p>The goal of this tutorial is to demonstrate how to incorporate ProteoWizard into a Linux project and use it to read and write data.  It is aimed at Linux users with moderate programming expertise.  Please feel free to add comments below or e-mail me at jegertso &lt;a .t&gt; u.washington.edu</p>
+    
+    <H2>The Final Product</H2>
+     <p><i> A Linux binary called pwiz_example that reads a ProteoWizard-supported file format, outputs the first 5 peaks (m/z and intensity) data from the first two spectra in the file, and then outputs the file as mzML.</i>
+    <H4>Delivered to the end-user:</H4>
+      <p>The final product delivered to the user will be a .zip archive.  For the user to use the software, they would download the .zip archive, uncompress it, and run one command (sh quickbuild.sh) to build the binary.</p>
+      <h4>How you (the developer) will make this happen:</h4>
+    <p>We will use the boost-build system to build our project.  The project will contain the ProteoWizard source code in a compressed .tar.gz archive.  When the project is built, the source folder will be decompressed and ProteoWizard code will be built directly into the binary.  There will be a section at the end of this tutorial for advanced users who wish to reference the ProteoWizard SVN repository directly from an SVN project.  By doing this, the ProteoWizard code is automatically updated on SVN check out. (note: I haven't written this section yet)</p>
+    <H4>There are two ways to use this tutorial:</H4>
+    <P>One is to create the project manually, from scratch following steps 0-6, you will be creating all directories manually, downloading ProteoWizard source code and libraries manually, adding build scripts, and project source code manually.  </P>
+    
+    <UL>If you'd like to take the easy way out...</p>
+    <p>The other way is to follow step 0 of the tutorial, download the complete project <a href="downloads/linuxExample/pwiz_project_example.zip">here</a>:<br />
+     <br />
+      unzip the file, and run sh quickbuild.sh in the pwiz_project directory.  This should build a binary which will be in pwiz_project/bin</p>
+    </UL>
+      
+    <H2>Step 0: Make sure you have g++ installed</H2>
+    <P><i>g++ is the GNU project C and C++ compiler</i><br />
+      A lot of Linux distributions come with g++ installed already, but just to be safe...<br />
+      The easiest way to check this is to run the command:<br />
+    <P class="indent"> &gt; which g++<br /></P>
+      <P>If this command returns nothing, you will have to install g++.  Most distributions come with a package manager that can facilitate this installation.</p>
+ 
+    <H2>Step 1: Create the directory structure for the project</H2>
+     <P> In this step, we'll create a directory hierarchy for our project, and download the ProteoWizard source code and libraries it depends on.
+ 	<img src="images/directory_structure.png" />
+    </p>
+    
+    
+    <p>The main directory for our project will be called pwiz_project and it will have four subdirectories:<br />
+    <UL>
+    bin - Compiled binaries will be placed in this directory<br />
+      project_src - The source code for our project<br />
+      pwiz_libraries - A directory containing all of the libraries ProteoWizard depends on (ex. boost) as well as the source for boost-build itself<br />
+      pwiz_src - A directory that will contain the ProteoWizard source code</p>
+    </UL> 
+    <p>pwiz_project itself will contain two important scripts:<br />
+    <UL> 
+      <a href="downloads/linuxExample/quickbuild.sh">quickbuild.sh</a> - the user calls this to build the project (ex. sh quickbuild.sh)<br />
+      <a href="downloads/linuxExample/clean.sh">clean.sh</a> - the user calls this to clean the project (ex. sh clean.sh)
+      </p>
+    </UL>
+    <p><I>Please make sure the full path to your project does not contain any spaces.</I></p>
+    <p>Create these directories.  We'll deal with the bin and project_src directories later, for now, lets prepare the pwiz_libraries and pwiz_src directories.</p>
+    <H4>Populate pwiz_libraries</H4>
+      <P>We'll access the ProteoWizard svn repository to download the source for the ProteoWizard dependencies and populate the pwiz_libraries directory.<br />
+      From the pwiz_project directory:<br />
+      <P class="indent"> &gt; svn co https://svn.code.sf.net/p/proteowizard/code/trunk/pwiz/libraries pwiz_libraries/</p>
+    <H4>Populate pwiz_src</H4>
+     <P> To populate pwiz_src we'll download a compressed .tar.gz archive containing the ProteoWizard source code.  I like to put this archive in the pwiz_project directory, and then have boost-build extract it at build time.  This saves space and, if the project is checked into a source repository, allows for much faster check outs.  <br />
+      The source archive can be found from our <a href="downloads.shtml">download</a> page.<br />
+      At the time of writing this tutorial, the most recent source archive is<br />
+      <span class="inputstyle">pwiz-src-without-ltv-2_1_2416.tar.bz2</span><br />
+      I downloaded the archive to my pwiz_project directory.</p>
+
+    <H2>Step 2: Write the source code for your project</H2>
+      <p>The project is a pretty simple one, so it will contain one source file called <a href="downloads/linuxExample/pwiz_example.cpp">pwiz_example.cpp</a>.  The file will be located in the pwiz_project/project_src directory.  The source file can be found in the attachments, with comments.  The file can include files from the ProteoWizard source directory, for example, the first line:<br />
+   <P class="indent"> #include &quot;pwiz/data/msdata/MSDataFile.hpp&quot;  </p>
+
+
+    <H2>Step 3: Write the boost-build scripts for your project</H2>
+          <P>The boost-build scripts are written in the boost-build language, and are analogous to Makefiles in Linux, but are much more powerful.  The syntax for these files is covered in the boost-build documentation.  We'll write two .jam files.  </P>
+          <P>One will be in <span class="inputstyle">pwiz_project/project_src</span> called <a href="downloads/linuxExample/Jamfile.jam">Jamfile.jam</a>.  This file allows the boost-build software to find the necessary libraries and header files for the pwiz_example binary, as well as defining build options such as linking type and threading.  In general, a large project will have many Jamfile's, each directing boost-build on how to build a sub-component of the project.  The ProteoWizard source code contains numerous Jamfiles.</P>
+          <P>The second will be in the <span class="inputstyle">pwiz_project</span> directory and is called <a href="downloads/linuxExample/Jamroot.jam">Jamroot.jam</a>.  Each boost-build project must have a Jamroot.jam file at the project root.  This is the file read by boost-build's interpreter (bjam) to determine how to build the entire project.  Our Jamroot.jam file serves two main purposes:</P>
+<OL>
+      <LI> To extract the ProteoWizard source archive (or determine that it has already been extracted), as well as other source archives in pwiz_libraries<br /></LI>
+     
+      <LI> To direct boost-build to build and install our pwiz_example program to the bin directory.<br />
+          Both of these files are attached at the end of this page separately, as well as being included in the compressed project archive also attached.
+     </LI> 
+    </OL>
+      
+
+    <H2>Step 4: Write a shell script for the user to build the project with</H2>
+         <P> At this point, the project could be built if the user had the boost-build system installed on their computer.  The interpreter is called bjam.  However, the source code for bjam is included in the <span class="inputstyle">pwiz_project/pwiz_libraries</span> directory.  A script in <span class="inputstyle">pwiz_project</span>, <a href="downloads/linuxExample/quickbuild.sh">quickbuild.sh</a>, will check to see if bjam has been compiled, and if not, build it.  Then, it will use this copy of bjam to interpret our build scripts from Step 3, and build/install the project.  Arguments passed to quickbuild.sh get passed on to bjam.  For example, to build the project using 4 threads:</p>
+ 
+    <P class="indent">&gt;  sh quickbuild.sh -j4</P>
+      <P>quickbuild.sh is attached below separately, and as part of the project archive.</p>
+
+    <H2>Step 5: Write a shell script for the user to clean the project with</H2>
+           <P>It is good practice to have a shell script that the user can use to clean the project.  This script is called clean.sh.  This script will be included in pwiz_project</p>
+
+    <H2>Step 6: Build the project!</H2>
+      <P>  Everything is now in place, and the project is ready to be built.  If you have not been creating the project manually, you can download the attached project archive, extract it, and run 
+      <P class="indent"> &gt; sh quickbuild.sh </P>
+      <P>from the pwiz_project directory (make sure you're in pwiz_project, not pwiz_project/pwiz_src !). Then, try running the pwiz_example binary in pwiz_project/bin.</p>
+      <P> Download the full example project <a href="downloads/linuxExample/pwiz_project_example.zip">HERE</a></p>
+
+    <!-- End of Content  -->
+
+    
+    <!-- end .content -->
+</div>
+	<div id="sourceforge">
+        <a href="http://sourceforge.net/projects/proteowizard"><img src="http://sflogo.sourceforge.net/sflogo.php?group_id=216483&type=11" width="120" height="30" border="0" alt="Get ProteoWizard at SourceForge.net. Fast, secure and Free Open Source software downloads" /></a>
+	</div>
+
+    
+    
+  <!-- end .container --></div>
+<script type="text/javascript">
+var MenuBar1 = new Spry.Widget.MenuBar("MenuBar1", {imgDown:"SpryAssets/SpryMenuBarDownHover.gif", imgRight:"SpryAssets/SpryMenuBarRightHover.gif"});
+</script>
+</body>
+</html>

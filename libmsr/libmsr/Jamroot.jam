@@ -1,0 +1,121 @@
+# Usage:
+#
+#   bjam [options] [install]
+#
+#   Builds and installs LibMSR, a Mass Spectrometry Reader library.
+#
+# Targets and Related Options:
+#
+#   build                   Build Bumbershoot libraries and applications
+#   =====
+#
+#   --libmsr-src=<DIR>      Find LibMSR source distribution here.
+#                           Default: "."
+#
+#   --expat-src=<DIR>       Find Expat 2.0+ source distribution here.
+#                           Default: "../ext/src/expat*"
+#
+#   --zlib-src=<DIR>        Find Zlib source distribution here.
+#                           Default: "../ext/src/zlib*"
+#
+#   --boost-src=<DIR>       Find root of Boost source distribution here.
+#                           Default: BOOST_ROOT environment variable
+#
+#   mfc=<on|off>            For LibMSR-dependent applications on Windows,
+#                           enable or disable support for certain vendor-
+#                           proprietary spectra formats:
+#                              * Thermo RAW (Xcalibur)
+#                              * ABI WIFF (Analyst or AnalystQS)
+#                              * Bruker FID/BAF/YEP (CompassXport)
+#                           This support will only work at run-time if the
+#                           host machine has access to the necessary vendor-
+#                           proprietary libraries (in parentheses above).
+#                           Default: on
+#
+#
+#   install                 Install headers and compiled library files to the
+#   =======                 configured locations (below).
+#
+#   --prefix=<PREFIX>       Install architecture independent files here.
+#                           Default; C:\Program Files\libmsr for Windows
+#                           Default: "/usr/local/bumbershoot" for Linux
+#
+#   --exec-prefix=<EPREFIX> Install architecture dependent files here.
+#                           Default; <PREFIX>
+#
+#   --libdir=<DIR>          Install library files here.
+#                           Default; <EPREFIX>/lib
+#
+#   --includedir=<HDRDIR>   Install header files here.
+#                           Default; <PREFIX>/include
+
+import os ;
+import modules ;
+import common ;
+import package ;
+import errors : error ;
+
+local LIBMSR_VERSION = "1.0" ;
+path-constant LIBMSR_ROOT_PATH : . ;
+
+local expat_src = [ MATCH --expat-src=(.*) : [ modules.peek : ARGV ] ] ;
+expat_src ?= [ glob "../ext/src/expat*" : "../ext/src/*.tar.gz" ] ;
+expat_src = $(expat_src[0]) ;
+
+if ! $(expat_src)
+{
+     error "This build requires the Expat source code. Specify the path to the Expat source distribution with '--expat-src=<path>'" ;
+}
+
+local zlib_src = [ MATCH --zlib-src=(.*) : [ modules.peek : ARGV ] ] ;
+zlib_src ?= [ glob "../ext/src/zlib*" : "../ext/src/*.tar.gz" ] ;
+zlib_src = $(zlib_src[0]) ;
+
+if ! $(zlib_src)
+{
+     error "This build requires the Zlib source code. Specify the path to the Zlib source distribution with '--zlib-src=<path>'" ;
+}
+
+local boost_src = [ modules.peek : BOOST_ROOT ] ;
+local boost_src2 = [ MATCH --boost-src=(.*) : [ modules.peek : ARGV ] ] ;
+
+if $(boost_src2)
+{
+     boost_src = $(boost_src2) ;
+}
+
+if ! $(boost_src)
+{
+     error "This build requires the Boost source code. Specify the path to the Boost distribution with the --boost-src parameter or BOOST_ROOT environment variable." ;
+}
+
+local .boost-build-file = [ modules.peek : .boost-build-file ] ;
+local tmp = [ modules.peek : BOOST_BUILD_PATH ] ;
+tmp += $(.boost-build-file:D)/ext $(LIBMSR_ROOT_PATH) ;
+modules.poke : BOOST_BUILD_PATH : $(tmp) ;
+
+path-constant EXPAT_SOURCE : $(expat_src) ;
+path-constant ZLIB_SOURCE : $(zlib_src) ;
+path-constant BOOST_SOURCE : $(boost_src) ;
+
+using libmsr : $(LIBMSR_VERSION) : $(LIBMSR_ROOT_PATH) ;
+
+local install-requirements = <install-source-root>. ;
+
+if [ modules.peek : NT ]
+{
+    install-requirements += <install-default-prefix>"C:/Program Files/libmsr" ;
+}
+else if [ modules.peek : UNIX ]
+{
+    install-requirements += <install-default-prefix>/usr/local ;
+}
+
+package.install install
+    : $(install-requirements)
+    : # no binaries
+    : /ext/libmsr//libmsr/<extension>libmsr/<libmsr-version>$(LIBMSR_VERSION)/<variant>release
+      /ext/libmsr//libmsr/<extension>libmsr/<libmsr-version>$(LIBMSR_VERSION)/<variant>debug
+    : $(build-headers)
+    ;
+explicit install ;
