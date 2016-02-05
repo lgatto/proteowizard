@@ -7,6 +7,6 @@ exe hello_pwiz
 ;
 
 install hello_pwiz_install
-: sandbox
+: hello_pwiz
 : <location>. # this puts the executable in this directory 
 ;
