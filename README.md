@@ -13,7 +13,10 @@ cd proteowizard
 ./quickbuild.sh
 ```
 
-
 ## Technical documentation
 
 ./pwiz/doc/technical/index.html
+
+## Sandbox
+
+`./pwiz/sandox` with code initially from `./pwiz/doc/technical/hello_pwiz`.
