@@ -874,7 +874,7 @@ PWIZ_API_DECL bool SourceFile::empty() const
 }
 
 //
-// DataCollection
+// AnalysisData
 //
 
 PWIZ_API_DECL bool AnalysisData::empty() const

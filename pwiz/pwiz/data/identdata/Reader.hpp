@@ -57,52 +57,57 @@ class PWIZ_API_DECL Reader
     };
 
 
-    /// return true iff Reader recognizes the file as one it should handle
-	/// that's not to say one it CAN handle, necessarily, as in Thermo on linux,
-	/// see comment for identify() below
+    /// return true if Reader recognizes the file as one it should
+    /// handle that's not to say one it CAN handle, necessarily, as in
+    /// Thermo on linux, see comment for identify() below
     bool accept(const std::string& filename,
                 const std::string& head) const
 	{
 		return (identify(filename,head).length() != 0);
 	}
 
-    /// return file type iff Reader recognizes the file, else empty;
-	/// note: for formats requiring a 3rd party DLL identify() should
-	/// return true if it recognized the format, even though reading
-	/// may fail if the 3rd party DLL isn't actually present
+    /// return file type if Reader recognizes the file, else empty;
+    /// note: for formats requiring a 3rd party DLL identify() should
+    /// return true if it recognized the format, even though reading
+    /// may fail if the 3rd party DLL isn't actually present
     /// Reader may filter based on filename and/or head of the file
     virtual std::string identify(const std::string& filename,
                                  const std::string& head) const = 0;
 
-    /// fill in a vector of IdentData structures; provides support for multi-run input files
+    /// fill in a vector of IdentData structures; provides support for
+    /// multi-run input files
     virtual void read(const std::string& filename,
                       IdentData& results,
                       const Config& config = Config()) const;
 
-    /// fill in a vector of IdentData structures; provides support for multi-run input files
+    /// fill in a vector of IdentData structures; provides support for
+    /// multi-run input files
     virtual void read(const std::string& filename,
                       const std::string& head,
                       IdentData& results,
                       const Config& config = Config()) const = 0;
 
-    /// fill in a vector of IdentData structures; provides support for multi-run input files
+    /// fill in a vector of IdentData structures; provides support for
+    /// multi-run input files
     virtual void read(const std::string& filename,
                       IdentDataPtr& results,
                       const Config& config = Config()) const;
 
-    /// fill in a vector of IdentData structures; provides support for multi-run input files
+    /// fill in a vector of IdentData structures; provides support for
+    /// multi-run input files
     virtual void read(const std::string& filename,
                       const std::string& head,
                       IdentDataPtr& results,
                       const Config& config = Config()) const = 0;
 
-    /// fill in a vector of IdentData structures; provides support for multi-run input files
+    /// fill in a vector of IdentData structures; provides support for
+    /// multi-run input files
     virtual void read(const std::string& filename,
                       const std::string& head,
                       std::vector<IdentDataPtr>& results,
                       const Config& config = Config()) const = 0;
 
-	virtual const char *getType() const = 0; // what kind of reader are you?
+    virtual const char *getType() const = 0; // what kind of reader are you?
 
     virtual ~Reader(){}
 };
@@ -131,8 +136,8 @@ typedef boost::shared_ptr<Reader> ReaderPtr;
 ///
 /// Reader container (composite pattern).
 ///
-/// The template get<reader_type>() gives access to child Readers by type, to facilitate
-/// Reader-specific configuration at runtime.
+/// The template get<reader_type>() gives access to child Readers by
+/// type, to facilitate Reader-specific configuration at runtime.
 ///
 class PWIZ_API_DECL ReaderList : public Reader,
                                  public std::vector<ReaderPtr>
