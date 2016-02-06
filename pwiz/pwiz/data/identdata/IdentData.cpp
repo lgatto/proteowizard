@@ -62,7 +62,7 @@ PWIZ_API_DECL vector<CV> defaultCVList()
 //
 
 PWIZ_API_DECL Identifiable::Identifiable(const std::string& id_,
-                                   const std::string& name_)
+					 const std::string& name_)
     : id(id_), name(name_)
 {
 }

@@ -146,12 +146,6 @@ internal data structures.
 - `Pep2MzIdent`: Translates data from a `MinimumPepXML` object into a
   `IdentData` object tree when a translation is known.
 
-```
-DelimReader
-DelimWriter
-Diff
-KwCVMap
-MzidPredicates
-TextWriter
-Version
-```
+- Other: `DelimReader`, `DelimWriter`, `Diff`, `KwCVMap`,
+  `MzidPredicates`, `TextWriter`, `Version`.
+
