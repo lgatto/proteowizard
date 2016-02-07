@@ -13,6 +13,7 @@ void test(const string& filename) {
   cout << mzid.creationDate << endl;
   cout << mzid.provider.name << endl;
   cout << mzid.provider.id << endl;
+  cout << mzid.analysisSoftwareList[0] << endl;
 
   // IdentDataFile *mzid;
   // mzid = new IdentDataFile(filename);
